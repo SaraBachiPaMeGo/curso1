@@ -1,7 +1,14 @@
-strong {
-    display: inline;
-    font-weight: normal;
-}    
+.mainheader {
+    background-color:black;
+    color:hotpink;
+    height: 10vh;
+    text-align: center;
+    padding: 1rem 0rem 2rem 0rem;
+}
 
-
-
+.mainfooter {
+    background-color: beige;
+    color: coral;
+    text-align: end;
+    padding: 1rem; /* Da "Aire" a la página */
+}
