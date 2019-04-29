@@ -1,5 +1,35 @@
 body {
     background:beige;
+}
 
+p {
+    text-align: center;
+}
+/* Los id no se usan en CSS, es una mala práctica */
+#Parrafo1 {
+    color: darkblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#soñar {
+    font-family: cursive; /* # Significa que pertenece a un Id */
+
+}
+
+.destacado {
+    color: cornflowerblue; /* Cuando tiene un punto delante quiere decir que es una clase */
+
+}
+
+.centrado {
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.imagenCentrada {
+
+    text-align: center;
 
 }
