@@ -6,6 +6,12 @@
     padding: 1rem 0rem 2rem 0rem;
 }
 
+.mainheader p {
+    font-size: 1,33rem;
+    margin-top: -1rem ;
+
+}
+
 .mainfooter {
     background-color: beige;
     color: coral;
