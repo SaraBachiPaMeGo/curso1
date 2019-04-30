@@ -19,3 +19,17 @@
     text-align: end;
     padding: 1rem; /* Da "Aire" a la página */
 }
+
+.sectionHeader {
+    border: 1px salmon;
+    background-color: lightpink;
+    border: 1px;
+    border-color: dimgrey;
+}
+
+.sectionFooter {
+    color: brown;
+}
+
+
+

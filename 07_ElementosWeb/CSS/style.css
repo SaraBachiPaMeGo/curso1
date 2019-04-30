@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+}
+
+
+.mainheader {
+    background-color:black;
+    color:hotpink;
+    height: 10vh;
+    text-align: center;
+    padding: 0.8rem 0rem 0.5rem 1rem;
+}
+
+.mainfooter {
+    background-color: beige;
+    color: coral;
+    text-align: end;
+    padding: 1rem; /* Da "Aire" a la página */
+}
+
+.content_wrapper {
+    margin: 1rem 5rem 1rem 1rem;
+}
+
+.imagenCentrada {
+    text-align: center;
+    max-width: 100%; /* Hace que una imagen sea responsive y puedes cambiar el tamaño de la imagen */
+} 
+
+p {
+    text-align: justify; /* No se debe justificar por el tema de anchos en móviles y ordenadores */
+}
+
+.figcapt {
+    text-align: center;
+
+}
+
+#conjuntoSections {
+    margin: 1rem 1rem 1rem 12rem;
+
+ }
+ .tamañoImagen {
+    size: 50px;
+
+ }
+
+
+  /*#section {
+
+    
+ }
+
+ #sections_Elements {
+
+ }
+
+ #header {
+
+ }
+
+ #article {
+
+ }
+
+ #aside {
+
+
+ }
+
+ #nav {
+
+ }
+
+ #footer {
+
+
+ }*/
+
