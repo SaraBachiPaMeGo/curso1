@@ -2,13 +2,13 @@ body {
     margin: 0;
 }
 
-
 .mainheader {
-    background-color:black;
-    color:hotpink;
+    background-color:coral;
+    color:rgb(255, 255, 255);
     height: 10vh;
     text-align: center;
     padding: 0.8rem 0rem 0.5rem 1rem;
+    font-size: large;
 }
 
 .mainfooter {
@@ -36,16 +36,57 @@ p {
 
 }
 
-#conjuntoSections {
+.conjuntoSections {
     margin: 1rem 1rem 1rem 12rem;
 
  }
  .tamañoImagen {
     size: 50px;
-
  }
 
+ blockquote {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-style: italic; 
+    border-left: 2px solid lightcoral;
+    padding-left: 10px;
+}
 
+blockquote footer {
+    margin-top: 0.5rem ;
+    border-top: 1px solid darkkhaki;
+    margin-bottom: 0.5rem;
+    width: fit-content;    
+    padding-left: 1px;
+
+}
+
+ol {
+    list-style-type: none;
+}
+
+.dt {
+    
+    float: left;
+    clear: right;
+    padding-left: 50px;
+    padding-right: 10px; 
+
+}
+
+.clearfix {
+
+    clear: both;
+}
+
+.dd {
+    
+    float: left;
+    clear: right;
+
+} 
   /*#section {
 
     
