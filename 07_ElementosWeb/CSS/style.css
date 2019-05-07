@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    /* background: radial-gradient silver skyblue springgreen wheat; */
 }
 
 .mainheader {
@@ -63,8 +64,12 @@ blockquote footer {
 
 }
 
-ol {
+/*ol {
     list-style-type: none;
+}*/
+.verde{
+    color: forestgreen;
+    font-weight: bold;
 }
 
 .dt {
@@ -87,6 +92,21 @@ ol {
     clear: right;
 
 } 
+
+footer a {  /* De esta forma coger todos los enlaces que haya dentro de footer */
+    color: inherit;
+    
+} 
+
+s {
+    text-decoration: line-through red;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* .ger {
+    display: none;
+} */
   /*#section {
 
     
