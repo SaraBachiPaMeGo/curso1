@@ -6,18 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./CSS/style.css">
-    <title>Elementos de la web</title>
+    <title>Inicio - Elementos de la web</title>
 </head>
 
-<body>
+<body id="inicio">
     <header class="mainheader">
-        <section>
             <h1>ETIQUETAS DE HTML5</h1>
             <p>Clasificación de las etiquetas según el estándar HTML5.2</p>
-        </section>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" rel="tag"></a>Inicio</li>
+                    <li><a href="#sections_Elements" rel="tag">Sections</a></li>
+                    <li><a href="#grouping" rel="tag">Grouping</a></li>
+                    <li><a href="#text-level" rel="tag">Text-level</a></li>
+                    <li><a href="/07_ElementosWeb/mmedia.html">Multimedia</a></li> <!-- Relativo al origen: me voy a la carpeta origen del sitio web y a partir de ahí empieza a "contar". 
+                    Relativo al documento: otro es que vayas a la carpeta desde el localhost y vea el navegador qué carpeta está activa. Puede ser que la carpeta de origen no sea la carpeta donde aparece el index -->
+                    <!-- <a href="/07_ElementosWeb/mmedia.html">Multimedia</a> "Busca desde la carpeta de origen"
+                    <a href="./mmedia.html"></a> Relativa a la carpeta que está el index "Busca desde dónde yo estoy" Sólo me sale directamente si estoy dentro de la carpeta en donde aparece el index que quiero -->
+                    <!-- PARA MÁS INFO. DIBUJO DE NACHO DE CAJITAS  -->
+                </ul>
+            </nav>
     </header>
     <div class="content_wrapper">
-        <p>El estándar <abbr title="Hiper Text Markup Language">html5</abbr>  diferencia inicialmente tres tipos de etiquetas: <span lang="en">Sections, Grouping content &
+        <main> <!-- Sólo puede haber un único main. Es lo único que no se repite de las páginas. No influye en nada-->
+        <p>El estándar <abbr title="Hiper Text Markup Language">HTML5</abbr>  diferencia inicialmente tres tipos de etiquetas: <span lang="en">Sections, Grouping content &
             Text-Level semantics.</span> </p>
         <section  id="sections_Elements">
             <header>
@@ -67,9 +79,12 @@
                    <img src="./assets/web.jpg" alt="La web"> 
                     <figcaption class="figcapt">Esta foto representa la web</figcaption> -->
                 <!-- </figure> -->
+                <footer>
+                   <a href="#inicio">Inicio</a> 
+                </footer>
             </section>
         </section>
-        <section>
+        <section id="grouping">
             <header>
                 <h2>Grouping content</h2>
             </header>
@@ -94,8 +109,9 @@
                         </blockquote>
                         <figure class="figcapt"><img src="./assets/etiquetas.PNG" alt="Etiquetas">
                             <figcaption class="figcapt">
-                                <cite> <a href="http://www.mclibre.org/consultar/htmlcss/como/como-texto-imagenes.html"> http://www.mclibre.org/consultar/htmlcss/como/como-texto-imagenes.html</a>
+                                <cite> <a target="_blank" href="http://www.mclibre.org/consultar/htmlcss/como/como-texto-imagenes.html" rel="external" > http://www.mclibre.org/consultar/htmlcss/como/como-texto-imagenes.html</a>
                                 </cite>
+                                <!-- En un mismo hiperenlace puedes poner tantos atributos cuantos necesites. Target= "_blank" te lo abre en otra pestaña -->
                             </figcaption>
                         </figure>
             </section>  
@@ -180,7 +196,7 @@
                     <p> El elemento HTML <strong>&lt;main&gt;</strong> representa el contenido principal del &lt;body&gt; de un documento o aplicación. El área principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicación. Este contenido debe ser único al documento, excluyendo cualquier contenido que se repita a través de un conjunto de documentos como barras laterales, enlaces de navegación, información de derechos de autor, logos del sitio y formularios de búsqueda (a menos, claro, que la función principal del documento sea un formulario de búsqueda).</p>
                     </blockquote>
                     <p>El elemento figure es un contenedor de imágenes. </p>
-            </section>
+            
             <section>
                 <h3>Otras etiquetas relacionadas con bloques</h3>
                 <ul>
@@ -189,30 +205,61 @@
                 </ul>
                 <p>La etiqueta <strong>&lt;br&gt;</strong> crea un salgo de línea.</p>
                 <blockquote>
-                <p>La etiqueta <strong>&lt;hr&gt;</strong> representa un cambio de tema entre párrafos (por ejemplo, un cambio de escena en una historia, un cambio de tema en una sección). En versiones previas de HTML representaba una línea horizontal. Aún puede ser representada como una línea horizontal en los navegadores visuales, pero ahora es definida en términos semánticos y no tanto en términos representativos, por tanto para dibujar una línea horizontal se debería usar el CSS apropiado.Crea un nuevo bloque</p>
+                <p>La etiqueta <strong>&lt;hr&gt;</strong> representa un cambio de tema entre párrafos (por ejemplo, un cambio de escena en una historia, un cambio de tema en una sección). En versiones previas de HTML representaba una línea horizontal. Aún puede ser representada como una línea horizontal en los navegadores visuales, pero ahora es definida en términos semánticos y no tanto en términos representativos, por tanto para dibujar una línea horizontal se debería usar el CSS apropiado.Crea un nuevo bloque.</p>
                 </blockquote>
             </section>
         </section>
+        </section>
+        <footer>
+                <a href="#inicio" rel="tag">Inicio</a> 
+             </footer>
         
-        <section>
+        <section id="text-level">
             <header>
                 <h2>Text-Level semantics</h2>
             </header>
             <section class="conjuntoSections">
+                <section>
                 <h3>Elementos en línea neutros</h3>
                 <p>La etiqueta &lt;span&gt; no tiene ningún valor semántico</p>
-                <p>Por ejemplo quiero que una palabra <span class="verde">verde</span>  salga de su color pondremos un &lt;span&gt; y dentro la palabra y le pondremos una clase </p>
+                <p>Por ejemplo quiero que una palabra <span class="verde">verde</span>  salga de su color pondremos un &lt;span&gt; y dentro la palabra y le pondremos una clase. </p>
+                 </section>
             <section>
                 <h3>Hiperenlaces</h3>
                 <p>La etiqueta a</p>
                 <p>Existen cuatro tipos de URL´S</p>
                 <ul>
                     <li>Absolutas</li>
-                    <li>Relativas al origen</li>
-                    <li>Relativas al documento</li>
+                    <li>Relativas al origen (Empiezan por /)</li>
+                    <li>Relativas al documento (Empiezan por ./)</li>
                     <li>Internas</li>
                 </ul>
+                <p>En un mismo hiperenlace puedes poner tantos atributos cuantos necesites. Target= "_blank" te abre una nueva pestaña para abrir la ventana</p>
+               <p> Otro atributo es rel, un metadato que sirve para "decirle" a los navegadores que relación tiene el documento actual con el documento al que vas a hacer el enlace, también para indicar si son links internos o externos. Tag sería para internos y externos external.</p>
+               <p>El orden de los atributos no tienen importancia.</p>
+               <p>Si añadimos "referrer" viajamos como "incógnito" para que en las páginas no aparezca tu URL. No es recomendable para el SEO. Nofollow sirve para que en la otra página que enlazamos no mejore su SEO. </p>
+               <P>Type es el tipo mime del estilo y media es lo mismo, para enlaces optimizados (ponemos el tipo de máquina adecuada para nuestra página).</P>
+
+               <figure class="figcapt">
+                   <img src="./assets/rel.PNG" alt="Hiperenlaces">
+               </figure>
+               <p>Dependiendo tel tipo de protocolo que uses en tu página, se te descargará un documento (File, que sólo se usa en Intranet, no en entornos web), te redigirá a una página...Mime nació para el correo, permite clasificar de qué tipo son los correos, ahora clasifica todos los archivos existentes. Se caracteriza porque se divide en dos partes: tipo/subtipo. Ejemplo: application/doc, text/css. Es una cuestión del servidor, dependiendo del tipo que tenga definido así serán todos los archivos que te dará. El servidor cuando no sabe de qué tipo es un archivo, lo descarga directamente. También puede darse que el navegador esté diseñado para que descargue x tipo de ficheros (como por ejemplo pdf). </p>
+               <figure class="figcapt">
+                    <img src="./assets/protocolos.PNG" alt="Hiperenlaces">
+                </figure>
                 <p> <strong>Absoluta</strong> en el href de la a siempre va a tener http://www... La url completa</p>
+                <blockquote cite="https://uniwebsidad.com/libros/xhtml/capitulo-4/enlaces-relativos-y-absolutos">Las URL absolutas incluyen todas las partes de la URL (protocolo, servidor y ruta) por lo que no se necesita más información para obtener el recurso enlazado.</blockquote>
+                <p> <strong>Relativos</strong></p>
+                <blockquote cite="https://uniwebsidad.com/libros/xhtml/capitulo-4/enlaces-relativos-y-absolutos">Las URL relativas se construyen a partir de las URL absolutas y prescinden de la parte del protocolo, del nombre del servidor e incluso de parte o toda la ruta del recurso enlazado.Las URL relativas aprovechan la inteligencia de los navegadores para crear URL incompletas que los navegadores pueden completar deduciendo la información que falta.Cuando el navegador encuentra una URL relativa que sólo consiste en el nombre de un recurso, supone que el protocolo, servidor y directorio del recurso enlazado son los mismos que los del origen del enlace.(En el caso de que esté en el mismo directorio)</blockquote>
+                <p>Hay diferentes tipos de hiperenlaces relativos, dependiendo de:</p>
+                <ul>
+                    <li>El origen y el destino del enlace se encuentran en el mismo directorio</li>
+                    <li>El destino del enlace se encuentra cerca de su origen y en un nivel superior</li>
+                    <li>El destino del enlace se encuentra cerca de su origen y en un nivel inferior</li>
+                    <li> El origen y el destino del enlace se encuentran muy alejados</li>
+                    <!--  -->
+                </ul>
+                <p>ETIQUETA EMBED Videos, imágenes y audios. que no están en un fichero de html sino que está en un fichero extra (No tienen links), por eso se embeben (incluyen).</p>
             </section>
             <section>
                 <h3>Elementos claramente semánticos</h3>
@@ -294,10 +341,18 @@
         </section>
         </section>
     </section>
+        <footer>
+                <a href="#inicio">Inicio</a> 
+        </footer>
+        </main>
+    <aside>
+        <h2>Publicidad</h2>
+        <img src="./assets/hamburguesas.jpg" alt="Publicidad">
+    </aside>
     </div>
     <footer class="mainfooter">
         <address>Sara Bachiller Parra - Tajamar <!-- (para poner el código de copyright debes de poner alt+169 de sacle © ® &+ copy también sale). Dentro de address se puede meter un párrafo -->
-            <div><a href="mailto://sarabachiller@gmail.com">Correo electrónico</a></div>
+            <div><a rel="Author" href="mailto://sarabachiller@gmail.com">Correo electrónico</a></div>
             <!-- Mailto para pegar una url de un correo -->
         </address>
     </footer>
