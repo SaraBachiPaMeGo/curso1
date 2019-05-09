@@ -1,6 +1,7 @@
 body {
     margin: 0;
     /* background: radial-gradient silver skyblue springgreen wheat; */
+    max-width: 100%;
 }
 
 .mainheader {
@@ -30,10 +31,38 @@ body {
     list-style-type: none;
 
 }
+.noresp {
+    max-width: 100%;
+}
 
 .mainheader nav li {
     display: inline-block;
 }
+
+
+.seccion_imagenes img {
+    max-width: 25%; 
+    /* width: 100%: Para que la imagen ocupe toda la pantalla, tiene el inconveniente de que la imagen se pixele*/
+    /* display: inline-block; */
+    margin-left: -4px; /* 4px es aprox el espacio entre palabras, es una opción para juntas las imágenes */
+    display:block; /*las juntaría de manera vertical */
+    float: left; /*hace que se coloquen de manera lineal */
+    /* ATENCIÓN; DESPUÉS DE UN FLOAT CLEARFIX -> CLEAR:BOTH; */
+    /* height: 20vh; */ /* Sirve para "alargar las imágenes. Hay que tener cuidado porque las imágenes se deforman. En el cambio de formato en el móvil se verán más */
+} 
+
+
+.image_wrapper_50 {
+    width: 50%;
+}
+.image_wrapper_25 {
+    width: 25%;
+}
+.image_wrapper_75 {
+    width: 75%;
+}
+
+
 
 .mainheader nav a {
     color: inherit;
