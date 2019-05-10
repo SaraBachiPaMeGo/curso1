@@ -49,6 +49,7 @@ body {
     float: left; /*hace que se coloquen de manera lineal */
     /* ATENCIÓN; DESPUÉS DE UN FLOAT CLEARFIX -> CLEAR:BOTH; */
     /* height: 20vh; */ /* Sirve para "alargar las imágenes. Hay que tener cuidado porque las imágenes se deforman. En el cambio de formato en el móvil se verán más */
+    background-color: bisque;
 } 
 
 
@@ -62,7 +63,10 @@ body {
     width: 75%;
 }
 
-
+.web_externa {
+    width: 100%;
+    height: 60vh;;
+}
 
 .mainheader nav a {
     color: inherit;
@@ -72,6 +76,23 @@ body {
     font-size: 1cm;
 }
 
+.video {
+    max-width: 100%;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* El valor sale de que los videos normales de youtube tienen un ratio (relación de tamaño) de 16:9 corresponde ese valor. Si el video tiene otra relación tienes que hacer una regla de 3, para más info: https://cybmeta.com/como-hacer-un-iframe-responsive */
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} /* Copiado y pegado de internet */
 
 .imagenCentrada {
     text-align: center;

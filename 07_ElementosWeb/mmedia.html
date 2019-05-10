@@ -63,8 +63,13 @@
                             <img src="./assets/ardilla.gif" alt="Dibujo Ardilla">
                             <img srcset="./assets/3boats.webp" src="./assets/3boats.jpg" alt="Barcas"> <!-- Permite definir una fuente con alternativas, si el sistema se encuentra con ambos intenta cargar la altenativa srcset sino, carga src --> <!-- Desde el punto de vista HTML estamos siendo responsive ya que la imagen pesa menos -->
                             <!-- Mejora el seo al cargar las imágenes en un tiempo record (ya que se adapta a móviles, por el uso de datos), una es el formato (si nos evitamos imágenes de jpg porque pesan mucho mejor)-->
+                            <img src="./assets/005.gif" alt="">
+                            <img src="./assets/WoodElf.png" alt="Elfo"><img src="./assets/logo.png" alt="logo svg" srcset="./assets/logo.svg">
+                            <!-- Las imágenes svg (Estandar vectorial graphics) es un formato de tipo vectorial (guarda la información en una serie de fórmulas vectoriales, esa información se reconstruyen cada vez que se carga. "Pinta" las fotos) a diferencia de las demás que son matriciales (las guarda las imágenes punto a punto) -->
+                            
                             <div class="clearfix"></div>
                     </section>
+                    <section>
                     <p>Uso de imágenes responsive en HTML</p>
                                 <p>Imagen no responsiva</p>
                                 <img src="./assets/komodo.jpg" alt="" id="noresp">
@@ -98,17 +103,46 @@
                             <source media="(min-width: 700px)" srcset="./assets/pastor.700.jpg" type="image/jpg" > <!-- Es mejor no poner el tipo a ponerlo mal -->
                             <source media="(min-width: 500px)" srcset="./assets/pastor.500.jpg" type="image/jpg">
                             <source media="(min-width: 10px)" srcset="./assets/pastor.300.jpg" type="image/jpg" >
-                            <img src="assets/pastor.700.jpg" alt="perro" style="width: auto;" type="image/jpg"> 
+                            <img src="assets/pastor.700.jpg" alt="perro" style="width: auto;"> 
                             
                         </picture>   
+                        <p>La etiqueta picture y los formatos alternativos de imágenes</p>
+                        <picture>
+                            <source srcset="./assets/tropical-sunrise.webp" type="image/webp">
+                                <img src="./assets/tropical-sunrise.jpg" alt="Paisaje tropical"> <!-- Sólo se debe meter una foto (la misma) en cada picture -->
+                        </picture>
+                        <picture>
+                            <source srcset="./assets/logo.svg" type="image/svg+xml">
+                                <img src="./assets/logo.gif" alt="">
+                        </picture>
+                        <p>Etiqueta figure</p>
+                    </section>
                     <section>
                         <h3>Video y Audio</h3>
+                        <p>Es posible incluir un vídeo desde una fuente externa (desde una url)</p>
+                    <div class="embed-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZPLEx52FLU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- Allow fullscream para que el vídeo se vea en pantalla completa, se puede quitar --> 
+                    </div>
+                    <p>Otra opción es reproducir el vídeo de nuestro servidor. En ese caso deberemos de descargarnos un vídeo y utilizar la etiqueta &lt;video&gt; </p>
+                    <video src="./assets/Ghost_in_the_Shell_Opening.mp4" class="video" controls >
+                      <source srcset="./assets/Ghost_in_the_Shell_Opening.webm" type="video/webp"> <!-- Para poner otro tipo de video (por si no es compatible con los navegadores hacemos un source como en picture para poder poner srcset) --> <!-- No se pone control en source, ya la tiene la etiqueta vídeo -->
+                    </video> <!-- Debemos de añadir el atributo "controls" para que el vídeo empiece y tenga los controles de pausar, iniciar...  -->
+                    <!-- ATENCIÓN: No se por qué soy a la unica que poniendo srcset en source le sale el vídeo, se supone que debes poner src (me funciona igual de bien) -->
+                    <figure class="figcapt">
+                        <img src="./assets/Captura2.PNG" alt="">
+                        <figcaption>Etiquetas de vídeo</figcaption>
+                    </figure>
+                    <audio src="." controls></audio>
                     </section>
                     <section>
                         <h3>Elementos de navegación gráficos</h3>
                     </section>
                 </section>
-            </section>
+                <aside>
+                    <h3>Elementos embebidos no multimedia</h3>
+                    <p>La etiqueta <strong>&lt;iframe&gt;</strong> permite acceder a otra web desde la nuestra</p>
+                    <iframe src="https://www.tajamar.es/" class="web_externa"></iframe> <!-- los frameborder="0" es css y no se debe de usar en html, es una etiqueta deprecado (obsoleto) -->
+                </aside>
         </main>
     <aside>
                 <h2>Publicidad</h2>
