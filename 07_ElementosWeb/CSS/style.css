@@ -149,6 +149,31 @@ video, embed {
 
 }
 
+table {
+    width: 100%;
+    text-align: center;
+    
+}
+.centrar {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_table>tbody>tr{
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+/* Filas Pares */
+.main_table>tbody>tr:nth-of-type(even) {
+    background-color:lightyellow ;
+}
+/* Filas impares */
+.main_table>tbody>tr:nth-of-type(odd) {
+    background-color: lightpink;
+}
+
 .sin_borde {
     border: 0;
 }
