@@ -149,6 +149,10 @@ video, embed {
 
 }
 
+.sin_borde {
+    border: 0;
+}
+
 p {
     text-align: justify; /* No se debe justificar por el tema de anchos en móviles y ordenadores */
 }
