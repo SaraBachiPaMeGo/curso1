@@ -191,15 +191,113 @@
                      <li>Method</li>
                  </ul>
                  <p>Los datos por get aparecen en la petición, en la url cuando envíes lo datos</p>
-                     <section>
-                        <form action="https://jsonplaceholder.typicode.com/users" method="post">
+                     <section class="conjuntoSections">
+                         <h3>Formulario mínimo</h3>
+                         <p>Ejemplo de los elementos mínimos de un formulario y uso de los distintos métodos: GET Y POST.</p>
+                         <p>Get y post sirven para especificar de qué manera se van a enviar los datos que envíe el usuario: En el caso de GET la información se ve reflejada en la URL de la página una vez que se envíe la información, en cambio, usamos POST para cuando la información que recopilamos es secreta (información sensible), o no queremos que se descifre desde la URL (Como cuentas bancarias o contraseñas).</p>
+                         <h4>Uso de GET</h4>
+                         <form action="https://jsonplaceholder.typicode.com/users" method="GET" name="basic_get">
                             <input type="text" name="userName" id="" placeholder="nombre">
                             <input type="password" name="userPassword" placeholder="Contraseña">
                             <button type="submit">Enviar</button>
                         </form>
-                    </section>
+                         <h4>Uso de POST</h4>
+                        <form action="https://jsonplaceholder.typicode.com/users" method="post" name="basic_post">
+                            <input type="text" name="userName" id="" placeholder="nombre">
+                            <input type="password" name="userPassword" placeholder="Contraseña">
+                            <button type="submit">Enviar</button>
+                        </form>
+                        <h3>Formulario completo</h3>
+                        <p>Usamos en un mismo formulario los principales controles</p>
+                        <p>El id del input sirve para decir que label for coincide con el nombre del id.</p>
+                        <p>Si das salto de línea no saldrá el placeholder porque saldrá por defecto un espacio entre los picoparéntesis. Se pueden dar valor por defecto escribiendo</p>
+                        <p>El atributo value dentro de un input sirve para obligr al usuario tener una cuenta (en nuestro caso en @tajamar365com) y validarse con él</p>
+                        <form action="https://jsonplaceholder.typicode.com/users" method="post" name="form_completo">
+                            <p>Un fiel hace que estéticamente tenga un reborde, pero hacen como "div" . Legend pone títulos a los fieldset.</p>
+                            <fieldset>
+                                <legend>Datos personales</legend>
+                            <label for="userName" class="form_label" >Nombre</label>
+                                <input type="text" name="userName" id="userName" placeholder="Nombre y apellidos" class="form_control" required>
+                            <label for="userPassword" class="form_label">Contraseña</label>
+                                <input type="password" name="userPassword" placeholder="Contraseña" id="userPassword" class="form_control" required minlength="8" maxlength="16">
+                            <label for="email" class="form_label">Email</label>    
+                                <input type="email" name="email" id="email" class="form_control" placeholder="Usuario@gmail.com" value="@tajamar365.com" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
+                                <datalist id="formacion"> <!-- Son lista de datos  -->
+                                   <option >Graduado</option>
+                                   <option >Licenciado</option>
+                                   <option >Doctor</option>
+                                </datalist>
+                                <label for="cumple" class="form_label">Fecha de nacimiento</label>
+                                    <input type="date" name="cumple" id="cumple" class="form_control" required>
+                            <label for="formacion" class="form_label">Formación</label>    
+                               <input type="text" name="user_cv" id="formacion" list="formulario" placeholder="Indica tu nivel de estudios" class="form_control" required>
+                            <textarea name="info" id="info" rows="5" class="form_control" placeholder="Observaciones"></textarea> 
+                        </fieldset>
+                        <fieldset>
+                            <legend>Condiciones sobre la privacidad</legend>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eius ullam aperiam cupiditate dolorum? Quo, itaque? Aperiam rem neque atque doloremque, corporis voluptate numquam quisquam corrupti quis voluptas sint beatae.</p>
+                            <input type="checkbox" name="isOk" id="isOk" required>
+                            <label for="isOk">Estoy de acuerdo</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Datos del curso</legend>
+                            <label for="datos_curso" class="form_label">Curso:</label>
+                            <select name="datos_curso" id="datos_curso" class="form_control" >
+                             <optgroup label="Desarrollo en front">
+                                <option value="" class="placeholder" selected>Selecciona</option> 
+                                <option value="html_01">Confección y diseño de páginas web</option>
+                                <option value="Angular_03">Desarrollo en plataforma Angular</option>
+                                <option value="other">Otro</option>
+                             </optgroup>
+                             <optgroup label="Desarrollo en back">
+                                    <option value="" class="placeholder" selected>Selecciona</option> 
+                                    <option value="html_01">Java</option>
+                                    <option value=".net_02">.net</option>
+                                    <option value="Angular_03">JavaScript</option>
+                                    <option value="other">Otro</option>
+                             </optgroup>
+                                </select>
+                                <p>Ubicaciones de los cursos:</p> <!-- No se pueden poner dos legend por muy lógico que sea ponerlo aquí, ya que ya que dentro del fieldset ya está la del "datos del curso" -->
+                            <label for="Madrid">Madrid</label>
+                                   <input type="radio" name="ubicacion" id="Madrid" value="Madrid"> <!-- sE PONE EN EL CASO DE LOS INPUT RADIO EL MISMO NOMBRE PARA PODER AGRUPARLOS -->
+                            <label for="Barcelona">Barcelona</label>
+                                  <input type="radio" name="ubicacion" id="Barcelona" value="Barcelona">
+                            <label for="Sevilla">Sevilla</label>
+                                  <input type="radio" name="ubicacion" id="Sevilla" value="Sevilla">
+                            </input>
+                                <!-- Cuando el value no tiene valor se envía el valor por defecto. Por eso se pone el valor por defecto en blanco en cambio si le pones valor se enviará ese valor. si no pongo value se envía el contenido (lo que ve el usuario)-->
+                                <!-- PREGUNTAS: Para obligar o no al usuario a que se valide? Cuando selecciona la opción otro y quiero que me salga un input para que me diga en que otro curso esta? -->
+                        </fieldset>
+                        <div class="bloque_botones">
+                            <button type="submit" class="boton_personalizado" >Enviar</button> <!-- Puede tener value pero da lo mismo, lo único que haces es cambiar el nombre (en vez de llamarse button se llama el valor que hayas puesto en el value) EJEMPLO: <input type=submit"" value=Enviar""> -->
+                            <!-- <input type="reset" value="delete" > -->
+                            <button type="reset" class="delete" class="boton_delete"><img src="https://img.icons8.com/windows/64/000000/trash.png"></button>
+                             <!-- METER UNA IMAGEN DENTRO DE UN BOTóN -->
+                             <!-- <button type="button"></button> Botón ue no tiene funcionalidad -->
+                        </div>    
+                        </form>
+                        <p>El atributo multiple en un selected sirve para que el usuario elija tantas opciones como haya pulsado Ctrl+click y le pone size por defecto. En cambio size hace que tenga tamaño la tabla y no sea el desplegable. Si le pones un número sale una barrita para subir y bajar y ver todas las opciones. </p>
+                        <p>Existen otros controles de formulario:</p>
+                        <dl>
+                            <dt class="dt">Input color</dt>
+                            <dd class="dd"><input type="color"></dd>
+                            <dt class="dt">Selecciona un archivo</dt>
+                            <dd class="dd"><input type="file" ></dd>
+                            <dt class="dt">Input number</dt>
+                            <dd class="dd"><input type="number" max="10" min="1"></dd>
+                            <dt class="dt">Input range</dt>
+                            <dd class="dd"><input type="range"max="10" min="1"></dd>
+                            <dt class="dt">Input search</dt>
+                            <dd class="dd"><input type="search"></dd>
+                            <dt class="dt">Input tel</dt>
+                            <dd class="dd"><input type="tel"></dd>
+                            <dt class="dt">Input url</dt>
+                            <dd class="dd"><input type="url"></dd>
+                            
+                        </dl>
+                        <div class="clearfix"></div>
+                    </section> 
             </section>
-            
         </main>
                 <aside>
                         <h2>Publicidad</h2>

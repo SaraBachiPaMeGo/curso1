@@ -149,6 +149,94 @@ video, embed {
 
 }
 
+.form_control {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    /* margin-bottom: 3vh; Es mejor da padding que margin */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: rgb(229, 231, 233);
+    color: blue;
+}
+
+.boton_personalizado {
+        text-decoration: none;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #ffffff;
+        background-color: lightcoral;
+        border-radius: 6px;
+        border: 2px solid coral;
+        text-align: left;
+      }
+.boton_personalizado:hover { /* HOVER ES UNA PSEUDO CLASE, ES DECIR CUANDO TENGA ALGÚN TIPO DE INTERACCIÓN/ PASE ALGO SOBRE ESE ELEMENTO */
+        color: lightsalmon;
+        background-color: #ffffff;
+}
+.boton_delete {
+    text-align: right;
+    align-content: end;
+}      
+
+legend{
+          font-size: larger;
+         font-weight: bold;
+}
+
+select:selected {
+      color: coral;
+
+}      
+
+.bloque_botones{
+      display: inline;
+      text-align: center;
+
+} 
+
+.delete {
+    border: none;
+    background: none;
+}
+
+optgroup {
+    color: coral;
+}
+      
+.placeholder {
+    color: coral
+}      
+
+
+textarea {
+    margin-top: 1rem;
+}
+
+::placeholder {
+    color: coral
+}
+
+:-ms-input-placeholder {
+    color: coral; /* Sólo es válido cambiar el color para algunos navegadores */
+}
+
+::-ms-input-placeholder {
+    color: coral; /* Sólo es válido cambiar el color para algunos navegadores */
+}
+
+fieldset {
+    margin-bottom: 1rem;
+    border-color: lightpink;
+}
+
+.form_label {
+    display: block;
+    margin-top: 1rem; /* Es un elemento inline por lo que debemos de cambiar el display */
+}
+
 table {
     width: 100%;
     text-align: center;
