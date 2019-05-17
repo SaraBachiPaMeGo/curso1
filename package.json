@@ -1,0 +1,22 @@
+{
+  "name": "curso1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaraBachiPaMeGo/curso1.git"
+  },
+  "author": "Sara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaraBachiPaMeGo/curso1/issues"
+  },
+  "homepage": "https://github.com/SaraBachiPaMeGo/curso1#readme",
+  "dependencies": {
+    "dialog-polyfill": "^0.5.0"
+  }
+}

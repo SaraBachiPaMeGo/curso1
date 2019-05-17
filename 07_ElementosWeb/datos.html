@@ -11,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <!-- Para meter iconos online -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../node_modules/dialog-polyfill/dist/dialog-polyfill.css">
     <link rel="stylesheet" href="./CSS/style.css">
+    <script src="./js/app.js" type="module"></script>
     <title>Inicio - Elementos de la web</title>
 </head>
 
@@ -197,13 +199,13 @@
                          <p>Get y post sirven para especificar de qué manera se van a enviar los datos que envíe el usuario: En el caso de GET la información se ve reflejada en la URL de la página una vez que se envíe la información, en cambio, usamos POST para cuando la información que recopilamos es secreta (información sensible), o no queremos que se descifre desde la URL (Como cuentas bancarias o contraseñas).</p>
                          <h4>Uso de GET</h4>
                          <form action="https://jsonplaceholder.typicode.com/users" method="GET" name="basic_get">
-                            <input type="text" name="userName" id="" placeholder="nombre">
+                            <input type="text" name="userName" placeholder="nombre">
                             <input type="password" name="userPassword" placeholder="Contraseña">
                             <button type="submit">Enviar</button>
                         </form>
                          <h4>Uso de POST</h4>
                         <form action="https://jsonplaceholder.typicode.com/users" method="post" name="basic_post">
-                            <input type="text" name="userName" id="" placeholder="nombre">
+                            <input type="text" name="userName" placeholder="nombre">
                             <input type="password" name="userPassword" placeholder="Contraseña">
                             <button type="submit">Enviar</button>
                         </form>
@@ -230,7 +232,7 @@
                                 <label for="cumple" class="form_label">Fecha de nacimiento</label>
                                     <input type="date" name="cumple" id="cumple" class="form_control" required>
                             <label for="formacion" class="form_label">Formación</label>    
-                               <input type="text" name="user_cv" id="formacion" list="formulario" placeholder="Indica tu nivel de estudios" class="form_control" required>
+                               <input type="text" name="user_cv" id="formacion" list="formacion" placeholder="Indica tu nivel de estudios" class="form_control" required>
                             <textarea name="info" id="info" rows="5" class="form_control" placeholder="Observaciones"></textarea> 
                         </fieldset>
                         <fieldset>
@@ -263,18 +265,18 @@
                             <label for="Barcelona">Barcelona</label>
                                   <input type="radio" name="ubicacion" id="Barcelona" value="Barcelona">
                             <label for="Sevilla">Sevilla</label>
-                                  <input type="radio" name="ubicacion" id="Sevilla" value="Sevilla">
-                            </input>
+                                  <input type="radio" name="ubicacion" id="Sevilla" value="Sevilla">                            
                                 <!-- Cuando el value no tiene valor se envía el valor por defecto. Por eso se pone el valor por defecto en blanco en cambio si le pones valor se enviará ese valor. si no pongo value se envía el contenido (lo que ve el usuario)-->
                                 <!-- PREGUNTAS: Para obligar o no al usuario a que se valide? Cuando selecciona la opción otro y quiero que me salga un input para que me diga en que otro curso esta? -->
                         </fieldset>
                         <div class="bloque_botones">
                             <button type="submit" class="boton_personalizado" >Enviar</button> <!-- Puede tener value pero da lo mismo, lo único que haces es cambiar el nombre (en vez de llamarse button se llama el valor que hayas puesto en el value) EJEMPLO: <input type=submit"" value=Enviar""> -->
                             <!-- <input type="reset" value="delete" > -->
-                            <button type="reset" class="delete" class="boton_delete"><img src="https://img.icons8.com/windows/64/000000/trash.png"></button>
+                            <button type="reset" class="delete" ><img src="https://img.icons8.com/windows/64/000000/trash.png" alt="imagen"></button>
                              <!-- METER UNA IMAGEN DENTRO DE UN BOTóN -->
                              <!-- <button type="button"></button> Botón ue no tiene funcionalidad -->
                         </div>    
+                        <div class="clearfix"></div>
                         </form>
                         <p>El atributo multiple en un selected sirve para que el usuario elija tantas opciones como haya pulsado Ctrl+click y le pone size por defecto. En cambio size hace que tenga tamaño la tabla y no sea el desplegable. Si le pones un número sale una barrita para subir y bajar y ver todas las opciones. </p>
                         <p>Existen otros controles de formulario:</p>
@@ -286,7 +288,7 @@
                             <dt class="dt">Input number</dt>
                             <dd class="dd"><input type="number" max="10" min="1"></dd>
                             <dt class="dt">Input range</dt>
-                            <dd class="dd"><input type="range"max="10" min="1"></dd>
+                            <dd class="dd"><input type="range" max="10" min="1"></dd>
                             <dt class="dt">Input search</dt>
                             <dd class="dd"><input type="search"></dd>
                             <dt class="dt">Input tel</dt>
@@ -298,10 +300,71 @@
                         <div class="clearfix"></div>
                     </section> 
             </section>
+            <section id="interactivos">
+                <header>
+                    <h2>Elementos interactivos</h2>
+                </header>
+                <p>Son elementos novedosos incluidos en las modificaciones de HTML5:</p>  
+                <ul>
+                    <li>Details - HTML 5.1</li>
+                    <li>Dialog - HTML 5.2</li>
+                </ul>
+                <section class="conjuntoSections">
+                <h3>Etiqueta &lt;Details&gt;</h3>
+                <p>Permite crear un bloque con información extra que se muestra opcionalmente</p>
+                 <h4>Novedades en HTML 5.1</h4>
+            <blockquote>
+                <details>
+                    <summary>Definir múltiples imágenes para el diseño responsive </summary>
+                      <p>Esta versión nos ofrece la posibilidad de utilizar el tag picture, junto con el atributo srcset para poder definir múltiples imágenes para el diseño responsivo. Podríamos definir este tag como un contenedor de imágenes donde los diseñadores podrán declarar varias, que se utilizarán dependiendo del tamaño de pantalla, píxeles u otros parámetros. Por sí solo este tag no muestra nada, y para que funcione deberíamos establecer una imagen por defecto utilizando la etiqueta img habitual. Las imágenes alternativas se ubicarían dentro de los atributos srcset de los elementos img y source. Este código nos mostrará la imagen por defecto mientras que el tamaño de la pantalla sea superior a los 960 px. Cuando sea menor, se mostrará large.jpg, y si es inferior a 360 px se verá "mobile.jpg".</p> 
+                </details>       
+                <details>
+                    <summary>Mostrar o esconder información extra </summary>         
+                        <p>En este caso utilizaremos las nuevas etiquetas details y summary. Mediante su uso podemos añadir información extra a cualquier contenido. Su principal característica es que la información no se muestra por defecto, pero si el usuario está interesado tendrá la opción de consultarla. Para utilizarla debes colocar el tag summary dentro de details. En el interior de summary será donde pondremos la información visible, que tendrá un icono a su izquierda para mostrar la información oculta.</p> 
+                </details>           
+                <details>
+                    <summary>Añadir funciones al menú contextual del navegador</summary>
+                        <p>Esta versión de HTML 5 permite añadir nuevas funciones al menú contextual del navegador. Para ello hay que utilizar el tag menuitem y su atributo type=context. Para 
+                            su uso hay que asignar esa etiqueta como elemento hijo del tag menu, al que habrá que definir el atributo id, que tendrá así el mismo valor que el atributo contextmenu del elemento que queremos añadir al menú contextual. El tag menuitem puede ser de tres tipos diferentes: checkbox, command y radio. Si se ejecuta el código anterior, aparecerá un botón. Si sobre él se pulsa con el botón derecho, aparece la nueva opción en el menú.</p>    
+                </details>
+                <details>
+                        <summary> Anidar headers y footers</summary>
+                        <p>HTML 5.1 ofrece la posibilidad de anidar varios headers y footers, siempre y cuando cada nivel esté dentro del contenido de la sección. Útil para crear cabeceras elaboradas.</p>    
+                </details>      
+                <details>
+                        <summary>Utilizar imágenes con un ancho de 0 píxeles</summary>
+                        <p> Otra de las novedades que incluye esta nueva versión es la posibilidad de utilizar imágenes que tengan un valor de 0 píxeles de ancho. Esto es muy útil a la hora de incluir fotografías que no queremos que sean vistas por los usuarios, como pueden ser archivos de trackeo. Lo que sí se recomienda es que se utilice el atributo alt vacío.</p>    
+                </details>  
+                <details>
+                        <summary>Crear opciones vacías</summary>
+                        <p> Otra de las cosas que no se podía utilizar hasta la fecha era crear un elemento option vacío. Este elemento suele ser utilizado conjuntamente con otras etiquetas como select, optgroup o datalist. Puede ser útil en aquellos casos en los que no queremos sugerir qué opción deben seleccionar los usuarios.</p>    
+                </details>          
+                </details>
+                <cite>
+                    <a href="https://www.imaginanet.com/html5-novedades.html" rel="external" target="_blank">.imaginanet.com</a>
+                </cite>
+            </blockquote>
+                <h3>Etiqueta &lt;Dialog&gt;</h3>
+            <p>La etiqueta dialog, novedad de HTML 5.1, corresponde a lo que se conoce como una ventana modal o simplemente modal. Es un contenedor que tiene dos estados.</p>
+           <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">
+                <p>El atributo open indica que el diálogo está activo y disponible para la interacción. Cuando el open atributo no está establecido, el diálogo no debe mostrarse al usuario.</p>
+            </blockquote>
+            <dialog id="dialogo">
+                <p>Información que se mostrará cuando aparezca el modal.</p>
+                <button type="button" id="btn_cerrar">Cerrar</button>
+            </dialog>
+            <button type="button" id="btn_Info">Mostrar información</button>
+               </section>
+            </section>
         </main>
                 <aside>
                         <h2>Publicidad</h2>
                         <img src="./assets/hamburguesas.jpg" alt="Publicidad">
+                        <template id="template">
+                            <p>Dentro del template podemos incluir cualquier etiqueta de HTML</p>
+                        </template>
+                        <p>Canvas es una Herramienta para dibujar dibujos matriciales </p>
+                        <canvas id="cnv" class="canvas"></canvas>
                 </aside>
             </div>
             <iframe class="iframe_footer" src="./footer.html" ></iframe>

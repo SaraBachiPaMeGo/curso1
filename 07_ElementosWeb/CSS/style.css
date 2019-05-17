@@ -193,13 +193,14 @@ select:selected {
 
 .bloque_botones{
       display: inline;
-      text-align: center;
-
+      text-align: center; 
 } 
 
 .delete {
-    border: none;
+     border: none;
     background: none;
+    display: inline;
+
 }
 
 optgroup {
@@ -301,6 +302,15 @@ blockquote footer {
     padding-left: 1px;
 
 }
+
+.canvas {
+    width: 400px;
+    height: 400px;
+    border: 1px solid coral;
+    background-color: beige;
+}
+
+
 .quitar ul {
     list-style-type: none;
 }
