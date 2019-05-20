@@ -1,0 +1,77 @@
+
+/* Se usa mucho es SAS, PERO CONSUME MÁS RECURSOS Y SE USA MENOS QUE EL LINK DEL HTLM */
+/* La etiqueta import tiene que ser lo primero que esté en el fichero. Sólo puede ir otra directiva antes de import: @charset (Se pone UTF-8 igual que en html). Establece una hoja de estilos diferente al index */
+/* Ejemplo de imports sin condiciones
+@import url(./footer.css); 
+@import url(./header.css) screen and (max-device-width: 500px); /* Responsivo, a partir de x px no aparece el color del h1 */
+
+/* Otras directivas son:
+@font-face define las fuentes, carga ficheros de fuentes
+@keyframes define las keyframes
+@nameSpace
+@page modifica alguna propiedades cuando se va a imprimir una imagen 
+@supports
+@document (experimental)
+
+*/
+
+/* Selector de etiqueta (es genérico) */
+
+body {
+    background-color:antiquewhite;
+    margin: 0;
+    /* background: radial-gradient silver skyblue springgreen wheat; */
+    max-width: 100%;
+    font-family: 'Zilla Slab', serif;
+}
+
+/* Selector de clase */
+
+.cabecera {
+    color: blueviolet;
+}
+
+/* Selector de id  pero no se usa por buenas prácticas*/
+
+#titulos {
+    color: black;
+}
+
+/* Forma más habitual de usar Media Query */
+
+/* @media screen and (max-device-width: 500px) { */ /* Todas las querys van con screen menos "printer" que es específico para imprimir imágenes */
+   /*  body {
+        background-color:  ;
+    }
+} */
+
+
+.figcapt {
+    text-align: center;
+
+}
+
+.conjuntoSections {
+    margin: 1rem 1rem 1rem 12rem;
+
+ }
+
+ h4 {
+     margin:0px;
+ }
+
+ .content_wrapper {
+    margin: 1rem 5rem 1rem 1rem;
+}
+.quitar ul {
+    list-style-type: none;
+}
+
+h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    border-left: 2px solid rgba(70, 0, 70, 0.575);
+    padding-left: 10px;
+}

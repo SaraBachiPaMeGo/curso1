@@ -1,0 +1,16 @@
+/* .mainheader {
+    background-color: rgb(202, 187, 202);
+    color: yellow;
+    font-size: x-large;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-left:1.5rem;
+} */
+
+.mainheader {
+    background-color:purple;
+    color:yellow;
+    padding: 0.8rem 0rem 0.5rem 1rem;
+    font-size: large;
+    font-family: 'Lemon', cursive;
+}

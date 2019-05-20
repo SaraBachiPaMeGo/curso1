@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Ejemplo de reseteo del css (la última línea) y esta primera línea un ejemplo de normalización -->
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./CSS/estilos.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- 
+    <link rel="stylesheet" href="./CSS/reset.css"> -->
+    <title>Curso css</title>
+</head>
+
+<body class="content_wrapper">
+    <section >
+        <header class="mainheader">
+            <h1>Estilos en CSS</h1>
+            <p>Selectores avanzados</p>
+        </header>
+    </section>
+    <section>
+        <header>
+            <h2>Directivas de css</h2>
+        </header>
+        <p>Se usa mucho es SAS, pero consume más recursos y se usa menos qye ek link de html.
+            La etiqueta import tiene que ser lo primero que esté en el fichero. Sólo puede ir otra directiva antes de
+            import: @charset (Se pone UTF-8 igual que en html). Establece una hoja de estilos diferente al index */
+            Ejemplo de imports sin condiciones:
+            <ul class="quitar ul">
+                <li>@import url(./footer.css); </li>
+                <li> @import url(./header.css) screen and (max-device-width: 500px); /* Responsivo, a partir de x px no
+                    aparece el color del h1 </li>
+            </ul>
+        </p>
+        <figure class="figcapt"><img src="./assets/estilos.PNG" alt="">
+            <figcaption>
+                Explicación de las directivas de CSS
+            </figcaption>
+        </figure>
+        <pre>
+            @media screen and (max-device-width: 500px) { */ /* Todas las querys van con screen menos "printer" que es
+            específico para imprimir imágenes
+            body {
+            background-color: blue ;
+            }
+            } </pre>
+        <figure class="figcapt"><img src="./assets/estilo2.PNG" alt="">
+            <figcaption>
+                Explicación de las directivas de CSS
+            </figcaption>
+
+        </figure>
+        
+        <figure class="figcapt"><img src="./assets/estilo3.PNG" alt="">
+            <figcaption>Explicación de las directivas de CSS</figcaption>
+        </figure>
+    </section>
+        <header>
+            <h2>Cómo escribimos CSS</h2>
+        </header>
+        <p>Hay varias maneras:</p>
+        <ul>
+            <li>Selector de etiqueta (es genérico)</li>
+            <li>Selector de clase</li>
+            <li>Selector de id</li>
+            <li>Selector de combinados</li>
+            <li>Selector de hijos</li>
+            <li>Selector de descendientes</li>
+            <li>Selector de hermanos</li>
+            <li>Selector de hermanos adyacentes</li>
+        </ul>
+        <h2>Selectores:</h2>
+        <section class="conjuntoSections">
+            <header>
+                <h3>Selector de etiqueta (es genérico)</h3>
+            </header>
+            <p>Cogemos el nombre de la etiqueta global y ponemos un estilo. Afectará a todo aquello que esté en esa etiqueta</p>
+            <pre>
+                body {
+                    color: blue;
+                    family-font: italic; 
+                }
+            </pre>
+            <header>
+              <h3>Selector de clase</h3>
+            </header>
+                <p>Le asigamos a una etiqueta una clase para darle un estilo concreto. </p>
+                <pre>
+                    <h4>En HTML</h4>
+                        &lt;figure class="centrado"&gt;
+                            &lt;img&gt; [...]
+                        &lt;/figure&gt;
+                    <h4>En CSS</h4>
+                        .centrado {
+                            text-aling: center;
+                        }
+                </pre>
+            <header>
+                <h3>Selector de id (pero no se usa por buenas prácticas)</h3>
+            </header>
+            <p>Le asigamos a una etiqueta una clase para darle un estilo concreto.</p>
+            <pre>
+                    <h4>En HTML</h4>
+                        &lt;figure id="centrado"&gt;
+                            &lt;img&gt; [...]
+                        &lt;/figure&gt;
+                    <h4>En CSS</h4>
+                        #centrado {
+                            text-aling: center;
+                        }
+                </pre>
+            </section>
+            <section>
+            <header>
+                <h2>Selector de combinados, relación de parentesco</h2>
+            </header>
+            </section>
+            <section class="conjuntoSections">
+            <header>
+                <h3>Selector de hijos</h3>
+            </header>
+            <p>Su símbolo es el ">". Aquellos que sólo sean hijos directos de la clase pero no sus descendientes. Se usa cuando quiero restringir algo y que afecte a los elementos inmediatos sin tocar su descendencia. También se utilizan mucho en los menús y submenús.</p>
+            <pre>
+                <h4>En HTML</h4>
+
+                <h4>En CSS</h4>
+                .combinadores>p {
+                    color:black;
+                }
+            </pre>
+            <header>
+                <h3>Selector de descendientes</h3>
+            </header>
+            <p>Utiliza el símbolo del espacio Des esta manera indicamos cualquier objeto que sea descendiente de un nivel. Cogemos el descendiente x de x padre. Cogerá todos aquellos descendientes estén dentro de otro bloque o no. </p>
+            <p>Ejemplo: </p>
+            <pre>
+                <h4>En HTML</h4>
+                    &lt;div&gt; 
+                        &lt;p&gt; Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, accusantium eum quasi officia ut quaerat pariatur perferendis numquam voluptates labore nesciunt recusandae blanditiis totam consequatur itaque quisquam soluta tenetur? Consequatur!
+                    &lt;/div&gt;
+                <H4>En css</H4>
+                    div p {
+                        background-color: red; 
+                    }
+            </pre>
+            <header>
+                <h3>Selector de hermano</h3>
+            </header>
+            <p>Aparece en CC3. Se representa con ~. Con esto queremos decir que cogerá las cosas que estén al mismo nivel que el div, por lo que afectará a los párrafos siguientes a div en éste caso</p>
+            <pre>
+                <h4>En HTML</h4>
+                    &lt;div&gt;
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id veritatis consequatur voluptatibus, suscipit delectus laboriosam odio. Porro error quidem aliquid esse facere ducimus ipsam nam velit totam. Odio, maxime assumenda.
+                    &lt;/div&gt;
+                    &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis, sed ab cupiditate ipsum harum accusantium illum explicabo? Beatae, excepturi? Tempore distinctio laudantium ab!
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis, sed ab cupiditate ipsum harum accusantium illum explicabo? Beatae, excepturi? Tempore distinctio laudantium ab!
+                    &lt;/p&gt;
+
+                <H4>En CSS</H4>
+                    .combinado div~ {
+                        color :green;
+                    }
+            </pre>
+            <header>
+                <h3>Selector de hermano adyacente</h3>
+            </header>
+            <p>Se representa con + . Adyacente es justo el que va a continuación de la etiqueta div, en el caso anterior, sólo afectará al primer párrafo. Siempre habrá un adayacente.</p>
+            <pre>
+                    <h4>En HTML</h4>
+                        &lt;div&gt;
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id veritatis consequatur voluptatibus, suscipit delectus laboriosam odio. Porro error quidem aliquid esse facere ducimus ipsam nam velit totam. Odio, maxime assumenda.
+                        &lt;/div&gt;
+                        &lt;p&gt;
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis, sed ab cupiditate ipsum harum accusantium illum explicabo? Beatae, excepturi? Tempore distinctio laudantium ab!
+                        &lt;/p&gt;
+                        &lt;p&gt;
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis, sed ab cupiditate ipsum harum accusantium illum explicabo? Beatae, excepturi? Tempore distinctio laudantium ab!
+                        &lt;/p&gt;
+    
+                    <H4>En CSS</H4>
+                        .combinado div+p {
+                            color :green;
+                        }
+                </pre>
+        </section>    
+    <section class="atributos">
+        <h2>Selector de atributo</h2>
+        <p>Selector de atributos: title. Utiliza los dos corchetes para indicar que lo que viene es un atributo []. De esta manera todos los elementos que tengan el atributo title, tendrán un background-color rojo.  </p>
+        <pre>
+            <h4>En HTML</h4>
+            &LT;p title="Parrafo 1"&GT;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nisi accusantium repellendus ipsum quia molestias placeat. Laboriosam, adipisci. Sapiente, animi nisi praesentium culpa officiis sint fugit vitae omnis accusantium labore.&LT;/p&GT;
+            &LT;p title="Parrafo 2"&GT;Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maxime dicta saepe similique excepturi quasi unde temporibus nihil at. Nemo enim, illo sed ipsum tempora tenetur. Ex cupiditate obcaecati recusandae.&LT;/p&GT;
+            <h4>En CSS</h4>
+            [title] {
+                background-color: red;
+            }
+        </pre>
+        <P>^ Con este simbolo indicamos que algo que empiece por x saldrá todo aquello que empiece por eso. </P>
+        <p>Ejemplo:</p>
+        <pre>
+                [title^="Parrafo"] {
+                    background-color: red;
+                }
+        </pre>
+        <p>De esta manera saldrán nuestros dos párrafos. </p>
+        <p>* "Atributo que contiene ...</p>
+        <p>Ejemplo:</p>
+        <pre>
+                [title*="rraf"] {
+                    background-color: red;
+                }
+        </pre>
+        <p>De igual manera nos saldrán nuestros dos párrafos.</p>
+        <p>$ "Termina por..."</p>
+        p>Ejemplo:</p>
+        <pre>
+                [title$="1"] {
+                    background-color: red;
+                }
+        </pre>
+        <p>En este caso sólamente se verá afectado el párrafo número 1.</p>
+        <figure class="figcapt">
+            <img src="./assets/esp.PNG" alt="">
+            <figcaption>Especificación de las clases</figcaption>
+        </figure>
+    </section>
+
+    <footer class="mainfooter ">
+        <address>
+            Sara Bachiller Parra ®Tajamar
+        </address>
+        <aside class="quitar">
+                <ul>
+                    <li></li><i class="fal fa-alicorn"></i></li>
+                    <li><a href="https://www.facebook.com/" rel="external" title="Facebook" target="_blank"><i class="fab fa-facebook" ></i></a></li> <!-- Calidad diferente de texto la etiqueta i -->
+                    <li><a href="https://twitter.com/?lang=en" rel="external" title="Twitter" target="_blank"><i class="fab fa-twitter" ></i></a></li>
+                    <li><a href="https://www.instagram.com/" rel="external" title="Instagram" target="_blank"><i class="fab fa-instagram" ></i></a></li>
+                    <li><a href="https://github.com/SaraBachiPaMeGo/curso1/blob/master/07_ElementosWeb/mmedia.html" title="Github" target="_blank"><i class="fab fa-github"></i></a> </li>
+                </ul>
+            </aside>
+    </footer>
+</body>
+
+</html>
