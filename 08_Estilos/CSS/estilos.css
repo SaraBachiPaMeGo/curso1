@@ -75,3 +75,115 @@ h3 {
     border-left: 2px solid rgba(70, 0, 70, 0.575);
     padding-left: 10px;
 }
+
+.pseudo-elementos p::first-letter {
+    font-size:3rem;
+    font-style: italic;
+}
+
+.pseudo-elementos p.medio::after { 
+    content: "escrito desde css con after"; 
+    display: block;
+    background-color: cornflowerblue;
+    padding: 1rem;
+}
+
+.pseudo-elementos p.medio::before { 
+    content: "escrito desde css con before"; 
+    display: block;
+    background-color: cornflowerblue;
+    padding: 1rem;
+}
+
+.numerado p::before {
+    counter-increment: parrafos;
+    content: counter(parrafos,lower-greek ) " - "; /* detrás de párrafo le dices qué tipo de número quieres que salga */
+    font-weight: bold;
+    padding: 5rem;
+    
+}
+
+body {
+    counter-reset: parrafos;
+}
+
+.comillas p::before { /* Da igual poner : o :: */
+    content: open-quote;
+}
+
+.comillas p::after { /* Da igual poner : o :: */
+    content: close-quote; 
+}
+
+.comillas {
+    quotes:"\00AB" "\00BB"
+}
+
+.pseudo-clases header:hover { /* Las clases definen los estados de los elementos, esta clase significa que el raton cuando esté por encima hará x cosa. No es una clase estática */
+    background-color: rgb(211, 175, 245);
+    color: blueviolet;
+}
+
+.pseudo-clases header{
+    background-color: blueviolet;
+    color: yellow;
+    }
+
+.pseudo-clases header p {
+    display: none;
+    padding: 1rem;
+}
+
+.pseudo-clases header:hover p {
+    display: initial;
+}
+
+.pseudo-clases header div {
+    display: none;
+    padding: 1rem;
+}
+
+.pseudo-clases header:hover div {
+    display: initial;
+}
+
+.pseudo-elem li {
+    padding: 0.4rem;
+    width: 10%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+/* .pseudo-elem li:last-of-type {
+    padding-right: 1.5rem;
+    /* width: 10%; */
+/* } */ 
+
+.pseudo-clases a:visited { /* Sirve para que una vez clicleado el enlace salga azul */
+    color:blue;
+}
+
+.pseudo-elem p:nth-child(2){
+    text-decoration: underline;
+}
+
+.pseudo-elem p:nth-of-type(2){ /* Cuenta párrafos y coja el segundo párrafo */
+    font-style: italic;
+}
+.pseudo-elem li:nth-of-type(2n){ /* da igual poner cualquiera de las anteriores, n se va multiplicando por 2 la posición por dos */
+    background-color: rgb(202, 236, 152);
+}
+
+.pseudo-elem li:nth-of-type(2n+1){ /* da igual poner cualquiera de las anteriores, n se va multiplicando por 2 la posición por dos */
+    background-color: rgb(233, 152, 236);
+}
+
+.pseudo-elem li:nth-of-type(3n){ /* da igual poner cualquiera de las anteriores, n se va multiplicando por 2 la posición por dos */
+    background-color: rgb(152, 209, 236);
+}
+
+ *:not(h1) {
+    background-color: white;
+} 
+

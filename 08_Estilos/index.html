@@ -29,16 +29,16 @@
         <header>
             <h2>Directivas de css</h2>
         </header>
-        <p>Se usa mucho es SAS, pero consume más recursos y se usa menos qye ek link de html.
+        <p>Se usa mucho es SAS, pero consume más recursos y se usa menos que el link de html.
             La etiqueta import tiene que ser lo primero que esté en el fichero. Sólo puede ir otra directiva antes de
             import: @charset (Se pone UTF-8 igual que en html). Establece una hoja de estilos diferente al index */
-            Ejemplo de imports sin condiciones:
+            Ejemplo de imports sin condiciones:</p>
             <ul class="quitar ul">
                 <li>@import url(./footer.css); </li>
                 <li> @import url(./header.css) screen and (max-device-width: 500px); /* Responsivo, a partir de x px no
                     aparece el color del h1 </li>
             </ul>
-        </p>
+        
         <figure class="figcapt"><img src="./assets/estilos.PNG" alt="">
             <figcaption>
                 Explicación de las directivas de CSS
@@ -143,7 +143,7 @@
             <pre>
                 <h4>En HTML</h4>
                     &lt;div&gt; 
-                        &lt;p&gt; Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, accusantium eum quasi officia ut quaerat pariatur perferendis numquam voluptates labore nesciunt recusandae blanditiis totam consequatur itaque quisquam soluta tenetur? Consequatur!
+                        &lt;p&gt; Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, accusantium eum q
                     &lt;/div&gt;
                 <H4>En css</H4>
                     div p {
@@ -157,13 +157,13 @@
             <pre>
                 <h4>En HTML</h4>
                     &lt;div&gt;
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id veritatis consequatur voluptatibus, suscipit delectus laboriosam odio. Porro error quidem aliquid esse facere ducimus ipsam nam velit totam. Odio, maxime assumenda.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id veritatis consequatur voluptatibus, suscipit delectus laboriosam odio.
                     &lt;/div&gt;
                     &lt;p&gt;
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis, sed ab cupiditate ipsum harum accusantium illum explicabo? Beatae, excepturi? Tempore distinctio laudantium ab!
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis,
                     &lt;/p&gt;
                     &lt;p&gt;
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis, sed ab cupiditate ipsum harum accusantium illum explicabo? Beatae, excepturi? Tempore distinctio laudantium ab!
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis, sed 
                     &lt;/p&gt;
 
                 <H4>En CSS</H4>
@@ -178,13 +178,13 @@
             <pre>
                     <h4>En HTML</h4>
                         &lt;div&gt;
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id veritatis consequatur voluptatibus, suscipit delectus laboriosam odio. Porro error quidem aliquid esse facere ducimus ipsam nam velit totam. Odio, maxime assumenda.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         &lt;/div&gt;
                         &lt;p&gt;
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis, sed ab cupiditate ipsum harum accusantium illum explicabo? Beatae, excepturi? Tempore distinctio laudantium ab!
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                         &lt;/p&gt;
                         &lt;p&gt;
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis mollitia molestiae dolore aspernatur temporibus commodi veritatis, sed ab cupiditate ipsum harum accusantium illum explicabo? Beatae, excepturi? Tempore distinctio laudantium ab!
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                         &lt;/p&gt;
     
                     <H4>En CSS</H4>
@@ -195,11 +195,12 @@
         </section>    
     <section class="atributos">
         <h2>Selector de atributo</h2>
+        <section class="conjuntoSections">
         <p>Selector de atributos: title. Utiliza los dos corchetes para indicar que lo que viene es un atributo []. De esta manera todos los elementos que tengan el atributo title, tendrán un background-color rojo.  </p>
         <pre>
             <h4>En HTML</h4>
-            &LT;p title="Parrafo 1"&GT;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nisi accusantium repellendus ipsum quia molestias placeat. Laboriosam, adipisci. Sapiente, animi nisi praesentium culpa officiis sint fugit vitae omnis accusantium labore.&LT;/p&GT;
-            &LT;p title="Parrafo 2"&GT;Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maxime dicta saepe similique excepturi quasi unde temporibus nihil at. Nemo enim, illo sed ipsum tempora tenetur. Ex cupiditate obcaecati recusandae.&LT;/p&GT;
+            &LT;p title="Parrafo 1"&GT;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam n.&LT;/p&GT;
+            &LT;p title="Parrafo 2"&GT;Lorem ipsum dolor sit amet consectetur adipisicing elit. &LT;/p&GT;
             <h4>En CSS</h4>
             [title] {
                 background-color: red;
@@ -229,11 +230,158 @@
                 }
         </pre>
         <p>En este caso sólamente se verá afectado el párrafo número 1.</p>
+        !important, hace que una propiedad tenga más importancia que cualquier especifidad. Se coloca entre el valor y el ;.
         <figure class="figcapt">
             <img src="./assets/esp.PNG" alt="">
             <figcaption>Especificación de las clases</figcaption>
         </figure>
     </section>
+</section>
+    <section>
+        <header>
+            <h2>Estilos de la sección .pseudo elemento</h2>
+        </header>
+        <section class="conjuntoSections">
+        <p>Actúa como un elemento sin necesidad de definirlo (sin etiquetas). Se localiza mediante ::.En esté ejemplo se afectarda culaquier primera letra que esté dentro de la clase pseudo-elementos. </p>
+        <pre>
+            <h4>En HTML</h4>
+                &lt;section class="pseudo-elementos"&gt;
+                &lt;p&gt; Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, iure?&lt;/p&gt;
+                &lt;/section&gt;
+            <H4>En CSS</H4>
+                .pseudo-elementos p::first-letter {
+                    font-size:3rem;
+                    font-style: italic;
+                }
+        </pre>
+        <p>Ejemplo:</p>
+    
+     <section class="pseudo-elementos"> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe qui suscipit possimus at voluptatum praesentium recusandae itaque nulla illum, corporis doloremque tempora dignissimos beatae corrupti sed eius quas voluptates dolorum!</p>
+        <!-- 
+        <pre>
+            <h4>En HTML</h4>
+                &lt;section class="pseudo-elementos"&gt;
+                &lt;p&gt; Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, iure?&lt;/p&gt;
+                &lt;/section&gt;
+            <H4>En CSS</H4>
+                .pseudo-elementos p::first-letter {
+                    font-size:3rem;
+                    font-style: italic;
+                }
+        </pre> -->
+        <p>Contenido desde CSS gracias a la etiqueta after. </p>
+        <p class="medio">X</p> <!-- Escrito desde CSS -->
+        <pre>
+                <H4>En CSS</H4>
+                    .pseudo-elementos p.medio::after {
+                        content: "escrito desde css"; 
+                    }
+        </pre>
+        <p>Gracias a la etiqueta before antes del elemento que se ve afectado (after detrás del elemento). No se peude agrupar pseudo elementos (Por ejemplo que la primera letra sea más grande como en el ejemplo anterior).No tiene por qué tener contenido cuando se hace un "content", muchas veces no se pone para crear bandas de colores e indicar que es más importante, por ejemplo.De todas maneras también se podría hacer mediante un div, dándole estilo.</p>
+     </section>   
+     <p>Gracias a counter podremos numerar nuestros párrafos sin necesidad de hacer clases o ponerles un id. Se debe de hacer un "counter-reset" al body.</p>
+     <section class="numerado">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+     </section>
+     <p>Párrafos con comillas desde css gracias a:</p>
+     <pre>
+            .comillas p::before { /* Da igual poner : o :: */
+                content: open-quote;
+            }
+            
+            .comillas p::after { /* Da igual poner : o :: */
+                content: close-quote; 
+            }
+     </pre>
+     <section class="comillas">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod veniam ut maiores beatae expedita minima atque a incidunt fugit voluptate fugiat ipsa qui delectus aut id, enim sapiente amet accusantium?</p>
+         <p>Repellat iste aspernatur sit, debitis incidunt veniam inventore consequuntur! Enim vitae quo saepe, distinctio doloremque velit quas omnis rem sed nostrum placeat nisi, vero quia! Nulla facilis suscipit in ratione?</p>
+         <div>Esto es un ejemplo de cita en linea con q. Sale con éste entrecomillado porque lo hemos establecido desde CSS con "quotes:"\00AB" "\00BB""" <q>Érase una vez, hace mucho tiempo...</q></div>
+     </section>
+    </section>
+     <figure class="figcapt">
+         <img src="./assets/simbolo.PNG" alt="">
+     </figure>
+     <figure class="figcapt">
+            <img src="./assets/w3.PNG" alt="">
+        </figure>
+    </section>
+     <section class="pseudo-clases">
+         <header>
+           <h2>Pseudo clases</h2>
+            <p>Información extra</p>
+           <div>
+               <figure class="figcapt">
+                        <img src="./assets/otros.PNG" alt="">
+                </figure>
+           </div>            
+         </header>
+         <p>Las clases definen los estados de los elementos.La clase "hover" significa que el raton cuando esté por encima hará x cosa. No es una clase estática.</p>
+         <p>Gracias a la pseudo clase: .pseudo-clases a:visited podemos darle el mismo color a una url aunque hayas cliqueado. </p>
+     <a href="https://www.microsoft.com/es-es/" target="_blank">Microsoft</a>     
+</section>
+<section class="pseudo-elem">
+    <header>
+        <h2>Pseudo elementos</h2>
+    </header>
+    <p> Los pseudo elementos sirve para dar orden a elementos, gracias a dos clases:  </p>
+    <pre>
+            .pseudo-elem p:nth-child(2){
+                text-decoration: underline;
+            }
+    </pre>
+    <p>En () debes especificar la posición que ocupa entre "los hijos" de section en este caso. Todos los párrafos que sena segundo hijo de alguien tiene que seguir esta norma, por eso el último párrafo aparece subrayado, porque es el segundo hijo de div</p>
+    <p>En el caso de:</p>
+    <pre>
+            .pseudo-elem p:nth-of-type(2){ 
+                font-style: italic;
+            }
+    </pre>
+    <p>Cuenta párrafos y coge el segundo párrafo independientemente de si hay mas tipos de tiquetas, las salta. En cambio en el anterior, cuenta todo y si es párrafo y segundo hijo lo pinta.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dolorem, a voluptas cum ex et iusto error ducimus est, repudiandae dolore eos quaerat incidunt expedita tempore officia quisquam ab natus.</p>
+    <p>Distinctio velit fuga, tempora deserunt adipisci nisi? Itaque ipsum quod dolore reiciendis totam asperiores earum inventore, impedit debitis beatae eum praesentium vel officia dolorum. Fugiat delectus exercitationem nesciunt voluptas ullam?</p>
+    <p>Obcaecati perferendis cum dolorum possimus autem cumque in laboriosam repudiandae accusantium ad tenetur unde numquam, vel deleniti suscipit veniam impedit mollitia illum debitis nulla, facere est alias amet quia. Esse.</p>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ex fugiat aspernatur aperiam et expedita? Et, vitae impedit praesentium fugiat, quis officiis optio accusantium, magni necessitatibus consequuntur ad eius expedita.</p>
+        <p>Sed officiis expedita quod autem. Velit voluptatibus hic reprehenderit, quisquam perferendis quibusdam voluptatem quis! Itaque non natus possimus at nisi quia ratione nihil assumenda. Dignissimos distinctio fuga magnam omnis ipsa!</p>
+    </div>
+    <p>Queremos que los pares estén de otro color, lo hacemos a través de:</p>
+    <pre>
+            .pseudo-elem li:nth-of-type(2n){ /* da igual poner cualquiera de las anteriores (nth-of-type ó nth-child) */
+                background-color: rgb(202, 236, 152);
+            }
+    </pre>
+    <p>n se va multiplicando por 2 la posición por dos. Otra forma es poner "Even" en 2n</p>
+    <p>Para los impares:</p> 
+    <pre>
+            .pseudo-elem li:nth-of-type(2n+1){ 
+                background-color: rgb(233, 152, 236);
+            }
+    </pre>
+    <p>n se va multiplicando por 2 la posición por dos más 1. Otra forma es poner "odd" en 2n</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9&nbsp; </li>
+        <li>Item 10</li>
+    </ul>
+    <p> Para crear un espacio "duro" y que html no quite el espacio & nbsp; </p>
+    <p>Utilizando * {} declaramos que todas las etiquetas sean de un estilo concreto, em cambio, la pseudo clase :not() hace referencia a todos los elementos exepto el declarado entre paréntesis.  </p>
+    <pre>
+        *:not(h1) {
+            background-color: white;
+        }
+    </pre>
+</section>
 
     <footer class="mainfooter ">
         <address>
@@ -241,7 +389,7 @@
         </address>
         <aside class="quitar">
                 <ul>
-                    <li></li><i class="fal fa-alicorn"></i></li>
+                    <li><i class="fal fa-alicorn"></i></li>
                     <li><a href="https://www.facebook.com/" rel="external" title="Facebook" target="_blank"><i class="fab fa-facebook" ></i></a></li> <!-- Calidad diferente de texto la etiqueta i -->
                     <li><a href="https://twitter.com/?lang=en" rel="external" title="Twitter" target="_blank"><i class="fab fa-twitter" ></i></a></li>
                     <li><a href="https://www.instagram.com/" rel="external" title="Instagram" target="_blank"><i class="fab fa-instagram" ></i></a></li>
