@@ -1,0 +1,143 @@
+/* //footer */
+footer {
+    background-color: var(--color-fondo);
+    color:var(--color-letra);
+    text-align: center;    
+}
+
+.footer aside li{
+    display: inline;
+    
+}
+.footer a {
+    color:var(--color-letra);    
+}
+
+.footer aside a {
+    color: inherit;
+    text-decoration: none;
+    text-align:center;
+    display: inline;
+    padding: 1rem 1rem; /* Da "Aire" a la página */    
+}
+
+address>div {
+    font-style: inherit;    
+    margin: 2rem;
+}
+
+/* RESET*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size:100%;
+    font:inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.header {
+    background-color: var(--color-fondo);
+    color:var(--color-letra);
+    padding: 0.8rem 0rem 0.5rem 1rem;
+    font-size: large;
+    background-image: url("./assets/oilseed-rape-2135026_1920.jpg");
+}
+
+.header p {
+    font-size: var(--size-sub);
+    margin: 1rem;
+}
+
+.header h1 {
+    /* background-color: var(--color-fondo);  */
+    color:var(--color-letra);    
+    font-family:var(--tipo-letra-title);
+    padding: 0.8rem 0rem 0.5rem 1rem;
+    font-size: xx-large;
+    text-shadow: rgba(2, 88, 2, 0.397) 0.1em 0.1em 0.2em;
+    font-size: var(--size-title);
+    margin-bottom: 1rem;
+}
+/* //Ambas se refieren a h1 */
+/* .h1-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family:var(--tipo-letra-title);
+} */
+
+
+
+/* // body  */
+body {
+    font-family: var(--tipo-letra-body);
+    line-height: 1;
+    font-size: var(-size-base-);
+   /*  background-image: linear-gradient(rgba(109, 240, 148, 0.5), rgba(255, 255, 0, 0.5))
+                 ; */
+}
+main{
+    margin: 2rem 2rem;
+    
+}
+main h2 {
+    font-size: var(--size-title-section);
+    margin: 0.8rem;
+    font:bold;
+;}
+
+main p {
+    margin: 0.8rem;
+}
+
+main section {
+    width: 49%;
+    display: inline-block; /* Hemos quitado el margen */
+    vertical-align: top;
+}
+
+/* Iconos */
+
+.fas {
+    color: green;
+}
+
+ul li {
+    color: green;
+}
+/* Variables */
+
+:root {
+    --color-letra: rgb(110, 110, 110);
+    --color-fondo: rgba(199, 199, 197, 0.479);
+    --tipo-letra-body:  'Roboto', sans-serif;
+    --tipo-letra-title: 'Bree Serif', serif;
+    --size-title: 4rem;
+    --size-sub: 1.4rem ;
+    --size-base: calc(8rem/16) ; 
+    --size-title-section: 1.5rem ;
+
+}
+
+/* 
+16px - 1rem
+14px - x     x= 0.875
+
+en cs3 calc te calcula los px
+se puede meter también en variables
+*/
+
+
+
+
+
+
+
+
+
+
+
