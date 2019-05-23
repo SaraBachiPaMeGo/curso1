@@ -29,13 +29,13 @@ address>div {
 /* RESET*/
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
     font-size:100%;
     font:inherit;
     vertical-align: baseline;
-    box-sizing: border-box;
 }
 
 /* Header */
@@ -93,11 +93,61 @@ main h2 {
 main p {
     margin: 0.8rem;
 }
-
-main section {
+/* 
+main article {
     width: 49%;
     display: inline-block; /* Hemos quitado el margen */
+   /*  vertical-align: top;
+    background-color: var(--color-article-border) ;
+    border: var(--color-article-fondo);
+} */ 
+
+section article {
+    width: 50%;
+    padding: 1rem;
+    background-color: var(--color-article-fondo);
+    border: 1px solid var(--color-article-border);
+}
+
+ .inline-block article{
+    box-sizing: content-box;
+    box-sizing: border-box;
+    width: 50%;
+    display: inline-block;
     vertical-align: top;
+/* padding: 1rem; Para que no se vaya para abajo cuando se hace pqueño*/
+}
+
+section.inline-block article:nth-of-type(2) {
+    margin-left: -4px;
+}
+
+section {
+    margin-top: 10px;
+}
+
+section.float article{
+    float:left;
+}
+
+section.float:after{
+    content: '';
+    display: block; /* ClearFix */
+    clear: both;
+}
+
+section.table {
+    display: table;
+    align-items: flex-start;
+}
+
+section.table article{
+    display: table-cell; /* Pone al mismo nivel el bloque de secciones */
+    align-items: stretch; /* Hace que todas las columnas tengan el mismo espacio, en cambio ocn flex-start se colocan en vez de extendidos de forma que se respetara el espacio */
+}
+
+section.flex {
+    display: flex; /* Pone al mismo nivel el bloque de secciones */
 }
 
 /* Iconos */
@@ -120,6 +170,8 @@ ul li {
     --size-sub: 1.4rem ;
     --size-base: calc(8rem/16) ; 
     --size-title-section: 1.5rem ;
+    --color-article-fondo :rgb(216, 248, 210);
+    --color-article-border :rgb(0, 165, 63) ;
 
 }
 
