@@ -49,9 +49,18 @@ console.log(typeof b);
 
 let precio = 80.90;
 let producto ='Gafas';
-precio=producto; /* Son dos variables de dos tipos diferentes */
+/* precio =producto; Son dos variables de dos tipos diferentes */
 
 
+/**
+ * 
+ * @param {number} a 
+ * @param {number} b 
+ * @returns {number}
+ */
 
+function sumarTipos(a: number, b:number) : number {
+    return a+b;
+}
 
 
