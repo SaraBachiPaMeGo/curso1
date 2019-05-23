@@ -47,8 +47,8 @@ console.log(typeof b);
 /* b='2'; ERROR DE TIPOS */
 
 
-let precio = 80.90;
-let producto ='Gafas';
+/* let precio = 80.90;
+let producto ='Gafas'; */
 /* precio =producto; Son dos variables de dos tipos diferentes */
 
 

@@ -65,13 +65,13 @@ function resta(a ,b) {
 }
 
 function division(a,b){
-    if (b=undefined | a= undefined) {
+    /* if (b=undefined | a= undefined) {
         b=0;
         a=0;
     } else {
         b=b;
         a=a;
-    }
+    } */
     return a/b;
 
 }
