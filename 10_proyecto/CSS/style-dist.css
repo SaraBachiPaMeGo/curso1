@@ -29,6 +29,8 @@ address>div {
 /* RESET*/
 
 * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -110,7 +112,11 @@ section article {
 }
 
  .inline-block article{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
     box-sizing: content-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     display: inline-block;
@@ -138,11 +144,19 @@ section.float:after{
 
 section .table {
     display: table;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
 }
 
 section .table article{
     display: table-cell; /* Pone al mismo nivel el bloque de secciones */
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
     align-items: stretch; /* Hace que todas las columnas tengan el mismo espacio, en cambio ocn flex-start se colocan en vez de extendidos de forma que se respetara el espacio */
 }
 
@@ -151,13 +165,29 @@ section .flex article{
 }
 
 section .flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex; /* Pone al mismo nivel el bloque de secciones */
     /* flex-wrap: nowrap; */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; /*Se colocan uno debajo de otro pero sólo es flex*/
 }
 
 @media screen and (min-width: 600px) { /*mobile first  con -device- nos funciona sólamente cuando demos a la vista del móvil en el ordenador*/
     section .flex{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -moz-box-orient: horizontal;
+        -moz-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;          
     } 
 } /*lee el codigo t al llegar a ma media query aplica lo que le pedimos en la media. El primero interpreta el código y crea un cuando (cuando sea más pequeño que 600px haz x)*/
@@ -185,6 +215,8 @@ ul li {
     --tipo-letra-title: 'Bree Serif', serif;
     --size-title: 4rem;
     --size-sub: 1.4rem ;
+    --size-base: -webkit-calc(8rem/16) ;
+    --size-base: -moz-calc(8rem/16) ;
     --size-base: calc(8rem/16) ; 
     --size-title-section: 1.5rem ;
     --color-article-fondo :rgb(216, 248, 210);

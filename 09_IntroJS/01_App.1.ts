@@ -35,22 +35,23 @@ undefined //Tipo Undefined
 */
 
 // En TypeScript el tipado puede ser fuerte y estático
-let b:number ;
-console.log(b);
-console.log(typeof b);
+{
+    let b:number ;
+    console.log(b);
+    console.log(typeof b);
 
-b=2;
+    b=2;
 
-console.log(b);
-console.log(typeof b);
+    console.log(b);
+    console.log(typeof b);
 
-/* b='2'; ERROR DE TIPOS */
+    /* b='2'; ERROR DE TIPOS */
 
 
-/* let precio = 80.90;
-let producto ='Gafas'; */
-/* precio =producto; Son dos variables de dos tipos diferentes */
-
+    let precio = 80.90;
+    let producto ='Gafas'; /* 
+    precio =producto; Son dos variables de dos tipos diferentes  */
+}
 
 /**
  * 
