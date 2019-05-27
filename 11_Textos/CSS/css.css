@@ -23,12 +23,14 @@ p {
     padding: 1em; /* Va a cambiar en relación al tamaño de letra */
 }
 
-section {
+section .centrada{
     font-size: 0.8em; 
     width: 83.8%;
     margin-left: auto;
     margin-right: auto;
 }
 
-
+.margenes {
+    
+}
 
