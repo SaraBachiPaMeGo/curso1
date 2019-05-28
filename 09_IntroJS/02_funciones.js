@@ -65,16 +65,40 @@ function resta(a ,b) {
 }
 
 function division(a,b){
-    /* if (b=undefined | a= undefined) {
-        b=0;
-        a=0;
+     if (typeof a=='undefined' || typeof b=='undefined') {
+        a=1;
+        b=1;        
     } else {
-        b=b;
         a=a;
-    } */
-    return a/b;
+        b=b;        
+    } 
+    return 'La división de a y b es ' + a/b;
 
 }
+console.log(division(10))
+
+function division1(a,b){
+    switch(a,b) {
+        case typeof a=='undefined':
+            a=1;
+        break;
+        case typeof b=='undefined':
+            b=1;
+    }
+   return 'La división de a y b es con switch' + a/b;
+
+}
+
+console.log(division1(undefined,10))
+
+function division3(a,b){
+    while(typeof a=='undefined' || typeof b=='undefined'){
+         return 'La división no se puede hacer porque a o b son indefinidos'
+    }
+   return a/b;
+}
+
+console.log(division3(10))
 
 function multi(a,b){
     /* if (b=undefined | a= undefined) {

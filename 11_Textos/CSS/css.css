@@ -11,6 +11,8 @@
 }
 body{
     font-family: "bellotaregular";
+    margin: 0;
+    padding: 0;
 }
  
 .content_wrapper {
@@ -20,17 +22,105 @@ body{
 p {
     font-size: 0.9rem; /*em(va en escala) vs rem(se miden en base a los 16px): */
     border: 1px solid black;
+    border-radius: 10%;
     padding: 1em; /* Va a cambiar en relación al tamaño de letra */
 }
 
-section .centrada{
+section.centrada{
     font-size: 0.8em; 
     width: 83.8%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.margenes {
-    
+.espacios {
+    margin:2rem 1rem ;
+    background-color: rgb(128, 223, 255);
+    padding-bottom: 5%;
 }
 
+.espacios h2 {
+    padding: 1rem;
+}
+
+.espacios p {
+    padding: 1rem;
+    background-color: white;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+}
+
+* {
+    box-sizing: border-box; /* width corresponde al padding al borde y al contenido*/
+}
+
+.flex {
+    margin:1rem ;
+    background-color: rgb(136, 128, 255);
+    padding-bottom: 5%;
+}
+
+.flex h2 {
+    padding:2rem 1rem;
+    flex: 1 0 100%; /*ancho, encoge y */
+}
+
+.flex p {
+    padding: 1rem;
+    background-color: white;
+    margin-left: 2.5%; /*Es redundante poner width porque se reparte automáticamente el espacio */
+    /* width: 30%;  *//*Para que salga el margen de la derecha*/
+    margin-right: 2.5%;
+}
+
+/* .espacios p:last-of-type{
+    margin-right: 2.5%; /*Para que el margen del último bloque sea realmente un margin*/
+
+/* .flex p:last-of-type{
+    margin-right: 2.5%; /*Para que el margen del último bloque sea realmente un margin*/
+/*} */ 
+
+/*margenes en % y padding en rem*/
+
+@media screen and (min-width:690px) {
+    .espacios p {
+        width: 30%;
+        float:left;
+    }
+    .espacios p:last-of-type{
+        margin-right: 2.5%;
+    }
+    .espacios::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .espacios p:not(:last-of-type){
+     margin-right:0;
+    }
+
+    .flex p {
+        margin-left: 2.5%; 
+    }
+    .flex p:last-of-type{
+        margin-right: 2.5%; /*Para que el amrgen del último bloque sea realmente un margin*/
+    }
+    .flex .flex-wrapper { /**Para sacar el h2 del flex*/
+        display: flex;
+    }
+
+    .flex h2 {
+        text-shadow: 10px 10px 10px rgb(20, 2, 122)
+    }
+
+    .flex p {
+        box-shadow: 5px 5px 5px rgb(20, 2, 122);
+    }
+
+    .flex p:not(:last-of-type){
+        margin-right:0;
+    }
+}
+
+/*Con flex los bloques se quedan alineados arriba y abajo */

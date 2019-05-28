@@ -1,0 +1,58 @@
+/*HEADER*/
+
+.header {
+    background-color: var(--color-fondo);
+    color:var(--color-letra);
+    padding: 0.8rem 0rem 0.5rem 1rem;
+    font-size: large;
+    background-image: url("./assets/oilseed-rape-2135026_1920.jpg");
+}
+
+.header p {
+    font-size: var(--size-sub);
+    margin: 1rem;
+}
+
+/*BODY*/
+
+main {
+    margin: 5%;
+}
+
+.img-wrapper-right {
+    width: 50%;
+    float: right;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.img-wrapper-left {
+    width: 50%;
+    float: left;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+section.section { /*Para que la imagen no pise al section */
+   content:'';
+   display: block;
+    clear: both;
+}
+
+/*FOOTER*/
+
+footer a {  /* De esta forma coger todos los enlaces que haya dentro de footer */
+    color: inherit;
+    
+} 
+
+.mainfooter aside{
+    background-color: beige;
+    color: coral;
+    text-align: center;
+    padding: 1rem; /* Da "Aire" a la página */
+}
