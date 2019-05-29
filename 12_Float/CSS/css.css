@@ -1,11 +1,23 @@
 /*HEADER*/
 
 .header {
-    background-color: var(--color-fondo);
-    color:var(--color-letra);
+    background-color:rgb(170, 172, 247) ;
+    color:white;
     padding: 0.8rem 0rem 0.5rem 1rem;
     font-size: large;
     background-image: url("./assets/oilseed-rape-2135026_1920.jpg");
+}
+
+.header h1 {
+    color:white;    
+    padding: 0.8rem 0rem 0.5rem 1rem;
+    font-size: 50px;
+    text-shadow: rgba(0, 4, 255, 0.555) 0.1em 0.1em 0.2em;
+    margin-bottom: 1rem;
+}
+
+.far{
+    margin-left: 1rem;
 }
 
 .header p {
@@ -13,35 +25,119 @@
     margin: 1rem;
 }
 
-/*BODY*/
+header,footer {
+    background-color: rgb(198, 199, 253);
+    color: white;    
+}
 
+h1 {
+    margin-top: 0;
+    margin-left: 0;
+    font-family: 'Pacifico', cursive;
+}
+
+.icono{
+    float:right;
+    padding-right: 50rem;
+    max-width: siz;
+}
+
+.icono::after{
+    content: '';    
+   display: block;
+   clear: both;
+
+}
+
+/*BODY*/
+body {
+    margin:0;
+    font-family: 'Cormorant Garamond', serif;
+}
 main {
     margin: 5%;
+    margin-top: 2rem;
+}
+
+div table {
+    float: right;
+    padding-bottom: 0.5rem;
+    margin-left: 2%;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+table caption{
+    background-color: rgba(219, 189, 247, 0.527)
+}
+
+div table::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .img-wrapper-right {
     width: 50%;
     float: right;
-    padding-right: 2rem;
-    padding-bottom: 0.5rem;
+    margin-right: 2rem; /*Hemos cambiado el padding por margin para que el borde se quede pegado a la imagen*/ 
+    margin-bottom: 0.5rem;
+    margin-left: 2%;
 }
 
 .img-wrapper-left {
+    max-width: 100%;
     width: 50%;
     float: left;
-    padding-right: 2rem;
-    padding-bottom: 0.5rem;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+    border:solid rgb(198, 199, 253);
+}
+
+div img {
+    max-width: 100%;
+    vertical-align: text-bottom;
+    display: block;
+    margin: 0;
+}
+
+header h1, footer{
+    line-height: 8rem;
+    }
+
+header p {
+    padding-bottom: 1rem;
+    text-align: center;
+    visibility: hidden; /*Cambiamos la visibiladad no el display, sino cambiaría el tamaño del header*/
+    /*display: none; /*no se ve ni el párrafo ni su padding*/
+    /*display: initial;/*Que vuelva su estado normal pero  no recupera el padding que hemos quitado */
+}    
+
+header:hover p {
+    visibility: initial;
+}
+
+header h1, footer{
+line-height: 8rem;
 }
 
 img {
     max-width: 100%;
+    vertical-align: text-bottom;
+    display: block;/*Para ajustar el borde a la foto*/
 }
 
-section.section { /*Para que la imagen no pise al section */
+section.section::after { /*Para que la imagen no pise al section */
    content:'';
    display: block;
     clear: both;
 }
+
+table tr th img {
+    width: 300px;
+    height: 237px;
+}
+
 
 /*FOOTER*/
 
@@ -50,9 +146,55 @@ footer a {  /* De esta forma coger todos los enlaces que haya dentro de footer *
     
 } 
 
-.mainfooter aside{
-    background-color: beige;
-    color: coral;
+.mainfooter /* aside */{
+    background-color: rgba(0, 4, 255, 0.555);
+    color: white;
     text-align: center;
     padding: 1rem; /* Da "Aire" a la página */
 }
+
+.lista {
+    list-style-position: inside;
+}
+
+ul li {
+    list-style-type: none;
+
+}
+
+.mainfooter aside li{
+    display: inline;
+}
+
+/**ANUNCIO*/
+
+aside img {
+    float: left;
+    width: 20%;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+    max-width: 100%;
+}
+
+
+aside img::after { /*Para que la imagen no pise al section */
+    content:'';
+    display: block;
+     clear: both;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -55,6 +55,15 @@ function sumar1(a,b){
 
 console.log(sumar(1,'5'));
 
+function isNumber(n){
+    let r=true;
+    if(isNaN(n)||  typeof n=='boolean'|| Array.isArray(n) ){ //== COMPARACIÓN
+        r=false
+    }
+    return r;
+}
+
+
 function sumar(a,b){    
     let r= parseFloat(a) + parseFloat(b)
     return 'La suma de a y b es: ' + r;
