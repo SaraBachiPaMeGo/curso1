@@ -1,0 +1,100 @@
+.gama{
+    display: flex;
+}
+.gama div{
+    color:darkblue;
+    background-color: rgb(37, 148, 245);
+    height: 10rem;
+    width: 10rem;
+}
+.gama div:nth-of-type(1){
+    background-color: rgb(76, 169, 252);
+}
+.gama div:nth-of-type(2){
+    background-color: rgb(109, 185, 252);
+}
+.gama div:nth-of-type(3){
+    background-color: rgb(148, 200, 245);
+}
+.gama div:nth-of-type(4){
+    background-color: rgb(185, 222, 253);
+}
+.gama div:nth-of-type(5){
+    background-color: rgb(223, 234, 245);
+}
+
+.trans{
+    display: flex;
+    margin:1rem;
+    border: 1px solid;
+    padding: 1rem;
+    width:90%;
+    height: 10vh;
+    background-color:bisque; 
+}
+
+.trans div {
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(234, 124, 248);
+}
+
+.trans div:nth-of-type(2){
+    background-color: rgba(234, 124, 248, 0.493);
+}
+
+.trans p {
+    font-size: 4rem;
+    color:rgba(0, 0, 0, 0.623);
+}
+
+.trans:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.opaci {
+    margin-top: 10rem;
+    opacity: 0; /* La opacidad se hereda. En lugar de display none o visibility para que no se vean las cosas, podemos reducir la opacidad (Ésta, se puede seleccionar, las otras dos no).  */
+}
+
+.opaci:hover{
+    opacity: 1; /* A google no le gustan los display none por lo que si hacemos opacidad 0 no se vería y no implicaríamos al haríamos SEO */
+}
+
+.fondo{
+    background-image: url("../assets/space.jpg");
+    opacity: 0.8; /* No se puede dar opacidad al fondo (si tenemos un texto con opacidad previa) porque se hereda y en nuestro caso nuestro texto no se ve porque es proporcional y el valor máximo de opacidad es 1 */
+   /*  background-color: rgba(0, 0, 0, 0.459); */
+}
+
+.fondo h2 {
+    opacity: 1;
+}
+
+.grad {
+    background:  rgb(76, 169, 252); /* Por si acaso ponemos un fondo para en el caso ed que algún navegador no soporte los gradientes que siga saliendo nuestro texto pero con otro fondo */
+    background: linear-gradient(
+        to left,
+        rgb(76, 169, 252),
+        rgb(248, 124, 176),
+        rgb(252, 196, 76)
+        )
+}
+/* css gradient generator */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
