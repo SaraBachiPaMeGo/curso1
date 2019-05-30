@@ -1,0 +1,41 @@
+/*HEADER*/
+
+
+
+
+
+/*BODY*/
+
+h1{
+    font-family: 'Delius Unicase', cursive;
+}
+
+blockquote {
+    font-family: 'Laila', serif;
+    quotes:\00AB, \00BB;
+}
+
+blockquote::after {
+    content: open-quote;;
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+
+
+
+/*FOOTER*/
+
+
+
+
+
+
+
+
+
+
+
+
