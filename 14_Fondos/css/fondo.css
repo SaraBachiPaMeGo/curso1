@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+
+
+header {
+    min-height: 100vh; /* Hace que ocupe toda la pantalla */
+    display: flex;
+    /* Herramienta de alineación en flex */
+    /* Alineación en el centro */
+    align-items: center; /*  Vertical  */
+    justify-content: left; /* Horizontal*//* 
+    background-color: rgba(245, 229, 8, 0.486);  */
+    background-color: rgba(43, 8, 245, 0.486); /* 
+    background-image: url(../Assets/space.jpg); */
+    background-image: url(../Assets/agujero.jpg); /* Contra más pequeña sea la imagen pesará menos */
+   /* background-repeat: repeat-x; /* repetirlo en horizontal la x (la y al revés) pero sólo la medida del cuadrado */    
+    background-repeat: no-repeat; /* Sólo va a salir un cuadrado. Si repite no agranda nada*/
+    background-position: center;/* Cambiar la posición del elemento. Poniendo después el cover hace que la imagen quede centrada, teniendo como referencia lo que hay en el centro */
+    background-size: cover; /* contain Intenta curbir todo el contenido que pueda sin degradar la imagen. Reajusta el ancho o el alto (depende de cuál sea más grande, pero no garantiza que lo haga al completo). Con cover cubre el 100% del elemento pero en imágenes pequeñas se pixela. */
+    background-blend-mode: hard-light;/* NO está soportado por algunos navegadores. Hace una mezcla haciendo filtros entre la imagen y entre el fondo que elijas (incluso con dos imágenes) (para eso necesitamos otro backgound)*/
+}
+
+h1{
+    color:whitesmoke;
+}
+
+
+
+
+
+
