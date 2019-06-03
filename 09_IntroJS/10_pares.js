@@ -91,7 +91,7 @@ probar();
 
 mostrar(x);
 
-
+module.exports= isPar;
 
 
 
