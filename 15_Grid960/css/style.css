@@ -4,18 +4,38 @@ body {
 }
 
 header {
-    background-color: beige;
-    color: black;
+    background-color: rgb(139, 28, 20);
+    color: white;
 }
 
+footer{
+    background-color: rgb(139, 28, 20);
+    color: white;
+}
 
+main {
+    min-height: 80vh;
+    background-color: bisque;
+}
 
+.columnas {
+    column-count: 3;
+   /*  column-width: 25%;  *//* Decir de qué ancho quieres las columnas, no puedes poner cuando pones column-count */
+    column-gap: 3rem;
+    column-rule: 1px solid brown; /* Border pero en columna y columna */
+    column-fill: balance; /* Para cuando tiene que hacer la longitud de las columnas  */
+}
 
+.colum_wrapper {
+    width: 90%;/* 
+    margin-left: auto;
+    margin-right: auto; */
+    margin: 1rem auto;
+}
 
-
-
-
-
+.colum_wrapper p:nth-of-type(1) {
+    margin-top: 0;
+}
 
 
 

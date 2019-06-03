@@ -11,7 +11,7 @@
   Note: IE6 works fine without this fix.
 */
 
-body {
+main {
   min-width: 960px;
 }
 
@@ -42,7 +42,7 @@ body {
 .grid_12
  {
   display: inline;
-  float: left;
+  float: left; 
   margin-left: 10px;
   margin-right: 10px;
 }
