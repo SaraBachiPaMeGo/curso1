@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+}
+
+header,footer {
+    background-color: rgb(255, 253, 240);
+    color: brown;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+p {
+    padding: 0.5rem 1rem;
+    background-color: rgb(252, 230, 90);
+}
+
+.relativa {
+    position: relative; /* Pasa a estar en una capa superior pero debemos de moverla */
+    top:2rem; /* Se mueven con respecto a las coordenadas iniciales */
+    left: 2rem;
+    background-color: rgba(245, 212, 0, 0.4);
+}
+
+.absoluta {
+    background-color: rgba(245, 212, 0, 0.4);
+    position: absolute; /* Deja vacío el hueco que ocupa el párrafo y lo ocupa el párrafo 5 por eso se solapan */
+    top: 0rem;
+    right: 6rem;
+    /* width: 50%;  *//* La posicion del origen es: si no hay nadie en medio que lo impida me pongo en medio aunque sea el padre (se va al inicio del body) a no ser que se encuentre con un ancestro del elemento y se encuentra con una posición distnta... (?) */
+    margin:0;
+}
+
+.section-relativa {
+
+}
+
+.section-absoluta {
+    position: relative;
+}
+
+
+
+
+
+
+
