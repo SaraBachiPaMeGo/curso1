@@ -33,7 +33,7 @@ function isEntero (n){
  * @description Función que calcula si un número es par o impar
  *      Puede devolver: -1,-2, true y false
  * @param {number}: x
- * @returns {*} 
+ * @returns {number | boolean} 
  */
 
 function isPar(x) {
@@ -91,9 +91,11 @@ probar();
 
 mostrar(x);
 
-module.exports= isPar;
+/* Exportar para que te salga en spec */
 
-
+exports.isPar= isPar;
+exports.isEntero= isEntero;
+exports.mostrar = mostrar;
 
 
 

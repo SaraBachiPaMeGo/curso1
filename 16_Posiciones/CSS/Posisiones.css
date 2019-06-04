@@ -10,15 +10,19 @@ body {
 header,footer {
     background-color: rgb(255, 253, 240);
     color: brown;
-    min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+header {    
+    min-height: 10vh;
+}
+
 main {
     width: 90%;
-    margin: 1rem auto;
+    margin: 1rem auto 5rem auto;
+    min-height: 80vh;
 }
 
 p {
@@ -38,8 +42,15 @@ p {
     position: absolute; /* Deja vacío el hueco que ocupa el párrafo y lo ocupa el párrafo 5 por eso se solapan */
     top: 0rem;
     right: 6rem;
-    /* width: 50%;  *//* La posicion del origen es: si no hay nadie en medio que lo impida me pongo en medio aunque sea el padre (se va al inicio del body) a no ser que se encuentre con un ancestro del elemento y se encuentra con una posición distnta... (?) */
+    /* width: 50%;  *//* La posición del origen es: si no hay nadie en medio que lo impida me pongo en medio aunque sea el padre (se va al inicio del body) a no ser que se encuentre con un ancestro del elemento y se encuentra con una posición distnta... (?) */
     margin:0;
+}
+
+.overflow {
+    height: 40vh;
+    /* overflow: hidden; */ /* Oculta lo que desborda  */
+    /* Genera una barra de scroll para la sección que se oculta */
+    overflow: scroll;
 }
 
 .section-relativa {
@@ -50,9 +61,26 @@ p {
     position: relative;
 }
 
+.fixed{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.3rem;
+    overflow: hidden;
+    align-items: flex-start;
+}
 
+footer:hover {
+   /*  min-height: 10vh; */
+   height: auto;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   align-items: center; 
+}
 
-
-
+.center {
+    text-align: center;
+}
 
 

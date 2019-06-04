@@ -40,10 +40,14 @@ function isPar(x) {
     let r = true;
     if (!isNumber(x)) {
         //Excepción: n no es un número 
-        throw 0; //Antes -1
+        const error= new Error(` ${x} x no es un número `)
+        error.numero=0
+        throw error; //Antes -1
     } else if (!isEntero(x)) {
-        //Excepción: n no es un número entero
-        throw 1;//-2
+        //Excepción: x no es un número entero
+        const error= new Error(` ${x} x no es un número entero `)
+        error.numero=1
+        throw error;
     } else if (x % 2) {
         r = false;
     }
@@ -74,7 +78,8 @@ function mostrar(x) {
     output = info[i]
     } catch (error) { // THROW -1 -2
         // i = -error + 1; // ESTO LO PONEMOS AQUÍ PARA QUE NOS SALGA EL CÓDIGO DE ERROR DEL ARRAY
-        output = excepciones[i]
+        /* output = excepciones[i] */
+        output=error.message
     }
     console.log(output)
 }
@@ -117,9 +122,11 @@ try {
 console.log(p)
  */
 
-module.exports =isPar;
-module.exports =mostrar;
-module.exports =mostrar;
+exports.isPar=isPar;
+exports.isNumber =isNumber;
+exports.isEntero =isEntero;
+exports.mostrar =mostrar;
+
 
 
 
