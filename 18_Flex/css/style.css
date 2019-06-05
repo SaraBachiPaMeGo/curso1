@@ -1,0 +1,68 @@
+
+body{
+    margin:0;
+    background-color: bisque;
+}
+
+header{
+    background-color: brown;
+    color: #ffe4c4;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+section.flex {
+    min-height: 60vh; 
+    display: flex;
+    flex-wrap: wrap; /* flex wrap del padre. Ajusta al tamaño de la pantalla, se hace responsive. Siempre hasta el límite del tamaño completo*/
+    flex-direction:row; /*Row Comportamiento que hace que mis casillas se coloquen en posición normal en lo que nos referimos al orden.
+    Row-reserve: alteramos los ejes (el principio ahora es el final sólo a las cajitas) en los párrafos no pasa porque son muy largos, si tuviéramos el texto en una línea estaría el texto orientado a la derecha
+    las ordena horizontalmente.
+    */
+    /* flex-direction: column; */ /* Los párrafos se colocan de arriba abajo */
+    /* flex-direction: column-reverse; *//* Los párrafos se colocan de  abajo arriba */
+
+    justify-content: left;
+    justify-content: flex-start; /* Desde el principio y en el sentido que marque el flex direction o el que está por defecto */
+    justify-content: end; /* No cambia la dirección sin ola justificación a no ser que hagamos un row-reverse */
+    justify-content: center; /* Me coloca todos los elementos en el centro (respetándose unos a otro) */
+    justify-content: space-between; /* Hace que se reparta el espacio entre ellos sin contar el margen izq y derecho del primero y el segundo */
+    justify-content: space-around; /* POnemos alredor del bloque márgenes por defecto (También al primero y al último no como el de arriba) */
+
+    align-items: stretch; /* En el eje secundario los elementos del eje vertical estén estirados. Siempre ocupará lo que se le marque */
+    align-items: flex-start;/* Se queda sin estiramiento, se quedan por defecto */
+    align-items: flex-end;/* Deja el espacio de arriba a mi disposición (Ahora nos deja espacio porque tenemos min-height de 60 y ocupa lo suyo pero abajo).*/
+    align-items: center; /* Nos coloca todos en el centro respecto a la pantalla*/
+    align-items: baseline; /* Se parece al center pero toma la linea base de los números, del interior no del contenedor*/
+
+    align-content: flex-start ;/* Reparte los distintos elementos siempre que existan varias líneas de elementos. del conjunto de las líneas */
+    align-content: center; /* Las dos líneas se nos centran en toda la pantalla */
+    align-content: space-around; /* Se comportan repartiéndose entre ellas todo el espacio */
+    align-content: space-between;  /* Las dos líneas de cuadrados */
+}
+
+section.flex div {
+    font-size: 4rem;
+    padding: 1rem;
+    background-color: darksalmon;
+    margin: 0.5rem;
+}
+
+section.flex div:nth-of-type(4){
+    font-size: 6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
