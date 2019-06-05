@@ -13,13 +13,18 @@
 </head>
 
 <body>
-    <header>
+    <header id="inicio">
         <h1> Imágenes de fondo</h1>
 
         <figure class="img">
             <img src="./assets/logotipo.svg" alt="">
         </figure>
-        <nav >
+
+        <nav class="icono">
+            <a href="#nav-footer" class="fas fa-bars"></a>
+        </nav>
+
+        <nav class="horizontal">
             <ul>
                 <li><a href="#inicio" rel="tag">Inicio</a></li>
                 <li><a title="clasePadre" href="#" rel="tag">Vegetación</a>
@@ -32,7 +37,13 @@
                 </li>
                 <li><a title="clasePadre" href="#">Cultura</a>
                     <ul>
-                        <li><a title="Subclase1" href="#">Comida</a></li>
+                        <li><a title="Subclase1" href="#">Comida</a>
+                        <ul>
+                            <li><a title="Subclase2" href="#">Pasta</a></li>
+                            <li><a title="Subclase3" href="#">Verduras</a></li>
+                            <li><a title="Subclase4" href="#">Carnes y pescados</a></li>
+                        </ul>
+                    </li>
                         <li><a title="Subclase2" href="#">Rutina</a></li>
                         <li><a title="Subclase3" href="#">Educación</a></li>
 
@@ -49,7 +60,7 @@
     </header>
     <div class="content-wrapper">
 
-        <section id="inicio">
+        <section >
             <h2>Inicio</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab animi eos quod, ratione, asperiores amet
                 quibusdam consequuntur autem sit consectetur aspernatur molestias esse veniam blanditiis sed, suscipit
@@ -159,6 +170,39 @@
         </section>
     </div>
     <!-- <p>Las imágenes de fondo se suelen hacer pequeñas imágenes para hacer un fondo</p> -->
+    <nav class="nav-footer" id="nav-footer">
+        <ul>
+            <li><a href="#" rel="tag">Inicio</a></li>
+            <li><a title="clasePadre" href="#" rel="tag">Vegetación</a>
+                <ul>
+                    <li><a title="Subclase1" href="#">Árboles</a></li>
+                    <li><a title="Subclase2" href="#">Arbustos</a></li>
+                    <li><a title="Subclase3" href="#">Flores</a></li>
+                    <li><a title="Subclase4" href="#">Cáctus</a></li>
+                </ul>
+            </li>
+            <li><a title="clasePadre" href="#">Cultura</a>
+                <ul>
+                    <li><a title="Subclase1" href="#">Comida</a>
+                    <ul>
+                        <li><a title="Subclase2" href="#">Pasta</a></li>
+                        <li><a title="Subclase3" href="#">Verduras</a></li>
+                        <li><a title="Subclase4" href="#">Carnes y pescados</a></li>
+                    </ul>
+                </li>
+                    <li><a title="Subclase2" href="#">Rutina</a></li>
+                    <li><a title="Subclase3" href="#">Educación</a></li>
+
+                </ul>
+            </li>
+            <li><a title="clasePadre" href="#">Leyendas de samuráis</a>
+                <ul>
+                    <li><a title="Subclase1" href="#">Leyendas</a></li>
+                    <li><a title="Subclase2" href="#">Extinción</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
     <footer class="mainfooter">
         <address>Sara Bachiller Parra</address>
         <div><a rel="Author" href="mailto://sarabachiller@gmail.com">Correo electrónico</a></div>
