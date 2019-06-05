@@ -49,15 +49,17 @@ h1 {
 }
 
 .mainfooter {
-    background-color:rgb(189, 27, 154)  ;
-    color: beige;
+    background-color:pink  ;
     text-align: center;
     padding: 1rem; /* Da "Aire" a la página */
 }
-
+address{
+    
+    color: rgb(248, 0, 41);
+}
 .mainfooter aside{
-    background-color:rgb(189, 27, 154) ;
-    color: beige;
+    background-color:pink ;
+    color: rgb(243, 83, 110);
     text-align: center;
     padding: 1rem; /* Da "Aire" a la página */
 }
@@ -145,6 +147,7 @@ nav ul{
     color: white;
     border: 1px solid #E0234E;
     background-color:  rgb(247, 96, 121);
+    margin-bottom: 5rem;
 }
 
 .mainfooter{
