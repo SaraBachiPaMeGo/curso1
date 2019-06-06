@@ -5,12 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Apuntes de flex</title>
 </head>
 
 <body>
-    <header>
-        <h1>Apuntes de flex</h1>
+    <header id="inicio" class="ppal">
+        <h1><span>Apuntes de flex</span></h1>
+        <!-- <div>
+            <img src="./assets/fondos.jpg" alt="">
+        </div> -->
+        <nav class="menu">
+                <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+                <label class="menu-open-button" for="menu-open">
+                 <span class="lines line-1"></span>
+                 <span class="lines line-2"></span>
+                 <span class="lines line-3"></span>
+               </label>
+             
+                <a href="#flex-directions" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
+                <a href="#justify-content" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
+                <a href="#aling-items" class="menu-item red"> <i class="fa fa-heart"></i> </a>
+                <a href="#aling-content" class="menu-item purple"> <i class="fa fa-microphone"></i> </a>
+                <a href="#resumen" class="menu-item orange"> <i class="fa fa-star"></i> </a>
+                <a href="#aling-content" class="menu-item lightblue"> <i class="fa fa-diamond"></i> </a>
+             </nav>
     </header>
     <p>Esto define un contenedor flexible; En línea o bloque dependiendo del valor dado. Permite un contexto flexible para todos sus hijos directos.Tenga en cuenta que las columnas CSS no tienen efecto en un contenedor flexible.</p>
     <section id="flex-directions">
