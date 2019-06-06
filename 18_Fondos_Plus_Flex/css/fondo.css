@@ -32,32 +32,54 @@ header::before { /* Generamos un componente flotante encima del header */
 }
 
 div.superior{
-    flex: 1 1 auto; /* No se aplica en el eje vertical sino en el horizontal  */
+    /* flex: 1 1 auto;  *//* No se aplica en el eje vertical sino en el horizontal  */
     display: flex;
+    margin-top: 10rem;
+    
 }
 
 div.superior div {
+    z-index: 50;
     flex: 1 1 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    
 }
-            div.menu-wrapper div {
-                /* flex: 1 1 auto; */
+            div.menu-wrapper nav {
+                flex: 1 1 auto;
                 display: flex;
                 align-items: center;
+                flex-direction: row; 
                 justify-content: space-around;
+                justify-content: flex-start;
+                padding-left: 5rem;
+               
             }
 
-            div.logo-wrapper  {
-               /*  flex: 1 1 auto; */
+            div.logo-wrapper div {
+                /* flex: 1 1 auto;
+                display: flex;
+                align-items: baseline;
+                
+                flex-direction: row-reverse; 
+                justify-content: flex-end; 
+                padding-right: 0;  */ 
+
+                flex: 1 1 auto;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                /* flex-direction: row-reverse;  */
+                justify-content: space-around;
+                justify-content: flex-end;
+                padding-right: 5rem;
+                padding-top: 0.5rem;
+                               
             }
 
             .logo-wrapper img {
-                max-width: 20%;
-                min-width: 5%;            
+                max-width: 15%;
+                min-width: 10%; 
             }
 
 div.inferior{
@@ -93,4 +115,18 @@ nav.icono {
     font-size: 3rem;
 }
 
+@media screen and (max-width:400px){
+    nav.icono {
+        color: #E0234E;
+        font-size: 2rem;
+    }
 
+    .logo-wrapper img {
+        max-width: 10%;
+        min-width: 10%; 
+    }
+}
+
+
+
+/* PREGUNTAR: CÓMO HAGO QUE MI ICONO NO SE VUELVA DIMINUTO? YA HE HECHO UNA MEDIA QUERY PONIÉNDOLE PARÁMETROS Y NO ME LOS COGE */
