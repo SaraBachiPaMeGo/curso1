@@ -46,6 +46,7 @@ div.superior div {
     align-items: center;
     
 }
+
             div.menu-wrapper nav {
                 flex: 1 1 auto;
                 display: flex;
@@ -198,11 +199,15 @@ nav ul{
     list-style-type: none;
 }
 
+div.superior nav.horizontal{
+    display: none;
+}
+
 @media screen and (min-width:500px){
     .content-wrapper{
         margin-left: 2rem;
         margin-right: 2rem;
-        border: 1px solid coral;
+        /* border: 1px solid coral; */
     } 
     
     div.superior nav.horizontal{
@@ -213,13 +218,42 @@ nav ul{
     {
         display: initial;
     }
+
+    li ul { /* Submenús ocultos */
+        display: none;
+    }
+    
+    li:hover>ul{
+        display: block;
+        position: initial; /* position: initial; Se hace más grande cuando estás encima del ul *//* 
+        background-color: rgb(247, 96, 121);
+        border: 1px solid pink;
+        color: white; */
+    }
 }
 
 @media screen and (min-width:650px){
     .content-wrapper{
         margin-left: 3rem;
         margin-right: 3rem;
-        border: 1px solid black;
+        /* border: 1px solid black; */
+    }
+
+    div.menu-wrapper {
+        margin-left:100px;
+        max-width: auto;
+        /* width: 100px; */
+    }
+
+    div.menu-wrapper nav {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: row; 
+        justify-content: space-around;
+        justify-content: center;
+        /* padding-left: 5rem; */
+       
     }
 
     nav.footer {
@@ -236,12 +270,14 @@ nav ul{
         position: relative;
                 
     }
-
-    nav.horizontal ul {
+.nav.horizontal{
+    margin-left: 45px;
+}
+   /*  nav.horizontal ul {
         padding: 0;
         display: flex;
         margin: 0;
-    }
+    } */
 
     nav.icono,
     .nav-footer{
@@ -341,6 +377,17 @@ nav ul{
             width: 10em;
         }
         
+        li ul { /* Submenús ocultos */
+            display: none;
+        }
+        
+        li:hover>ul{
+            display: block;
+            position: initial; /* position: initial; Se hace más grande cuando estás encima del ul *//* 
+            background-color: rgb(247, 96, 121);
+            border: 1px solid pink;
+            color: white; */
+        }
 
 }
 
