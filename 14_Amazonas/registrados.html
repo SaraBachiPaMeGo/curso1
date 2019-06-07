@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="shortcut icon" href="eye256x256_114396.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Laila&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius+Unicase&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>El Amazonas</title>
+</head>
+<body>
+    <header>
+        <h1> Amazonas</h1>
+        <p>¡Un lugar para descubrir!</p>
+        <nav>
+            <ul>
+                <li><a href="#green" rel="tag">GreenPeace en La Amazonas</a></li>
+                <li><a href="#curiosidad" rel="tag">¿Sabías que...?</a></li>
+                <li><a href="#viajes" rel="tag">Consejos para ir de viaje al Amzonas</a></li>
+                <li><a href="#mas" rel="tag">¿Quieres saber más sobre La Amazonas?</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section id="mas">
+        <header>
+            <h2>¿Quieres saber más sobre La Amazonas?</h2>
+            <p>¡Contacta con nosotros!</p> <!-- Formulario -->
+        </header>
+        <form action="https://jsonplaceholder.typicode.com/users" method="POST" name="form">           
+            <label for="userEmail">Email</label>
+                <input type="email" name="email" id="email" class="form_control" placeholder="Usuario@gmail.com" value="@gmail.com" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
+            <label for="userPassword" class="form_label">Contraseña</label>
+                <input type="password" name="userPassword" placeholder="Contraseña" id="userPassword" class="form_control" required minlength="8" maxlength="16">
+        <!-- Dos botones para aquellos que están registrados y otros que no. Para los que ya están ir a otra página -->
+        <!-- Aviso de contraseña demasiado larga -->
+        </form>
+        <button type="submit" class="sing-up" onclick="location.href='wwww.amazonas.com'" value=""> <span><i class="fal fa-sign-in-alt"></i></span> Iniciar sesión</button>
+    </section>
+    <footer>
+            <aside>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" rel="external" title="Facebook" target="_blank"><i class="fab fa-facebook" ></i></a></li> <!-- Calidad diferente de texto la etiqueta i -->
+                        <li><a href="https://twitter.com/?lang=en" rel="external" title="Twitter" target="_blank"><i class="fab fa-twitter" ></i></a></li>
+                        <li><a href="https://www.instagram.com/" rel="external" title="Instagram" target="_blank"><i class="fab fa-instagram" ></i></a></li>
+                    </ul>
+                </aside>
+    </footer>
+</body>
+
+</html>

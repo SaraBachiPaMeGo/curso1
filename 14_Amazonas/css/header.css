@@ -1,0 +1,121 @@
+/*Fondo header*/
+
+/* header div {
+    height: 40vh;
+    width: auto;
+    border: 1px solid;
+} */
+
+body header:nth-of-type(1) { /* Capa profunda */
+    position: relative;
+    min-height: 40vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    z-index: 20;
+}
+/* La foto del fondo del header afecta a los demás header, tengo que encintrar la forma de que encuentre sólo al hijo predilecto de body y no a los demás */
+
+header::before { /* Generamos un componente flotante encima del header */
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 10; 
+    opacity: 0.5;
+    background-image: url(../Assets/fondo-am.jpg); 
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+}
+
+.fondo{
+    content: ''; /*No entiendo por qué se pone esto*/
+    position: absolute;
+    max-width: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+    z-index: 1;
+    top: 0%;
+    margin-left: 0%;
+}
+.fondo::after{
+    z-index: 5;
+    position: relative;
+}
+
+
+
+/*Menú*/
+
+.navigation {
+    background-color: #2B8039;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    }
+    .navigation * {
+    padding:0;
+    margin:0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1em;
+    }
+    .navigation ul {
+    display: flex;
+    justify-content: left;
+    padding: 10px 0 0 0;
+    }
+    .navigation ul li {
+    list-style: none;
+    justify-content: left;
+    margin: 0 0 0 5px;
+    }
+
+    .navigation ul li a {
+        display: flex;
+        padding: 0 15px 0 0;
+        color: #e0ebf3;
+        text-decoration: none;
+        
+        }
+        .navigation ul li a span {
+        padding: 10px 0 10px 15px;
+        }
+            .navigation ul li a:hover /* span */ {            
+            background-color: #9BFFAC;
+            color: #2B8039;
+            transform: scale(1);
+            transition-property: "background-color";
+            transition-timing-function: linear;
+
+            }
+
+ /*PREGUNTAS: CÓMO PONER UN ICONO DENTRO DE UN BOTÓN
+ PONER UNA TRASICIÓN A UN LI PERO SIN PONER +x NO SALE POR QUÉ
+ COMILLAS SALEN TODAS PARA EL MISMO LADO AUN CAMBIANDO LA EXPRESIÓN DE QUE SEA PARA EL OTRO LADO*/           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

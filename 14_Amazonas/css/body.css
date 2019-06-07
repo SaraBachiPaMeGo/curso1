@@ -1,10 +1,11 @@
-/*HEADER*/
-
-
-
-
 
 /*BODY*/
+
+
+body{
+    background-color: rgba(0, 0, 0, 0.192);
+    margin-left: 0%;
+}
 
 h1{
     font-family: 'Delius Unicase', cursive;
@@ -23,10 +24,12 @@ blockquote::before {
     content: open-quote;
 }
 
+/*FORMULARIO*/
 
+.fal .fa-sign-in-alt {
+    min-width: 10px;;
+}
 
-
-/*FOOTER*/
 
 
 
