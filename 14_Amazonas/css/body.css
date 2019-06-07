@@ -17,17 +17,20 @@ blockquote {
 }
 
 blockquote::after {
-    content: open-quote;;
+    content: close-quote;;
 }
 
 blockquote::before {
     content: open-quote;
 }
 
+/* Cambiar tipo de comillas */
+
 /*FORMULARIO*/
 
-.fal .fa-sign-in-alt {
-    min-width: 10px;;
+button.sing-up {
+    font-size: 1rem;
+    color: rgb(37, 0, 248);
 }
 
 

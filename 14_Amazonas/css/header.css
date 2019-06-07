@@ -95,10 +95,11 @@ header::before { /* Generamos un componente flotante encima del header */
             transition-timing-function: linear;
 
             }
+        
 
- /*PREGUNTAS: CÓMO PONER UN ICONO DENTRO DE UN BOTÓN
- PONER UNA TRASICIÓN A UN LI PERO SIN PONER +x NO SALE POR QUÉ
- COMILLAS SALEN TODAS PARA EL MISMO LADO AUN CAMBIANDO LA EXPRESIÓN DE QUE SEA PARA EL OTRO LADO*/           
+ /*PREGUNTAS: CÓMO PONER UN ICONO DENTRO DE UN BOTÓN-- no coger los que son pro
+ PONER UNA TRAnSICIÓN A UN LI PERO SIN PONER +x NO SALE POR QUÉ ---Se pone + porque son hermanos adyacentes (inmediato), ~ para todos los hermanos.
+ COMILLAS SALEN TODAS PARA EL MISMO LADO AUN CAMBIANDO LA EXPRESIÓN DE QUE SEA PARA EL OTRO LADO-- Él no pone coma, pero si no le pongo coma entre las dos expresiones cada una es distinta*/           
 
 
 

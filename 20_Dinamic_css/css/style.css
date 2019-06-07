@@ -37,10 +37,12 @@ div.transform {
 }
 
 p.btn-Esc:hover+div {
+    transform-origin: left;
     transform: scale(3); /* Admite uno o dos valores (si uno, lo hace por los dos). Hace x veces que crezca */
 }
 
 p.btn-Rot:hover+div {
+    transform-origin: top; /* Gira entorno a un punto */
     transform: rotate(100deg) /* Los grados de rotación, 360 grados que rote entero y así. DEG de degrees en inglés */
 }
 
@@ -52,8 +54,17 @@ p.btn-Tras:hover+div {
     transform: translateX(100px)
 }
 
+section.trans3d{
+    perspective: 500px;
+}
 
+/* .btn-3D {
+    
+} */
 
-
+p.btn-3D:hover+div {
+    transform: translateZ(1rem);
+    transform: translate3d(3rem , 3rem)
+}
 
 
