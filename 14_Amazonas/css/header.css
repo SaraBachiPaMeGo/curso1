@@ -28,7 +28,7 @@ header::before { /* Generamos un componente flotante encima del header */
     opacity: 0.5;
     background-image: url(../Assets/fondo-am.jpg); 
     background-repeat: no-repeat; 
-    background-position: center;
+    /* background-position: center; se ve mejro no sale la chica*/
     background-size: cover;
 }
 
