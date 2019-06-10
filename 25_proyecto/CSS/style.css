@@ -2,7 +2,8 @@
 footer {
     background-color: var(--color-fondo);
     color:var(--color-letra);
-    text-align: center;    
+    text-align: center;  
+    grid-area: footer;  
 }
 
 .footer aside li{
@@ -46,6 +47,7 @@ address>div {
     padding: 0.8rem 0rem 0.5rem 1rem;
     font-size: large;
     background-image: url("./assets/oilseed-rape-2135026_1920.jpg");
+    grid-area: header;
 }
 
 .header p {
@@ -62,29 +64,36 @@ address>div {
     text-shadow: rgba(2, 88, 2, 0.397) 0.1em 0.1em 0.2em;
     font-size: var(--size-title);
     margin-bottom: 1rem;
+    
 }
-/* //Ambas se refieren a h1 */
-/* .h1-header {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-family:var(--tipo-letra-title);
-} */
 
-
-
-/* // body  */
 body {
     font-family: var(--tipo-letra-body);
     line-height: 1;
     font-size: var(-size-base-);
-   /*  background-image: linear-gradient(rgba(109, 240, 148, 0.5), rgba(255, 255, 0, 0.5))
-                 ; */
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        "header header"
+        "main main"
+        "aside aside"
+        "footer footer" ;
+    
 }
 main{
     margin: 2rem 2rem;
+    grid-area: main;
     
 }
-main h2 {
+
+aside{
+    margin-right: var(--margin-lateral);
+    margin-left: var(--margin-lateral);
+    grid-area: aside;
+    margin-bottom: var(--margin-vertical);
+}
+main h2, aside h2 {
     font-size: var(--size-title-section);
     margin: 0.8rem;
     font:bold;
@@ -93,14 +102,6 @@ main h2 {
 main p {
     margin: 0.8rem;
 }
-/* 
-main article {
-    width: 49%;
-    display: inline-block; /* Hemos quitado el margen */
-   /*  vertical-align: top;
-    background-color: var(--color-article-border) ;
-    border: var(--color-article-fondo);
-} */ 
 
 section article {
     width: 50%;
@@ -125,42 +126,6 @@ section.inline-block article:nth-of-type(2) {
 section {
     margin-top: 10px;
 }
-
-section.float article{
-    float:left;
-}
-
-section.float:after{
-    content: '';
-    display: block; /* ClearFix */
-    clear: both;
-}
-
-section .table {
-    display: table;
-    align-items: flex-start;
-}
-
-section .table article{
-    display: table-cell; /* Pone al mismo nivel el bloque de secciones */
-    align-items: stretch; /* Hace que todas las columnas tengan el mismo espacio, en cambio ocn flex-start se colocan en vez de extendidos de forma que se respetara el espacio */
-}
-
-section .flex article{
-    width:100%;
-}
-
-section .flex {
-    display: flex; /* Pone al mismo nivel el bloque de secciones */
-    /* flex-wrap: nowrap; */
-    flex-direction: column; /*Se colocan uno debajo de otro pero sólo es flex*/
-}
-
-@media screen and (min-width: 600px) { /*mobile first  con -device- nos funciona sólamente cuando demos a la vista del móvil en el ordenador*/
-    section .flex{
-        flex-direction: row;          
-    } 
-} /*lee el codigo t al llegar a ma media query aplica lo que le pedimos en la media. El primero interpreta el código y crea un cuando (cuando sea más pequeño que 600px haz x)*/
 
 section>header{
     margin-bottom:5px;
@@ -192,17 +157,139 @@ ul li {
 
 }
 
-/* 
-16px - 1rem
-14px - x     x= 0.875
+:root {
+    --size-title: calc( var(--size-small) * 3);
+    --size-subtitle: calc( var(--size-small) * 2);
+    --size-title-section: 1.2rem;
+    --size-title-article: 1rem;
+    --size-base: calc(14rem/16);
+    --size-small: calc(12rem/16);
+    --margin-vertical: 1.5rem;
+    --margin-lateral: 2rem;
+    --margin-parrafo: 1rem;
+   }
 
-en cs3 calc te calcula los px
-se puede meter también en variables
-*/
+/*ASIDE*/
+
+.publi{
+    max-width: 100%;
+    height: 50vh;
+    background-image: url(../assets/burger-king.jpg);
+    background-repeat: no-repeat;
+    background-size: contain; /* Que se muestre entera la foto */
+}
+
+.enano {
+    transform: scale(0);
+}
+
+/*NUEVO*/
+
+section {
+    margin-top: var(--margin-vertical);
+    margin-bottom: var(--margin-vertical);
+}
+
+section>header {
+    color: var(--color-fondo);
+    background-color:  var(--color-letra);
+    padding: 0.3rem 1rem;
+    margin-bottom: var(--margin-parrafo);
+
+}
+
+section article {
+    padding: 1rem;
+    background-color: rgb(166, 228, 166);
+    border: 1px solid rgb(45, 139, 45);    
+    width: 100%;
+
+}
+
+/* @media screen and (min-device-width: 600px) { */
+
+    @media screen and (min-width: 600px) { /*mobile first  con -device- nos funciona sólamente cuando demos a la vista del móvil en el ordenador*/
+        /* section .flex{
+            flex-direction: row;          
+        }  */
+    
+        body{
+            grid-template-areas: 
+            "header header"
+            "main aside"
+            "main aside"
+            "footer footer" ;    
+        }
+    
+        aside {
+            margin-top: var(--margin-vertical);
+        }
+    
+        main,aside {
+            margin-right: calc(var(--margin-lateral)/2);
+            margin-left: calc(var(--margin-lateral)/2);
+        }
+    
+        .publi {
+            background-image: url(../assets/publi-piiza.gif);
+        }
+    }
+
+@media screen and (min-width: 800px) {
+
+    .publi {
+        background-image: url(../assets/publi-piiza.gif);
+    }
+
+    body{
+        grid-template-columns: 4fr 1fr;    
+    }
+
+    section.grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        grid-column-gap: 0.5rem;
+        /* grid-row-gap: 0.5rem; */
+        grid-template-areas: 
+        /* "... pepe ... "
+        "... ... ..." */
+        "header header header"
+        "col1 col2 col3";
+    }
+
+    section>header {
+        grid-area: header;/* pepe; */ /* Este nombre esta aquí porque arriba hemos puesto la palabra header header header */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    section>article:nth-of-type(1){
+        grid-area: col1;
+    }
+
+    section>article:nth-of-type(2){
+        grid-area: col2;
+    }
+
+    section>article:nth-of-type(3){
+        grid-area: col3;
+    }
+
+    /* Se centra el título y pierde los dos márgenes que tiene a los lados (realmente no son márgenes, son cuadrados) */
 
 
 
 
+
+
+
+
+
+
+}
 
 
 
