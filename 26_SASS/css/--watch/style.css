@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+body > header {
+  background-color: #f85340;
+  color: bisque;
+}
+
+section {
+  margin: 2rem;
+}
+section header {
+  background-color: salmon;
+  color: bisque;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+body .mainheader {
+  background-color: #f85340;
+  color: bisque;
+  display: flex;
+  justify-content: center;
+}
+body .mainheader h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+section {
+  margin: 2.5rem;
+}
+section header {
+  background-color: salmon;
+  color: bisque;
+}
+
+/*# sourceMappingURL=style.css.map */
