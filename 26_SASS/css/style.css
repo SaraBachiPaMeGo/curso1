@@ -1,15 +1,35 @@
+@charset "UTF-8";
+/* Esto es un comentario */
+/* El compilador no compila variables */
+/*VARIABLES EN SASS*/
+/* Conjunto de instrucciones que yo agrupo en un sólo nombre */
+.main, .mainfooter, body .mainheader {
+  background-color: #f85340;
+  color: #ea2b2b;
+  display: flex;
+}
+
 body {
-  margin: 0;
+  background-color: #fffcf6;
+  margin: 0rem;
+  /* Esto da 0 */
+  display: grid;
+  grid-template-rows: 2fr auto auto 1fr;
 }
 body .mainheader {
-  background-color: #f85340;
-  color: bisque;
-  display: flex;
+  /* Te ahorra escribir otra clase. Coge algo que ya has aplicado un selector a otro */
+  /*  background-color: rgb(248, 83, 64);
+   /* color: bisque; */
+  /*display: flex; */
   justify-content: center;
+  /* color:darken($color:$color-ppal , $amount:20) ; */
+  /* Cantidad de oscurecimiento */
 }
 body .mainheader h1 {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   height: 10vh;
   display: flex;
   justify-content: center;
@@ -17,12 +37,40 @@ body .mainheader h1 {
   align-content: center;
 }
 
-section {
+section.intro {
   margin: 2.5rem;
+  min-height: 60vh;
 }
-section header {
+section.intro header {
   background-color: salmon;
   color: bisque;
+}
+
+section.samples {
+  margin: 2.5rem;
+}
+section.samples h2 {
+  /* Cantidad de oscuro que le quieras dar */
+  background-color: #fce5e5;
+  color: #cd1515;
+}
+
+p {
+  border: 1px solid #e900f1;
+  padding: 1rem;
+}
+
+.mainfooter {
+  /* Dependiendo del orden cogerá un color/estilo establecido en el extend o no, en el caso de que pongas un background de otro color por ejemplo. */
+  background-color: #f85340;
+  color: #f38888;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.mainfooter div {
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

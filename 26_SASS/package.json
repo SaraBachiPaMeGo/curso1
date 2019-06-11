@@ -1,0 +1,16 @@
+{
+  "name": "26_SASS",
+  "version": "1.0.0",
+  "description": "Ejemplos de uso del SASS",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm -v",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "saludo": "echo 'Hola'",
+    "sass": "sass sass/:css/ --watch --no-source-map"
+
+  },
+  "keywords": [],
+  "author": "Sara",
+  "license": "ISC"
+}

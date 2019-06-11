@@ -1,39 +1,88 @@
+/* Esto es un comentario */
+// Esto es otro comentario 
+/* El compilador no compila variables */
+
+/*VARIABLES EN SASS*/
+
+$color-back: rgb(255, 252, 246);
+$color-ppal: rgb(243, 136, 136);
+$margen-base:1rem;
+
+@mixin sin_margenes_vertic {
+    margin-top: 0;
+    margin-bottom: 0;
+} /* Conjunto de instrucciones que yo agrupo en un sólo nombre */
+
+@mixin colores_invertidos($oscuro:20, $claro:40) { /* Cantidad de oscuro que le quieras dar */
+    background-color: lighten($color: $color-ppal, $amount: $claro) ;
+    color:darken($color:$color-ppal , $amount:$oscuro) ;
+}
+
+.main {
+    background-color: rgb(248, 83, 64);
+    color:darken($color:$color-ppal , $amount:20) ;
+    display: flex;
+}
+
 
 body {
-    margin: 0;
+    background-color: $color-back;
+    margin: ($margen-base+ $margen-base)/2 - $margen-base; /* Esto da 0 */
+    display: grid;
+    grid-template-rows: 2fr auto auto 1fr;
 
     .mainheader{
-        background-color: rgb(248, 83, 64);
-        color: bisque;
-        display: flex;
+       @extend .main; /* Te ahorra escribir otra clase. Coge algo que ya has aplicado un selector a otro */
+       /*  background-color: rgb(248, 83, 64);
+        /* color: bisque; */
+        /*display: flex; */
         justify-content: center;
+        /* color:darken($color:$color-ppal , $amount:20) ; */ /* Cantidad de oscurecimiento */
         
         h1{
-            margin-top: 0;
-            margin-bottom: 0;
-            height: 10vh;;
+            @include sin_margenes_vertic();
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            height: 10vh;
             display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
         }
     }
 }
 
-
-section{
+section.intro{
     margin: 2.5rem;
-   
+    min-height: 60vh;
+
     header {
         background-color: salmon;
         color: bisque;
     }
  }
 
+ section.samples {
+     margin: 2.5rem;
+    h2 {
+       @include colores_invertidos(30,20);
+    }
+ }
 
+ @import './_parrafo.scss'; 
 
-
-
+.mainfooter{
+    @extend .main; /* Dependiendo del orden cogerá un color/estilo establecido en el extend o no, en el caso de que pongas un background de otro color por ejemplo. */
+    background-color: rgb(248, 83, 64);
+    color: $color-ppal;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    div {
+        flex-direction: column;
+    }
+}
 
 
 
