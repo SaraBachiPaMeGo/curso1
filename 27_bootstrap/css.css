@@ -1,0 +1,46 @@
+
+:root {
+    --color-letra: rgb(48, 48, 48);
+    --color-fondo: rgba(173, 173, 173, 0.61);
+    --tipo-letra-body:  'Roboto', sans-serif;
+    --tipo-letra-title: 'Bree Serif', serif;
+    --size-title: 4rem;
+    --size-sub: 1.4rem ;
+}
+
+.mainheader {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);    
+    /* min-height: 10vh; */
+    font-family: var(--tipo-letra-title);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+body {
+   font-family: var(--tipo-letra-body);
+}
+
+.mainfooter {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    font-family: var(--tipo-letra-title);
+    min-height: 10vh;
+    
+}
+
+.mainfooter address {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
