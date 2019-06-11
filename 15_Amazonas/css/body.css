@@ -159,8 +159,8 @@ div.green h2 {
     flex-wrap: nowrap;
 }
 
-.div-img {
-    height: 20vh;
+.div-img {/* 
+    height: 20vh; */
     width: 30%;
     margin: 0;
     flex-direction: column;
