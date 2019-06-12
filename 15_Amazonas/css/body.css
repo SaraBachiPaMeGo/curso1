@@ -5,34 +5,61 @@
 
 }
 
-/*BODY*/
-
-/*Intro*/
-
-body{
-    margin-right:10% ;
-    margin-left:10%;    
-}
-
+/*HEADER*/
 header{
     border: 1px solid rgb(250, 6, 6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      );
 }
 
 h1{
     border: 1px solid rgb(77, 13, 252);
+    /* background-image: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ); */
+    max-width: 100%;
+    height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      position: relative;
+      z-index: 0;
+      /* Se podría hacer un transform y cuando esté acabando el vídeo que apareciera "El amazonas" */
+      /* También se podría hacer una página para cada apartado del nav, para que la página no sea muy larga. */
 }
+/*NAV*/
 
 nav{
     border: 1px solid black;
+    /* position: relative;
+    z-index: -10; */
+    margin-top: 51.2%;
+    display: inline-block;
 }
+
+/*BODY*/
+
+main{
+    margin-right:10% ;
+    margin-left:10%;    
+}
+
+/*Intro*/
 
 .div-video { 
     background-color: antiquewhite;
     position: absolute;
     left: 0;
-    top: 2.2rem;
+    top: 3rem;
     width: 100%;
-    height: 50vh;
+    /* height: 100vh; */
     z-index: -10;
     visibility: visible;
     margin: 0;
@@ -41,11 +68,16 @@ nav{
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ); */
 }
 
 .video {
     max-height: 100%;
     /* height: 50vh; */
+    max-width: 100%;
 }
 
 div{
