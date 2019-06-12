@@ -35,32 +35,14 @@ h1{
       /* Se podría hacer un transform y cuando esté acabando el vídeo que apareciera "El amazonas" */
       /* También se podría hacer una página para cada apartado del nav, para que la página no sea muy larga. */
 }
-/*NAV*/
-
-nav{
-    border: 1px solid black;
-    /* position: relative;
-    z-index: -10; */
-    margin-top: 51.2%;
-    display: inline-block;
-}
-
-/*BODY*/
-
-main{
-    margin-right:10% ;
-    margin-left:10%;    
-}
-
-/*Intro*/
 
 .div-video { 
     background-color: antiquewhite;
     position: absolute;
     left: 0;
     top: 3rem;
-    width: 100%;
-    /* height: 100vh; */
+    width: 100%;/* 
+    height: 100vh; */
     z-index: -10;
     visibility: visible;
     margin: 0;
@@ -73,13 +55,66 @@ main{
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ); */
+          background: rgba(0,0,0,0.5);
 }
 
 .video {
-    max-height: 100%;
+    /* max-height: 100%; */
     /* height: 50vh; */
     max-width: 100%;
 }
+/*NAV*/
+
+.menu{
+    border-top: 0.07em  solid rgba(0, 0, 0, 0.432);
+    border-bottom: 0.07em  solid rgba(0, 0, 0, 0.432);
+    
+}
+    .menu ul{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .menu ul li {
+        display: inline;
+        margin: 1%;
+    }
+    .menu ul li a{
+    text-decoration: none;
+    font-family: 'Pragati Narrow', sans-serif;
+    /* color:rgb(146, 3, 3) */
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color:rgb(146, 3, 3);
+    }
+/* 
+#menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navigation{
+    margin-top: 21rem;
+} */
+
+nav{
+    border: 1px solid black;
+    /* position: relative;
+    z-index: -10; */
+    /* margin-top: 51.2%; */
+    
+}
+
+/*BODY*/
+
+main{
+    margin-right:10% ;
+    margin-left:10%;    
+}
+
+/*Intro*/
 
 div{
     min-height: 20vh;
