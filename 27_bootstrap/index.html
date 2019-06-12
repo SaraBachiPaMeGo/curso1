@@ -7,11 +7,12 @@
     <title>Bootstrap</title>
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="./css.css"> <!-- Poner nuestro css después de bootstrap para que si haces algún cambio que se vea el tuyo -->
+    
 </head>
 <body>
-    <header class="mainheader">
+    <header class="mainheader text-color-letra text-color-fondo pt-4 pb-4">
         <div class="container"><!-- Estructura de los elementos típicos de bootstrap cpn b4-grid-default -->
             <div class="row mt-4 mg-4 justify-content-center align-items-center">
                 <div class="col-xs">
@@ -138,7 +139,7 @@
         </main>
                   
     </div>   
-        <footer class="mainfooter">
+        <footer class="mainfooter text-color-letra text-color-fondo">
             <div class="container">
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-xs-12">
@@ -151,6 +152,10 @@
             </div>
             
         </footer>
-    
 </body>
+
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script> <!-- Link para acceder a js -->
+    <script src="../node_modules/jquery/dist/jquery.slim.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </html>

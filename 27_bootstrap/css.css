@@ -9,8 +9,8 @@
 }
 
 .mainheader {
-    background-color: var(--color-fondo);
-    color: var(--color-letra);    
+   /*  background-color: var(--color-fondo);
+    color: var(--color-letra);     */
     /* min-height: 10vh; */
     font-family: var(--tipo-letra-title);
     padding-top: 1.5rem;
@@ -22,8 +22,8 @@ body {
 }
 
 .mainfooter {
-    background-color: var(--color-fondo);
-    color: var(--color-letra);
+    /* background-color: var(--color-fondo);
+    color: var(--color-letra); */
     font-family: var(--tipo-letra-title);
     min-height: 10vh;
     
