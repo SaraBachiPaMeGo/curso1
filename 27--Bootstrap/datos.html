@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/1custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Kameron|&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kreon|&display=swap" rel="stylesheet">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <header class="main_header ">
+        <div class="container pt-6 pb-2">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-xs-12 ">
+                    <h1>Uso de Bootstrap</h1>
+                </div>
+                <div class="col 4">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Clientes </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">datos</a>
+                        </li>
+                    </ul>
+                </div>
+    </header>
+    <div class="container">
+        <div class="main">
+            <section class="col-xs-1-12">
+                <div class="jumbotron">
+                    <h1 class="display-3">Datos</h1>
+                    <p class="lead">Formulario</p>
+                </div>
+                <div class="container">
+                    <form>
+                        <fieldset class="form-group row">
+                            <legend class="col-form-legend col-12">Datos de Usuario</legend>
+                            <div class="form-group row">
+                                <label for="inputName" class="col-4 col-form-label col-lg-2">Nombre</label>
+                                <input type="text" class="col-lg-2 col-4 form-control" name="inputName" id="inputName"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputApellidos" class="col-4 col-form-label col-lg-2">Apellidos</label>
+                                <input type="text" class="col-8 form-control col-lg-4" name="inputApellidos"
+                                    id="inputApellidos" placeholder="">
+                            </div>
+                            <div class="form-group row">
+                                <label for="passw" class="col-4 col-form-label col-lg-2">Contraseña</label>
+                                <input type="password" class="col-4 form-control col-lg-4" name="passw" id="passw"
+                                    placeholder="">
+                            </div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="offset-sm-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Action</button>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <form>
+
+                        </div>
+                        <fieldset class="form-group row">
+                            <legend class="col-form-legend col-12">Formulario</legend>
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="inputName" class="col-4 col-lg-2 col-form-label">Nombre</label>
+                                    <input type="text" class="col-4 col-lg-2 form-control" name="inputName"
+                                        id="inputName" placeholder="">
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-4 col-lg-2 col-form-label">Email</label>
+                                    <input type="email" class="form-control col-6 col-lg-4" name="email" id="email" aria-describedby="emailHelpId" placeholder="user@gmail.com">
+                                    <small id="emailHelpId" class="form-text text-muted">Help text</small>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="pw" class="col-4 col-lg-2">Password</label>
+                                    <input type="password" class="form-control col-6 col-lg-4" name="pw" id="pw" placeholder="">
+                                </div>
+                                <div class="form-group row">
+                                  <label for="obs" class="col-4 col-lg-2">Observaciones</label>
+                                  <input type="text" class="form-control col-8 col-lg-12" name="obs" id="obs" aria-describedby="helpId" placeholder="">
+                                  <small id="helpId" class="form-text text-muted">Help text</small>
+                                </div>
+                                <div class="form-group row col-12">
+                                  <label for="opc" class="col-4 col-lg-2">Opciones</label>
+                                  <select multiple class="form-control form-control-sm col-4 col-lg-6" name="opc" id="opc">
+                                    <option>1</option>
+                                    <option>1</option>
+                                    <option>3</option>
+                                  </select>
+                                </div>
+                                <div class="form-check form-check-inline row">
+                                    <label class="form-check-label col-6 col-lg-4 alert-success">Chequear con radio buttons</label>
+                                        <input class="form-check-input col-2 col-lg-4" type="radio" name="rd" id="rd" value="checkedValue"> Check 1
+                                        <input class="form-check-input col-2 col-lg-4" type="radio" name="rd" id="rd" value="checkedValue"> Check 2
+                                        <input class="form-check-input col-2 col-lg-4" type="radio" name="rd" id="rd" value="checkedValue" checked> Check 3
+                                    
+                                </div>
+                                <div class="form-check row custom-control-inline">
+                                    <label class="form-check-label col-4 col-lg-6">Lorem ipsum dolor sit, amet
+                                        consectetur adipisicing elit. Corporis tempore dolore facere? Suscipit aliquid
+                                        est nulla pariatur explicabo quisquam iure quis quaerat minus, provident soluta
+                                        nesciunt similique voluptas distinctio cupiditate!</label>
+                                    <input type="checkbox" class="form-check-input" name="check" id="check" value="checkedValue" checked>
+                                    Acepto
+                                    <input type="checkbox" class="form-check-input" name="nocheck" id="nocheck" value="checkedValue">
+                                    No acepto
+
+                                </div>
+                                
+                            </div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="offset-sm-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Action</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+                </form>
+        </div>
+        </section>
+    </div>
+    </div>
+
+
+
+
+    <footer class="main_footer">
+        <header>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xs-12">
+                        <address>Sara Bachiller</address>
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="../node_modules/jquery/dist/jquery.slim.js"></script>
+            <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+            <script src="../node_modules/holderjs/holder.js"></script>
+            <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
