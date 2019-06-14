@@ -1,13 +1,13 @@
 // esto es un comentario para html
 //-Esto es un comentario sólo para pug
 //-     más comentario
-//- -const page: 1;
-//- -let saludo = "Hola";
-//- -const charset = 'utf-8';
-//- -const empresa = 'Colegio <strong>Tajamar</strong>';
-//- -const aPaises = [{nombre:"España" id:"es"},{nombre:"Colombia" id:"co"},{nombre:"Francia" id:"fr"},{nombre:"Italia" id:"it"}];
--const aMenu = ["Home", "Portfolio", "Clientes", "Acerca de"]
--const aMenuP = [{nombre:"web" id:"web" description:"asde"},{nombre:"Mobile App´s" id:"apps" description:"asde"},{nombre:"IX / UI" id:"ui" description:"asde"}]
+-const page = 1;
+-let saludo = "Hola";
+-const charset = 'utf-8';
+-const empresa = 'Colegio <strong>Tajamar</strong>';
+-const aPaises = [{nombre:"España", id:"es"},{nombre:"Colombia", id:"co"},{nombre:"Francia", id:"fr"},{nombre:"Italia", id:"it"}];
+-const aMenu = [{nombre:"Home", id:"home", description:"asde"},{nombre:"Portfolio", id:"portfolio", description:"asde"},{nombre:"Clientes", id:"clientes", description:"asde"},{nombre:"Acerca de", id:"acerca", description:"asde"}]
+- const aMenuP = [{nombre:"Web", id:"web", description:"asde"},{nombre:"Mobile App´s", id:"apps", description:"asde"},{nombre:"IX / UI", id:"ui", description:"asde"}]
 
 // Mixin estructuras qwe tienen forma de funciones (Se les puede añadir parámetros y tienen un nombre)
 
@@ -18,6 +18,12 @@
 mixin itemMenu(item)
     li
         a(href="#"+item.id.toLowerCase() title=item.description) #{item.nombre}
+
+mixin inputGroup(inputName)
+    .form-group 
+        label(for=inputName.toLowerCase()) #{inputName}:
+        block 
+        p.error(hidden) Aquí irán los errores
 
 doctype
 html(lang=language) 
@@ -37,20 +43,24 @@ html(lang=language)
                     each item in aMenu 
                         +itemMenu(item)
         section#inicio
+            h2 inicio
             figure
                 img(src="https://via.placeholder.com/500x350", alt="alt")   
             p Interpolar variables. Poner una variable ya establecida debemos ir a options.js # { variables }
-        section#portfolio     
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit.   
+        section
+            h2 Portfolio    
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus blanditiis amet ea autem. Expedita quasi dolor omnis rem. Commodi eos ex consequuntur earum, assumenda asperiores inventore est ipsam recusandae odit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, incidunt. Rem modi quia reiciendis labore, odio alias praesentium harum aspernatur, eius, quisquam dolores repellendus officiis quibusdam quaerat vero sint? Quas.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    
         section#clientes
+            h2 Clientes
             form(action="" method="get")        
                 select(name="pais")
-                    //- -for (let i=0; i<aPaises.length; i++;) {
+                    //-for (let i=0; i<aPaises.length; i++;) {
                     //- -let item =aPaises[i]
                     //- option(value=item.id) #{item.nombre}
-                    //-  -}
-                    //-each item in aPaises
-                        //-  option(value=item.id title) #{item.nombre}
+                    //-}
+                    each item in aPaises
+                         option(value=item.id title) #{item.nombre}
         section#portfolio     
             header 
                 h2 Portfolio
@@ -58,8 +68,21 @@ html(lang=language)
                 ul
                     each item in aMenuP
                         +itemMenu(item)
-        section#portfolio     
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus blanditiis amet ea autem. Expedita quasi dolor omnis rem. Commodi eos ex consequuntur earum, assumenda asperiores inventore est ipsam recusandae odit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, incidunt. Rem modi quia reiciendis labore, odio alias praesentium harum aspernatur, eius, quisquam dolores repellendus officiis quibusdam quaerat vero sint? Quas.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.                
+        section(id=aMenu[3].id)
+            header
+                h2= aMenu[3].nombre
+                p= aMenu[3].description
+            h3  Formulario de contactos 
+            form(action="" method="get")   
+                +inputGroup('Nombre') 
+                    input(type="text", name="nombre")
+                +inputGroup('Email') 
+                    input(type="email", name="email")   
+                +inputGroup('Contraseña') 
+                    input(type="password", name="password")    
+                +inputGroup('Comentarios') 
+                    textarea(name="comentarios", cols="30", rows="10")
+                           
         footer.main-footer#main-footer
             address &copy; #{autor}  
             div
