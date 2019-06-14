@@ -7,3 +7,17 @@
     background-color: rgba(167, 46, 46, 0.616);
     color: antiquewhite;
 }
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    color:inherit;
+    display: block;
+    text-decoration: none;
+    padding:1rem;
+}
