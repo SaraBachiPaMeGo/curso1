@@ -1,11 +1,35 @@
+// esto es un comentario para html
+//-Esto es un comentario sólo para pug
+    más comentario
+-const page: 1;
+-let saludo = "Hola";
+-const charset = 'utf-8';
+-const empresa = 'Colegio <strong>Tajamar</strong>';
+-const aPaises = ["España","Colombia","Francia","Italia"];
+
 doctype
 html(lang=language) 
     head
-        meta(charset='utf-8')
-        title Hola Pug
+        meta(charset=charset)
+        title Hola Pug 
+        link(rel="stylesheet", href="./css/style.css")
     body
-        header
-             h1 Hola Pug
+        header(class="main-header")
+            -if (page == 1) {
+            h1 #{saludo} Pug
+            -} else {
+            h1=saludo - Continuación
+            -}    
+        section
+            figure
+                img(src="https://via.placeholder.com/500x350", alt="alt")     
+        section
+            form(action="" method="method")        
+                select#(name="pais")
+                -for i=1; 1<aPaises.length; i++; {
+                    option(value="")
+
+                -}
         section
              p Interpolar variables. Poner una variable ya establecida debemos ir a options.js # { variables }
         section     
@@ -14,6 +38,10 @@ html(lang=language)
                 Cupiditate quibusdam a quidem, accusamus, vero ipsa corporis 
                 voluptate autem, repellat labore laborum non quas commodi! 
                 Nam, sapiente. Perferendis mollitia consequuntur impedit!
-        footer
-            address #{autor}  
- 
+                .info Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        footer.main-footer#main-footer
+            address &copy; #{autor}  
+            div
+                small!=empresa
+            div    
+                small #{empresa}    

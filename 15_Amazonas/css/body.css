@@ -116,7 +116,7 @@ nav{
 main{
     margin-right:15% ;
     margin-left:15%;    
-    font-family: 'Laila', serif;
+    font-family: 'Delius', cursive;
 }
 
 /*Intro*/
@@ -270,6 +270,7 @@ div.green blockquote{
     margin: 7%;
     margin-bottom: 8%;
     margin-top: 5%;
+    
 }
 
 div.green h2 {
@@ -327,7 +328,7 @@ div.green h2 {
     
 }
 
-blockquote q {
+blockquote q {font-family: 'Indie Flower', cursive;
     font-style: italic;
     quotes: \201C \201D ;
     /* font-size:40px; */
@@ -336,6 +337,8 @@ blockquote q {
 }
 
 .parrafo-claudia{
+    
+    font-size: 150%;
     display: flex;/* 
     justify-content: right;*/
     align-items: center; 
