@@ -32,7 +32,16 @@ html(lang=language)
         title Hola Pug 
         link(rel="stylesheet", href="./css/style.css")
     body
-        include "../partials/header.pug"   
+        header(class="main-header")
+            -if(page == 1){
+            h1 #{saludo} Pug
+            -}else{
+            h1 #{saludo} - Continuación
+            -}    
+            nav.main-menu
+                ul
+                    each item in aMenu 
+                        +itemMenu(item)
         section#inicio
             h2 inicio
             figure
@@ -74,4 +83,9 @@ html(lang=language)
                 +inputGroup('Comentarios') 
                     textarea(name="comentarios", cols="30", rows="10")
                            
-        include "../partials/footer.pug"
+        footer.main-footer#main-footer
+            address &copy; #{autor}  
+            div
+                small!= empresa
+            div    
+                small #{empresa}    

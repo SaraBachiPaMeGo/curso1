@@ -1,0 +1,11 @@
+
+ header(class="main-header")
+            -if(page == 1){
+            h1 #{saludo} Pug
+            -}else{
+            h1 #{saludo} - Continuación
+            -}    
+            nav.main-menu
+                ul
+                    each item in aMenu 
+                        +itemMenu(item)
