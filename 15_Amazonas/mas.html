@@ -30,9 +30,9 @@
     <section id="inicio" class="menu">
         <nav class="navigation parallax">
             <ul>
-                <li class="home"><a href="#intro"><span>Homepage</span></a></li>
-                <li class="products"><a href="#green"><span>GreenPeace</span></a></li>
-                <li class="contact"><a href="#curiosidad"><span>¿Sabías que...?</span></a></li>
+                <li class="home"><a href="./index.html#intro"><span>Homepage</span></a></li>
+                <li class="products"><a href="./index.html#green"><span>GreenPeace</span></a></li>
+                <li class="contact"><a href="./index.html#curiosidad"><span>¿Sabías que...?</span></a></li>
                 <li class="consejos"><a href="./viajes.html#viajes"><span>Consejos para viajes</span></a></li>
                 <li class="mas"><a href="./mas.html#mas"><span>¿Quieres saber más?</span></a></li>
             </ul>
@@ -42,7 +42,7 @@
     <main>
     <section id="mas">
             <h2>¿Quieres saber más sobre La Amazonas?</h2>
-            <p>¡Contacta con nosotros!</p> <!-- Formulario -->
+            <p class="contactar">¡Contacta con nosotros!</p> <!-- Formulario -->
         
         <fieldset>
             <form action="https://jsonplaceholder.typicode.com/users" method="POST" name="form">
@@ -58,16 +58,16 @@
                 <!-- Dos botones para aquellos que están registrados y otros que no. Para los que ya están ir a otra página -->
                 <!-- Aviso de contraseña demasiado larga -->
             </form>
-            <p class="olvidar"><a href="#">¿Olvidaste tu contraseña?<i class="far fa-question-circle"></i></a></p>
+            <p class="olvidar"><a href="#">¿Olvidaste tu contraseña?<i class="fas fa-question-circle"></i><i class="far fa-question-circle"></i></a></p>
             <button type="submit" class="sing-up">Registrarse<i class="fas fa-user-plus"></i></button>
-            <button type="submit" class="sing-in" onclick="location.href='./registrados.html'">Iniciar sesión</button>
+            <button type="submit" class="sing-in" onclick="location.href='./registrados.html#mas'">Iniciar sesión <i class="fas fa-sign-in-alt"></i></button>
         </fieldset>
         <fieldset>
             <legend>Política de Privacidad</legend>
-            <p>Sólo tratamos los datos personales que sean estrictamente necesarios para gestionar o resolver tu
+            <p class="poli">Sólo tratamos los datos personales que sean estrictamente necesarios para gestionar o resolver tu
                 solicitud o petición de acuerdo a la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos
                 Personales y garantía de los derechos digitales.</p>
-            <input type="checkbox" name="isOk" id="isOk" required>
+            <input class="check" type="checkbox" name="isOk" id="isOk" required>
             <label for="isOk">Estoy de acuerdo</label>
         </fieldset>
     </section>

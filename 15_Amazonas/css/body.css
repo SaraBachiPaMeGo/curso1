@@ -405,6 +405,10 @@ fieldset{
     text-align: center;
 }
 
+.contactar {
+    margin: 2%
+}
+
 label {
     margin-left:2%;
 
@@ -422,18 +426,74 @@ input {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background: rgb(229, 231, 233);
-    color: blue;
+    color: #1b8f38;
 }
 
-.olvidar p,i {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.747);
-    margin-bottom: 2%;
+.olvidar i {
+    color: rgb(0, 0, 0);
 }
 
 .olvidar a {
     color:inherit;
-    color: rgba(0, 0, 0, 0.527);
+    color: rgba(0, 0, 0, 0.781);
+    text-decoration: none;
+}
+
+button{
+    text-decoration: none;
+    padding: 1%;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1b8f38;
+    border-radius: 6px;
+    border: 2px solid #1b8f38;
+    transition-property: "color";
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    filter: drop-shadow(2px 2px 5px rgba(68, 68, 68, 0.541));
+  }
+  button:hover{
+    color: #57FF73;
+    background-color: #ffffff;
+    transform-origin: center;
+  }
+
+  button.sing-up i {
+    font-size: 10%;
+    color: #2B8039;
+}
+
+button {
+    margin: 3%;
+}
+
+.check {
+    width: 2%;
+    filter: drop-shadow(2px 2px 5px rgba(68, 68, 68, 0.644));
+}
+
+.poli {
+    margin: 2%;
+}
+
+legend {
+    font-size:150%;
+    font-weight: bold;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*YA REGISTRADOS*/
+
+.email {
+    max-width: 100%;
+}
+
+fieldset{
+    border: 1px solid #1b8f38;
+    margin-bottom: 10%;
+    text-align: center;
 }
 
 /*FOOTER*/
