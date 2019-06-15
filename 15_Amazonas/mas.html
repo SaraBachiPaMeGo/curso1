@@ -7,67 +7,102 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/body.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
     <link rel="shortcut icon" href="eye256x256_114396.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Laila&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Delius+Unicase&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Dosis:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <!-- Letra bonita cursiva -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <title>El Amazonas</title>
 </head>
 
 <body>
     <header>
         <div class="div-video">
-             <video class="video" src="./Assets/NatGeo Wild Colombia Chiribiquete documental (online-video-cutter.com).mp4" loop autoplay="autoplay" muted></video>
+            <video class="video"
+                src="./Assets/NatGeo Wild Colombia Chiribiquete documental (online-video-cutter.com).mp4" loop
+                autoplay="autoplay" muted></video>
         </div>
         <h1>El amazonas</h1>
     </header>
-    <section id="menu">
-        <nav class="navigation">
+    <section id="inicio" class="menu">
+        <nav class="navigation parallax">
             <ul>
-                <li class="home"><a href="./index.html#intro"><span>Homepage</span></a></li>
-                <li class="products"><a href="./index.html#green"><span>GreenPeace</span></a></li>
-                <li class="contact"><a href="./index.html#curiosidad"><span>¿Sabías que...?</span></a></li>
+                <li class="home"><a href="#intro"><span>Homepage</span></a></li>
+                <li class="products"><a href="#green"><span>GreenPeace</span></a></li>
+                <li class="contact"><a href="#curiosidad"><span>¿Sabías que...?</span></a></li>
                 <li class="consejos"><a href="./viajes.html#viajes"><span>Consejos para viajes</span></a></li>
-                <li class="mas"><a href="#mas"><span>¿Quieres saber más?</span></a></li>
+                <li class="mas"><a href="./mas.html#mas"><span>¿Quieres saber más?</span></a></li>
             </ul>
-                <!-- Se debería de poner alguna subclase -->
-            </nav>
+            <!-- Se debería de poner alguna subclase -->
+        </nav>
     </section>
-<section id="mas">
-    <header>
-        <h2>¿Quieres saber más sobre La Amazonas?</h2>
-        <p>¡Contacta con nosotros!</p> <!-- Formulario -->
-    </header>
-    <fieldset>
-        <form action="https://jsonplaceholder.typicode.com/users" method="POST" name="form">
-            <label for="userName">Nombre</label>
-                <input type="text" placeholder="Introduzca su nombre">
-            <label for="userEmail">Email</label>
-                <input type="email" name="email" id="email" class="form_control" placeholder="Usuario@gmail.com" value="@tajamar365.com" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
-            <label for="userPassword" class="form_label">Contraseña</label>
-                <input type="password" name="userPassword" placeholder="Contraseña" id="userPassword" class="form_control" required minlength="8" maxlength="16">
-        <!-- Dos botones para aquellos que están registrados y otros que no. Para los que ya están ir a otra página -->
-        <!-- Aviso de contraseña demasiado larga -->
-        </form>
-        <button type="submit" class="sing-up">Registrarse<i class="fas fa-user-plus"></i></button>
-        <button type="submit" class="sing-in" onclick="location.href='./registrados.html'">Iniciar sesión</button>
-    </fieldset>
-    <fieldset>
-        <legend>Política de Privacidad</legend>
-        <p>Sólo tratamos los datos personales que sean estrictamente necesarios para gestionar o resolver tu solicitud o petición de acuerdo a la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.</p>
-        <input type="checkbox" name="isOk" id="isOk" required>
-        <label for="isOk">Estoy de acuerdo</label>
-    </fieldset>
-</section>
-<footer>
-
-</footer>
+    <main>
+    <section id="mas">
+            <h2>¿Quieres saber más sobre La Amazonas?</h2>
+            <p>¡Contacta con nosotros!</p> <!-- Formulario -->
+        
+        <fieldset>
+            <form action="https://jsonplaceholder.typicode.com/users" method="POST" name="form">
+                <label for="userName">Nick</label>
+                <input class="input-name" type="text" placeholder="Introduzca su nick">
+                <label for="userEmail">Email</label>
+                <input type="email" name="email" id="email" class="form_control" placeholder="Usuario@gmail.com"
+                    value="@gmail.com" required
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
+                <label for="userPassword" class="form_label">Contraseña</label>
+                <input type="password" name="userPassword" placeholder="Contraseña" id="userPassword"
+                    class="form_control" required minlength="8" maxlength="16">
+                <!-- Dos botones para aquellos que están registrados y otros que no. Para los que ya están ir a otra página -->
+                <!-- Aviso de contraseña demasiado larga -->
+            </form>
+            <p class="olvidar"><a href="#">¿Olvidaste tu contraseña?<i class="far fa-question-circle"></i></a></p>
+            <button type="submit" class="sing-up">Registrarse<i class="fas fa-user-plus"></i></button>
+            <button type="submit" class="sing-in" onclick="location.href='./registrados.html'">Iniciar sesión</button>
+        </fieldset>
+        <fieldset>
+            <legend>Política de Privacidad</legend>
+            <p>Sólo tratamos los datos personales que sean estrictamente necesarios para gestionar o resolver tu
+                solicitud o petición de acuerdo a la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos
+                Personales y garantía de los derechos digitales.</p>
+            <input type="checkbox" name="isOk" id="isOk" required>
+            <label for="isOk">Estoy de acuerdo</label>
+        </fieldset>
+    </section>
+</main>
+    <footer>
+        <div>
+            <div class="footer-right">
+                <h4>Aviso legal</h4>
+                <p>Aviso legal</p>
+                <p>Política de priacidad</p>
+                <p>Política de cookies</p>
+            </div>
+            <div class="footer-left">
+                <h4>Quienes somos</h4>
+                <p>Lo que hacemos</p>
+                <p>Quienes somos</p>
+                <p>Trabaja con nosotros</p>
+            </div>
+        </div>
+        <address>
+            <small>Copyright © Sara Bachiller Parra ®</small>
+        </address>
+        <aside class="redes">
+            <ul>
+                <li><a href="https://www.facebook.com/" rel="external" title="Facebook" target="_blank"><i
+                            class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/?lang=en" rel="external" title="Twitter" target="_blank"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/" rel="external" title="Instagram" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="https://github.com/SaraBachiPaMeGo/curso1/blob/master/07_ElementosWeb/mmedia.html"
+                        title="Github" target="_blank"><i class="fab fa-github"></i></a> </li>
+            </ul>
+        </aside>
+    </footer>
 </body>
 
 </html>

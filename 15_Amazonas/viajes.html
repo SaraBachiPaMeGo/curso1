@@ -7,14 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/body.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
     <link rel="shortcut icon" href="eye256x256_114396.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Laila&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Delius+Unicase&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
@@ -22,27 +19,25 @@
 </head>
 
 <body>
-    <header>
-        <div class="div-video">
-            <video class="video"
-                src="./Assets/NatGeo Wild Colombia Chiribiquete documental (online-video-cutter.com).mp4" loop
-                autoplay="autoplay" muted></video>
-        </div>
-        <h1>El amazonas</h1>
-    </header>
-
-    <section id="menu">
-        <nav class="navigation">
-            <ul>
-                <li class="home"><a href="./index.html#intro"><span>Homepage</span></a></li>
-                <li class="products"><a href="./index.html#green"><span>GreenPeace</span></a></li>
-                <li class="contact"><a href="./index.html#curiosidad"><span>¿Sabías que...?</span></a></li>
-                <li class="consejos"><a href="#viajes"><span>Consejos para viajes</span></a></li>
-                <li class="mas"><a href="./mas.html#mas"><span>¿Quieres saber más?</span></a></li>
-            </ul>
-            <!-- Se debería de poner alguna subclase -->
-        </nav>
-    </section>
+        <header >
+            <div class="div-video">
+                <video class="video"
+                    src="./Assets/NatGeo Wild Colombia Chiribiquete documental (online-video-cutter.com).mp4" loop
+                    autoplay="autoplay" muted></video>
+            </div>
+            <h1>El amazonas</h1>
+        </header>
+        <section id="inicio"class="menu">
+            <nav class="navigation parallax">
+                <ul>
+                    <li class="home"><a href="index.html#intro"><span>Homepage</span></a></li>
+                    <li class="products"><a href="index.html#green"><span>GreenPeace</span></a></li>
+                    <li class="contact"><a href="index.html#curiosidad"><span>¿Sabías que...?</span></a></li>
+                    <li class="consejos"><a href="./#viajes"><span>Consejos para viajes</span></a></li>
+                    <li class="mas"><a href="./mas.html#mas"><span>¿Quieres saber más?</span></a></li>
+                </ul>
+            </nav>
+        </section>
     <main>
         <section id="viajes">
             <h2>Consejos para ir de viaje al Amazonas</h2>
@@ -58,6 +53,9 @@
                 cuenta varios factores, además de disfrutar al máximo este viaje tan fantástico.</p>
             <p>Un buen seguro de viajes es primordial para cualquier imprevisto, ya que lo más importante es nuestra
                 salud.</p>
+                <!-- <div class="img-barco">
+                    <img src="./Assets/barco.jpg" alt="El amazonas en barco">
+                </div> -->
             <h3>Vacunas para viajar al Amazonas</h3>
             <blockquote>
                 La vacuna de Fiebre Amarilla es obligatoria para esta zona en Colombia y Perú y hay que ponérsela mínimo
@@ -89,10 +87,36 @@
                 personas delicadas!
             </blockquote>
         </section>
+        <a href="#inicio" class="up trans esc"><i class="fas fa-chevron-circle-up"></i></a>
     </main>
-        <footer>
-
-        </footer>
+    
+    <footer>       
+            <div> 
+                <div class="footer-right">
+                    <h4>Aviso legal</h4>
+                    <p>Aviso legal</p>
+                    <p>Política de priacidad</p>
+                    <p>Política de cookies</p>
+                </div> 
+                <div class="footer-left">
+                    <h4>Quienes somos</h4>
+                    <p>Lo que hacemos</p>
+                    <p>Quienes somos</p>
+                    <p>Trabaja con nosotros</p>
+                </div> 
+            </div>   
+            <address>
+                <small>Copyright © Sara Bachiller Parra ®</small>               
+            </address>
+            <aside class="redes">
+                <ul>
+                    <li><a href="https://www.facebook.com/" rel="external" title="Facebook" target="_blank"><i class="fab fa-facebook" ></i></a></li> 
+                    <li><a href="https://twitter.com/?lang=en" rel="external" title="Twitter" target="_blank"><i class="fab fa-twitter" ></i></a></li>
+                    <li><a href="https://www.instagram.com/" rel="external" title="Instagram" target="_blank"><i class="fab fa-instagram" ></i></a></li>
+                    <li><a href="https://github.com/SaraBachiPaMeGo/curso1/blob/master/07_ElementosWeb/mmedia.html" title="Github" target="_blank"><i class="fab fa-github"></i></a> </li>
+                </ul>
+            </aside>
+    </footer>
 </body>
 
 </html>
