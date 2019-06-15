@@ -58,7 +58,7 @@ h1{
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ); */
-          background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.5);
 }
 
 .video {
@@ -67,6 +67,7 @@ h1{
     margin: 0 auto;
     max-width: 100%;
 }
+
 /*NAV*/
 
 .menu{
@@ -111,18 +112,48 @@ nav{
     
 }
 
+/*ICONO DE SUBIDA*/
+
+.up{
+    background-color: inherit;
+    margin: 0%;
+    display: flex;
+    justify-content: end;
+    color: inherit;
+    flex-direction: row-reverse;
+}
+
+.up i{
+    margin-top: 2%;
+    text-align: end;
+    font-size:200%; 
+    color: #57FF73;
+}
+
+i:hover{
+    color: #2B8039;/* 
+    font-size: 300%;  */
+    transform-origin: center;
+    transform: scale(1.5);    
+}
+.up i{
+    transition-property: "color";
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
 /*BODY*/
 
 main{
-    margin-right:15% ;
+    margin-right:15%;
     margin-left:15%;    
     font-family: 'Delius', cursive;
 }
 
 /*Intro*/
 
-div{
-    min-height: 20vh;
+ div{
+    /* min-height: 20vh; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -176,7 +207,7 @@ div span img {/*
     font-size: 170%;
     font-family: 'Dosis', sans-serif;
 }
-div p {
+#intro div p {
     text-align: center;
     margin:0;
     
@@ -281,23 +312,22 @@ div.green h2 {
     
 }
 
+/*CURIOSIDAD*/
+
 .imagenes-flex {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     background-color: bisque;
+    flex-wrap:  nowrap;
 }
 
-.imagenes-flex div {
-    max-height: 33%;
-
+.imagenes-flex img{
+    width: 33%;
+    /* max-width: 100%; */
 }
 
-.imagenes-flex div {
-    max-height: 100%;
-    max-width: 100%;
-}
-
+/*VIAJES*/
 
 .flex {
     border: 1px solid rgb(2, 158, 248);
@@ -347,3 +377,96 @@ blockquote q {font-family: 'Indie Flower', cursive;
     margin-left: 10%; */
     /* margin-right: 10%; */
 }
+
+/*FOOTER*/
+
+footer {
+    margin-top:10%;
+    max-height: 50vh;
+    background-image: url(../Assets/footer-sinm.png);
+    background-position: top;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;/* 
+    background-color: rgba(224, 238, 163, 0.226); */
+   /*  -moz-transform: rotate(-50deg);
+     -o-transform: rotate(-50deg);
+     -webkit-transform: rotate(-50deg);
+     transform: rotate(-50deg); */
+     margin: 0;
+}
+
+.footer-right {
+    background-color: rgba(155, 255, 172, 0.603);
+    display: block; 
+    width: 30%;   
+    margin: 5%;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    height: 40%;
+    border: none;
+}
+
+.footer-left p{
+    text-align: left;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 10%;
+}
+.footer-right p{
+    text-align: left;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 10%;
+}
+
+.footer-left {
+    background-color: rgba(155, 255, 172, 0.603);
+    display: block;
+    width: 30%; 
+    height: 40%; 
+    margin: 5%;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    border: none;
+}
+
+footer h4{
+    margin: 7%;
+}
+
+/*FOOTER ASIDE*/
+
+address{
+    margin: 2%;
+    text-align: center;
+}
+
+.redes {
+    
+    list-style-type: disc;
+}
+
+.redes ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.redes ul li{
+    list-style-type: none;
+    margin: 2%;
+    font-size: 150%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.redes li i {
+    color: #5D8764;
+}
+
+
+
+
+
+
+
