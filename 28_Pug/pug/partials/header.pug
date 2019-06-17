@@ -2,11 +2,11 @@
 
 header(class="main-header")
             -if(page == 1){
-            h1 #{saludo} Pug
+            h1=title 
             -}else{
-            h1 #{saludo} - Continuación
+            h1 #{title} - #{page_title}
             -}    
             nav.main-menu
                 ul
-                    each item in aMenu 
-                        +itemMenu(item)
+                    each item,index in aMenu 
+                        +itemMenu(item,index)

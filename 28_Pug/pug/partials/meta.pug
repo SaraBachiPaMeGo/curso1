@@ -2,5 +2,10 @@ doctype
 html(lang=language) 
     head
         meta(charset=charset)
-        title Hola Pug 
+        -if(page == 1){
+            title #{titulo}
+        -}else{
+            title #{page_title} | #{titulo}
+        -}    
         link(rel="stylesheet", href="./css/style.css")
+        

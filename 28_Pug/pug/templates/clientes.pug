@@ -1,4 +1,6 @@
 -const page = 2;
+-const page_title ='Clientes';
+-const aPaises = [{nombre:"España", id:"es"},{nombre:"Colombia", id:"co"},{nombre:"Francia", id:"fr"},{nombre:"Italia", id:"it"}];
 
 include ../partials/variables.pug
 include ../partials/mixins.pug
@@ -12,13 +14,9 @@ body
             h2 Clientes
             form(action="" method="get")        
                 select(name="pais")
-                    //-for (let i=0; i<aPaises.length; i++;) {
-                    //- -let item =aPaises[i]
-                    //- option(value=item.id) #{item.nombre}
-                    //-}
                     each item in aPaises
                          option(value=item.id title) #{item.nombre}
-    include "../partials/footer.pug"                     
+    include ../partials/footer.pug                     
 
 
 

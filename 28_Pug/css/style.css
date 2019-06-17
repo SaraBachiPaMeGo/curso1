@@ -22,6 +22,12 @@ nav a {
     padding:1rem;
 }
 
+nav a.active {
+    text-decoration: underline;
+    color:gold;
+    text-decoration-color: gold;
+}
+
 .form-group {
     padding: 1rem;
 }
