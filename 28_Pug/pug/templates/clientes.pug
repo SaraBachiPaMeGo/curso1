@@ -1,0 +1,24 @@
+-const page = 2;
+
+include ../partials/variables.pug
+include ../partials/mixins.pug
+
+include ../partials/meta.pug
+
+body 
+    include ../partials/header.pug
+    main
+         section#clientes
+            h2 Clientes
+            form(action="" method="get")        
+                select(name="pais")
+                    //-for (let i=0; i<aPaises.length; i++;) {
+                    //- -let item =aPaises[i]
+                    //- option(value=item.id) #{item.nombre}
+                    //-}
+                    each item in aPaises
+                         option(value=item.id title) #{item.nombre}
+    include "../partials/footer.pug"                     
+
+
+
