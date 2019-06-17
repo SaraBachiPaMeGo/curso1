@@ -384,10 +384,6 @@ div.green h2 {
 }
 .flex img {
     max-width: 80%;
-    /* margin-top: 7%; */
-    /* margin-left: 10%;
-    margin-top: 0;
-    margin-bottom: 0; */
     filter: drop-shadow(5px 5px 10px #444);
     
 }
@@ -615,6 +611,13 @@ address{
 /*MEDIA QUERY*/
 
 @media screen and (min-width:600px){ 
+
+    /*MAIN*/
+    main{
+        margin-right:7%;
+        margin-left:7%; 
+    }
+
     /*HEADER*/
     header{
             /* border: 1px solid rgb(250, 6, 6); */ 
@@ -624,7 +627,7 @@ address{
             align-content: center;
             
             /* margin-top: 25%; */
-            height: 10vh; /* Colocar el nav */
+            height: 105vh; /* Colocar el nav */
         }
 
     /*NAV*/
@@ -641,7 +644,73 @@ address{
 
     }
 
+    /*INTRO */
+
+    div>span{
+        margin: 5%;
+        font-size: 200%;
+        justify-content: center;
+        color: #2B8039;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.green h2 {
+        text-align: left;
+        margin-bottom: 2%;
+    }
+
+    /*VIAJES*/
+
+    .flex {
+        border: 1px solid rgb(2, 158, 248);
+        display: flex;
+        justify-content:space-between;
+        /* align-content: center; */
+        flex-wrap: nowrap;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-inline-start: 5%;
+    }
     
+    .div-img {
+        max-width: 40%;
+        margin: 0;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: space-around;
+        margin-right: 2%;
+    }
+    .flex img {
+        max-width: 80%;
+        filter: drop-shadow(5px 5px 10px #444);
+        
+    }
+    
+    /*MAS*/
+
+    label {
+        margin-left:2%;
+    
+    }
+    
+    .input-name {
+        width: 50%;
+    }
+    
+    input {
+        margin:2%;
+        width: 50%;
+        border: none;
+        border-bottom: 1px solid gray;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background: rgb(229, 231, 233);
+        color: #1b8f38;
+    }
 
 }
 
