@@ -1,0 +1,31 @@
+extends ../partials/layout.pug
+
+block variables
+    -const page = 2;
+    -const page_title = 'Portfolio';
+    -
+        const aMenuP = [
+            {nombre:"Web", id:"web", description:"asde"},
+            {nombre:"Mobile App´s", id:"apps", description:"asde"},
+            {nombre:"IX / UI", id:"ui", description:"asde"} ]
+
+block main
+    section#portfolio     
+    header 
+        h2 Portfolio
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus blanditiis amet ea autem. Expedita quasi dolor omnis rem. Commodi eos ex consequuntur earum, assumenda asperiores inventore est ipsam recusandae odit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, incidunt. Rem modi quia reiciendis labore, odio alias praesentium harum aspernatur, eius, quisquam dolores repellendus officiis quibusdam quaerat vero sint? Quas.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    nav 
+        ul
+            each item in aMenuP
+                +itemMenu(item) 
+
+
+
+
+
+
+
+
+
+

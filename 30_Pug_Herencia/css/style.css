@@ -1,0 +1,51 @@
+.main-header {
+    background-color: rgba(167, 46, 46, 0.616);
+    color: antiquewhite;
+}
+
+.main-header h1 {
+    padding: 0.6rem 2rem ;
+}
+
+.main-footer {
+    background-color: rgba(167, 46, 46, 0.616);
+    color: antiquewhite;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    color:inherit;
+    display: block;
+    text-decoration: none;
+    padding:1rem;
+}
+
+nav a.active {
+    text-decoration: underline;
+    color:gold;
+    text-decoration-color: gold;
+}
+
+.form-group {
+    padding: 1rem;
+}
+
+.form-group label, 
+.form-group input,
+.form-group textarea{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+}
+
+
+.form-group input,
+.form-group textarea{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.63);
+}

@@ -1,0 +1,11 @@
+doctype
+html(lang=language) 
+    head
+        meta(charset=charset)
+        if(page == 1)
+            title #{titulo}
+        else
+            title #{page_title} | #{titulo}
+           
+        link(rel="stylesheet", href="./css/style.css")
+        

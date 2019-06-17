@@ -1,11 +1,11 @@
 -const aMenu = [{nombre:"Home", id:"index", description:"asde"},{nombre:"Portfolio", id:"portfolio", description:"asde"},{nombre:"Clientes", id:"clientes", description:"asde"},{nombre:"Partners", id:"partners", description:"asde"},{nombre:"Acerca de", id:"acerca", description:"asde"}]
 
 header(class="main-header")
-            -if(page == 1){
+            if(page == 1)
             h1=title 
-            -}else{
+            else
             h1 #{title} - #{page_title}
-            -}    
+               
             nav.main-menu
                 ul
                     each item,index in aMenu 

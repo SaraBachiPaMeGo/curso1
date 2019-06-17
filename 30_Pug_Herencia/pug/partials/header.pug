@@ -1,0 +1,20 @@
+-const icono = '<i class="fas fa-paw"></i>';
+-
+    const aMenu = [
+        {nombre:"Home", id:"index", description:"asde"},
+        {nombre:"Portfolio", id:"portfolio", description:"asde"},
+        {nombre:"Clientes", id:"clientes", description:"asde"},
+        {nombre:"Partners", id:"partners", description:"asde"},
+        {nombre:"Noticias", id:"news", description:"asde"},
+        {nombre:"Acerca de", id:"acerca", description:"asde"}]
+
+header(class="main-header")
+            if(page == 1)
+                h1!= titulo + icono
+            else
+                -let tituloFinal = titulo + ` - ` + page_title
+                h1!= tituloFinal+icono
+            nav.main-menu
+                ul
+                    each item,index in aMenu 
+                        +itemMenu(item,index)
