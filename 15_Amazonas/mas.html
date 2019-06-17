@@ -10,7 +10,8 @@
     <link rel="shortcut icon" href="eye256x256_114396.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Delius&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Delius+Unicase&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
     <!-- Letra bonita cursiva -->
     <link href="https://fonts.googleapis.com/css?family=Dosis:700&display=swap" rel="stylesheet">
@@ -26,6 +27,9 @@
                 autoplay="autoplay" muted></video>
         </div>
         <h1>El amazonas</h1>
+        <nav class="hamb-nav">
+            <button type="submit" onclick="location.href='./registrados.html'"><i class="fas fa-bars"></i></button> 
+    </nav>
     </header>
     <section id="inicio" class="menu">
         <nav class="navigation parallax">
@@ -58,9 +62,9 @@
                 <!-- Dos botones para aquellos que están registrados y otros que no. Para los que ya están ir a otra página -->
                 <!-- Aviso de contraseña demasiado larga -->
             </form>
-            <p class="olvidar"><a href="#">¿Olvidaste tu contraseña?<i class="fas fa-question-circle"></i><i class="far fa-question-circle"></i></a></p>
-            <button type="submit" class="sing-up">Registrarse<i class="fas fa-user-plus"></i></button>
-            <button type="submit" class="sing-in" onclick="location.href='./registrados.html#mas'">Iniciar sesión <i class="fas fa-sign-in-alt"></i></button>
+            <p class="olvidar"><a href="#">¿Olvidaste tu contraseña?<!-- <i class="fas fa-question-circle"></i> --><i class="far fa-question-circle"></i></a></p>
+            <button type="submit" class="sing-up">Registrarse<!-- <i class="fas fa-user-plus"></i> --></button>
+            <button type="submit" class="sing-in" onclick="location.href='./registrados.html#mas'">Iniciar sesión <!-- <i class="fas fa-sign-in-alt"></i> --></button>
         </fieldset>
         <fieldset>
             <legend>Política de Privacidad</legend>
@@ -68,7 +72,7 @@
                 solicitud o petición de acuerdo a la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos
                 Personales y garantía de los derechos digitales.</p>
             <input class="check" type="checkbox" name="isOk" id="isOk" required>
-            <label for="isOk">Estoy de acuerdo</label>
+            <label class="agree" for="isOk">Estoy de acuerdo</label>
         </fieldset>
     </section>
 </main>
