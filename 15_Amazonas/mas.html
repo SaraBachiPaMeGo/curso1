@@ -53,9 +53,9 @@
         <fieldset>
             <form action="https://jsonplaceholder.typicode.com/users" method="POST" name="form">
                 <label for="userName">Nick</label>
-                <input class="input-name" type="text" placeholder="Introduzca su nick">
+                <input class="input-name" type="text" placeholder="Introduzca su nick" id="userName" required>
                 <label for="userEmail">Email</label>
-                <input type="email" name="email" id="email" class="form_control" placeholder="Usuario@gmail.com"
+                <input type="email" name="email" id="userEmail" class="form_control" placeholder="Usuario@gmail.com"
                     value="@gmail.com" required
                     pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
                 <label for="userPassword" class="form_label">Contraseña</label>
