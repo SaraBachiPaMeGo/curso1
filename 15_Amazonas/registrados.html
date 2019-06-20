@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Información sobre el Amazonas">
-    <meta name="Keywords" content="selva, tropical, selva tropical, amazonas, Sur America, pulmón del mundo, deforestación, greenPeace, salvaje, viajes, fauna, animales, exótico, río, indígenas,Brasil,,Perú,,Colombia,,Venezuela,,Bolivia,,Ecuador,,Surinam,,Guyana,selva amazónica ">
+    <meta name="Keywords"
+        content="selva, tropical, selva tropical, amazonas, Sur America, pulmón del mundo, deforestación, greenPeace, salvaje, viajes, fauna, animales, exótico, río, indígenas,Brasil,,Perú,,Colombia,,Venezuela,,Bolivia,,Ecuador,,Surinam,,Guyana,selva amazónica ">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/body.css">
     <link rel="shortcut icon" href="eye256x256_114396.ico" type="image/x-icon">
@@ -19,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <title>El Amazonas</title>
 </head>
+
 <body>
     <header>
         <div class="div-video">
@@ -27,7 +30,7 @@
                 autoplay="autoplay" muted></video>
         </div>
         <h1>El amazonas</h1>
-    </nav>
+        </nav>
     </header>
     <section id="inicio" class="menu">
         <nav class="navigation ">
@@ -40,31 +43,42 @@
             </ul>
         </nav>
         <nav class="hamb-nav">
-                <button type="submit" onclick="location.href='./#nav-movil'"><i class="fas fa-bars"></i></button>
+            <button type="submit" onclick="location.href='./#nav-movil'"><i class="fas fa-bars"></i></button>
     </section>
     <main>
-    <section id="mas">
+        <section id="mas">
             <h2>¿Quieres saber más sobre La Amazonas?</h2>
             <p class="contactar">¡Contacta con nosotros!</p> <!-- Formulario -->
-        
-        <fieldset class="field-regis">
-            <form action="https://jsonplaceholder.typicode.com/users" method="POST" name="form">
-                <label for="userEmail">Email</label>
-                <input type="email" name="email" id="userEmail" class="email" placeholder="Usuario@gmail.com"
-                    value="@gmail.com" required
-                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
-                <label for="userPassword" class="form_label">Contraseña</label>
-                <input type="password" name="userPassword" placeholder="Contraseña" id="userPassword"
-                    class="form_control" required minlength="8" maxlength="16">
-                <!-- Dos botones para aquellos que están registrados y otros que no. Para los que ya están ir a otra página -->
-                <!-- Aviso de contraseña demasiado larga -->
-            </form>
-            <p class="olvidar"><a href="#">¿Olvidaste tu contraseña?<i class="fas fa-question-circle"></i><i class="far fa-question-circle"></i></a></p>
-            <button type="submit" class="sing-in" onclick="location.href='./registrados.html'">Iniciar sesión <i class="fas fa-sign-in-alt"></i></button>
-        </fieldset>
-    </section>
-</main>
+
+            <fieldset class="field-regis">
+                <form action="https://jsonplaceholder.typicode.com/users" method="POST" name="form">
+                    <label for="userEmail">Email</label>
+                    <input type="email" name="email" id="userEmail" class="email" placeholder="Usuario@gmail.com"
+                        value="@gmail.com" required
+                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
+                    <label for="userPassword" class="form_label">Contraseña</label>
+                    <input type="password" name="userPassword" placeholder="Contraseña" id="userPassword"
+                        class="form_control" required minlength="8" maxlength="16">
+                    <!-- Dos botones para aquellos que están registrados y otros que no. Para los que ya están ir a otra página -->
+                    <!-- Aviso de contraseña demasiado larga -->
+                </form>
+                <p class="olvidar"><a href="#">¿Olvidaste tu contraseña?</i><i class="far fa-question-circle"></i></a>
+                </p>
+                <button type="submit" class="button sing-in" onclick="location.href='./registrados.html'">Iniciar sesión
+                    <i class="fas fa-sign-in-alt"></i></button>
+            </fieldset>
+        </section>
+    </main>
     <footer>
+        <nav id="nav-movil" class="navigation-mv">
+            <ul>
+                <li class="home"><a href="#intro"><span>Homepage</span></a></li>
+                <li class="products"><a href="#green"><span>GreenPeace</span></a></li>
+                <li class="contact"><a href="#curiosidad"><span>¿Sabías que...?</span></a></li>
+                <li class="consejos"><a href="./viajes.html#viajes"><span>Consejos para viajes</span></a></li>
+                <li class="mas"><a href="./mas.html#mas"><span>¿Quieres saber más?</span></a></li>
+            </ul>
+        </nav>
         <div>
             <div class="footer-right">
                 <h3>Aviso legal</h3>

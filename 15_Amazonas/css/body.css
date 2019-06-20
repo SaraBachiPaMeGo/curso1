@@ -165,6 +165,10 @@ main{
     font-family: 'Delius', cursive;
 }
 
+strong {
+    font-weight: inherit;
+}
+
 /*Intro*/
 
  div{
@@ -480,7 +484,7 @@ input {
     text-decoration: none;
 }
 
-button{
+.button{
     text-decoration: none;
     padding: 1%;
     font-weight: 600;
@@ -494,18 +498,18 @@ button{
     transition-timing-function: linear;
     filter: drop-shadow(2px 2px 5px rgba(68, 68, 68, 0.541));
   }
-  button:hover{
+  .button:hover{
     color: #57FF73;
     background-color: #ffffff;
     transform-origin: center;
   }
 
-  button.sing-up i {
+  .button.sing-up i {
     font-size: 10%;
     color: #2B8039;
 }
 
-button {
+.button {
     margin: 3%;
 }
 
@@ -659,22 +663,37 @@ address{
     }
 
     .menu{
-        display: none;
+        border: none;
     }
 
     .hamb-nav {
-        display: block;
-        height: 0vh;
-        /* position:relative;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    nav.hamb-nav button {
+        background-color: inherit;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 0;
         margin-right: 5%;
-        margin-left: 5%;
-        height: 30vh;
-        z-index: 30; */ /* NO FUNCIONA */
+        border: none;
+        color: inherit;
+        
+}
+
+
+    }
+
+    .hamb-nav i{
+        color: rgba(0, 0, 0, 0.637);
+        font-size: 30px;
     }
 
     .button-hamb {
         font-size: 40%;
     }
+
     .navigation-mv {
         display: flex;
         justify-content: center;
@@ -684,6 +703,11 @@ address{
         margin-top: 10%;
     }
 
+    .navigation-mv li {
+        margin-top:5%;
+        margin-bottom:0.5%;
+    }
+
     .navigation-mv ul li a{
         text-decoration: none;
         font-family: 'Delius', cursive;
@@ -691,7 +715,7 @@ address{
         font-weight: bold;
         letter-spacing: 1.2px;
         color:#444;
-        }
+    }
 
     /*INTRO */
 
