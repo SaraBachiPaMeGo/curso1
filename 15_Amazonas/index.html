@@ -1,6 +1,5 @@
 <!-- https://codepen.io/KamilDyrek/pen/ejmRxV
-https://www.smashingmagazine.com/2012/04/pure-css3-cycling-slideshow/
-https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascript-required -->
+https://www.smashingmagazine.com/2012/04/pure-css3-cyc yde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascript-required -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,7 +8,8 @@ https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascri
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Información sobre el Amazonas">
-    <meta name="Keywords" content="selva, tropical, selva tropical, amazonas, Sur America, pulmón del mundo, deforestación, greenPeace, salvaje, viajes, fauna, animales, exótico, río, indígenas,Brasil,,Perú,,Colombia,,Venezuela,,Bolivia,,Ecuador,,Surinam,,Guyana,selva amazónica ">
+    <meta name="Keywords"
+        content="selva, tropical, selva tropical, amazonas, Sur America, pulmón del mundo, deforestación, greenPeace, salvaje, viajes, fauna, animales, exótico, río, indígenas,Brasil,,Perú,,Colombia,,Venezuela,,Bolivia,,Ecuador,,Surinam,,Guyana,selva amazónica ">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/body.css">
     <link rel="shortcut icon" href="eye256x256_114396.ico" type="image/x-icon">
@@ -31,10 +31,7 @@ https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascri
                 src="./Assets/NatGeo Wild Colombia Chiribiquete documental (online-video-cutter.com).mp4" loop
                 autoplay="autoplay" muted></video>
         </div>
-        <h1>El amazonas</h1>
-        <nav class="hamb-nav">
-            <button type="submit" onclick="location.href='./registrados.html'"><i class="fas fa-bars"></i></button>
-        </nav>
+        <h1>El amazonas</h1>        
     </header>
     <section id="inicio" class="menu">
         <nav class="navigation ">
@@ -45,7 +42,9 @@ https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascri
                 <li class="consejos"><a href="./viajes.html#viajes"><span>Consejos para viajes</span></a></li>
                 <li class="mas"><a href="./mas.html#mas"><span>¿Quieres saber más?</span></a></li>
             </ul>
-            <!-- Se debería de poner alguna subclase -->
+        </nav>
+        <nav class="hamb-nav">
+                <button type="submit" onclick="location.href='./#nav-movil'"><i class="fas fa-bars"></i></button>
         </nav>
     </section>
 
@@ -54,29 +53,29 @@ https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascri
             <h2>Top récord de: La Amazonas</h2>
             <div>
                 <div>
-                    <span><img src="./Assets/icons8-bear-footprint-96.png" alt="">
-                        <!-- <i class="fas fa-frog"></i> --></span>
+                    <span class="diferente"><i class="fas fa-frog"></i></span>
                     <p> <span class="letras">1 de cada 10</span> especies conocidas en la Tierra vive en la Amazonía.
                     </p>
                 </div>
                 <div>
-                    <span><img src="./Assets/icons8-dreamcatcher-100.png" alt=""></span>
+                    <span><i class="fas fa-feather-alt"></i></span>
                     <p class="parrafo-centrado"> <span class="letras">Alrededor de 34 millones</span> de personas viven
                         en ella, incluyendo más de 350 grupos indígenas.</p>
                 </div>
                 <div>
-                    <span><i class="fas fa-globe-americas"></i></span>
+                    <span class="diferente"><i class="fas fa-globe-americas"></i></span>
                     <p class="parrafo-centrado"><span class="letras">6.7 millones</span> de km2 son abarcados por el
                         bosque tropical amazónico en 8 países.</p>
                 </div>
                 <div>
-                    <span><img src="./Assets/icons8-large-tree-90.png" alt=""></span>
+                    <span><i class="fas fa-tree"></i></span>
                     <p class="parrafo-centrado">​Sus bosques contienen <span class="letras">entre 90 y 140
                             millones</span> de toneladas métricas de carbono que al ser deforestados acelerarían el
                         cambio climático.</p>
                 </div>
-                <div>
-                    <span><i class="fas fa-tint"></i></span>
+                <div class="diferente">
+                    </divclass>
+                    <span> <i class="fas fa-tint"></i></span>
                     <p class="parrafo-centrado"> La Cuenca Amazónica representa <span class="letras">entre el 15% y
                             16%</span> de la descarga fluvial del mundo.</p>
                 </div>
@@ -87,7 +86,8 @@ https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascri
             <h2>Información general</h2>
             <p><strong>La Amazonia</strong>, también denominada <strong>Amazonía</strong>, es una vasta región de la
                 parte central y septentrional de <strong>América del
-                Sur</strong> que comprende la <strong>selva tropical</strong> de la cuenca del <strong>río</strong> <strong>Amazonas</strong>. Las adyacentes
+                    Sur</strong> que comprende la <strong>selva tropical</strong> de la cuenca del <strong>río</strong>
+                <strong>Amazonas</strong>. Las adyacentes
                 regiones de las Guayanas y
                 el Gran Chaco también poseen <strong>selvas tropicales</strong>, por lo que muchas veces se les
                 considera parte de la
@@ -150,32 +150,44 @@ https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascri
             <p>Esta <strong>selva amazónica</strong> es el <strong>bosque tropical</strong> más extenso del mundo.2​ Se
                 considera que su extensión llega a
                 los 7 000 000 km² (siete millones de kilómetros cuadrados) repartidos entre nueve países, de los cuales
-                <strong>Brasil</strong> y <strong>Perú</strong> poseen la mayor extensión, seguidos por <strong>Bolivia</strong>,<strong>Colombia</strong>,<strong>Venezuela</strong>,<strong>Ecuador</strong>,<strong>Guyana</strong>, Francia (Guayana Francesa) y Surinam. <strong>La Amazonia</strong> se destaca por ser una de las ecorregiones
+                <strong>Brasil</strong> y <strong>Perú</strong> poseen la mayor extensión, seguidos por
+                <strong>Bolivia</strong>,<strong>Colombia</strong>,<strong>Venezuela</strong>,<strong>Ecuador</strong>,<strong>Guyana</strong>,
+                Francia (Guayana Francesa) y Surinam. <strong>La Amazonia</strong> se destaca por ser una de las
+                ecorregiones
                 con mayor biodiversidad en el planeta.</p>
         </section>
         <a href="#inicio" class="up "><i class="fas fa-chevron-circle-up"></i></a>
         <section id="rio">
-            <h2>El<strong>Río Amazonas</strong></h2>
-            <p>El <strong>río Amazonas</strong> es un río de <strong>América del Sur</strong> que atraviesa Perú (nacimiento), Colombia y Brasil
+            <h2>El <strong>Río Amazonas</strong></h2>
+            <p>El <strong>río Amazonas</strong> es un río de <strong>América del Sur</strong> que atraviesa Perú
+                (nacimiento), Colombia y Brasil
                 (desembocadura). Es el río más largo y caudaloso del mundo, y contiene más agua que el Nilo, el Yangtsé
                 y el Misisipi juntos, suponiendo cerca de una quinta parte del agua dulce en estado líquido del planeta.
             </p>
             <div class="img-rio">
                 <img class="img" src="./Assets/img.jpg" alt="Rio amazonas">
             </div>
-            <p> <strong>El Amazonas</strong>, que tiene la cuenca hidrográfica más grande en el mundo, alrededor de 7.05 millones de
+            <p> <strong>El Amazonas</strong>, que tiene la cuenca hidrográfica más grande en el mundo, alrededor de 7.05
+                millones de
                 kilómetros cuadrados, representa aproximadamente la quinta parte del caudal fluvial del planeta. De
-                hecho, este <strong>río</strong> tiene la mayor cuenca hidrográfica del mundo incluso contando únicamente la región que
+                hecho, este <strong>río</strong> tiene la mayor cuenca hidrográfica del mundo incluso contando
+                únicamente la región que
                 atraviesa Brasil, que supone la quinta parte de su volumen. Estudios realizados por investigadores
-                brasileños y peruanos en 2007 y 2008 apuntaban a que era el <strong>río</strong> de mayor longitud.En el año 2010,
-                finalmente, se confirmó que era el <strong>río</strong> más largo del mundo, con 7062 km de longitud desde su nacimiento
+                brasileños y peruanos en 2007 y 2008 apuntaban a que era el <strong>río</strong> de mayor longitud.En el
+                año 2010,
+                finalmente, se confirmó que era el <strong>río</strong> más largo del mundo, con 7062 km de longitud
+                desde su nacimiento
                 en la Quebrada de Apacheta, región de Arequipa, <strong>Perú</strong>.</p>
             <!-- Estaría bien un slide -->
 
-            <p>En sus extensiones superiores, sobre la confluencia del río Negro, el <strong>Amazonas</strong> es llamado Solimões en
-                Brasil; sin embargo, en<strong>Perú, Colombia, Ecuador</strong>, así como el resto del mundo hispanohablante, el <strong>río</strong> es
-                generalmente llamado <strong>Amazonas</strong><strong>río</strong>  abajo desde la confluencia de los ríos Marañón y Ucayali en Perú. El
-                sistema fluvial Ucayali-Apurímac es considerado la principal fuente del <strong>Amazonas</strong>, con la que es su
+            <p>En sus extensiones superiores, sobre la confluencia del río Negro, el <strong>Amazonas</strong> es
+                llamado Solimões en
+                Brasil; sin embargo, en<strong>Perú, Colombia, Ecuador</strong>, así como el resto del mundo
+                hispanohablante, el <strong>río</strong> es
+                generalmente llamado <strong>Amazonas</strong><strong>río</strong> abajo desde la confluencia de los
+                ríos Marañón y Ucayali en Perú. El
+                sistema fluvial Ucayali-Apurímac es considerado la principal fuente del <strong>Amazonas</strong>, con
+                la que es su
                 principal afluente el arroyo glacial Carhuasanta que fluye de la montaña Mismi.</p>
 
         </section>
@@ -184,10 +196,12 @@ https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascri
             <div class="green">
                 <h2>GreenPeace en <strong>El Amazonas</strong></h2>
                 <blockquote>
-                    <strong>La Amazonia</strong> es la mayor región de bosque tropical del planeta. Desde 1970 se ha perdido solo en
+                    <strong>La Amazonia</strong> es la mayor región de bosque tropical del planeta. Desde 1970 se ha
+                    perdido solo en
                     Brasil una superficie forestal más grande que toda Francia. La ganadería ha sido la responsable de
                     la mayoría de esta deforestación. Por lo que potenciamos la sostenibilidad y el equilibrio sobre
-                    todo en éste lugar. Las instituciones que ocupan <strong>El Amazonas</strong> se deben de hacer responsables de sus
+                    todo en éste lugar. Las instituciones que ocupan <strong>El Amazonas</strong> se deben de hacer
+                    responsables de sus
                     actos y comprometerse a implantar una política de cero deforestación.
                 </blockquote>
 
@@ -196,9 +210,11 @@ https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascri
         <a href="#inicio" class="up "><i class="fas fa-chevron-circle-up"></i></a>
         <section id="curiosidad">
             <h2>¿Sabías que...?</h2>
-            <p>El Bosque lluvioso del <strong>Amazonas</strong> es tan grande que cubre parte de América del Sur. Es también el hogar de
+            <p>El Bosque lluvioso del <strong>Amazonas</strong> es tan grande que cubre parte de América del Sur. Es
+                también el hogar de
                 una increíble variedad de fauna animal la cual no se pueden encontrar en ningún otro lugar del planeta.
-                El bosque del <strong>amazonas</strong> ha sido objetivo de infinitos documentales y programas de televisión. <strong>El Amazonas</strong>
+                El bosque del <strong>amazonas</strong> ha sido objetivo de infinitos documentales y programas de
+                televisión. <strong>El Amazonas</strong>
                 es una de las zonas más importantes de la Tierra, y a pesar de que la deforestación ha afectado a gran
                 parte de éste, sigue siendo uno de los bosques más fascinantes dada su variedad y singularidad de sus
                 plantas y animales que lo habitan.</p>
@@ -215,6 +231,15 @@ https://www.hyde-design.co.uk/joomla-bites/80-create-a-css-slideshow-no-javascri
         <a href="#inicio" class="up "><i class="fas fa-chevron-circle-up"></i></a>
     </main>
     <footer>
+        <nav id="nav-movil" class="navigation-mv">
+            <ul>
+                <li class="home"><a href="#intro"><span>Homepage</span></a></li>
+                <li class="products"><a href="#green"><span>GreenPeace</span></a></li>
+                <li class="contact"><a href="#curiosidad"><span>¿Sabías que...?</span></a></li>
+                <li class="consejos"><a href="./viajes.html#viajes"><span>Consejos para viajes</span></a></li>
+                <li class="mas"><a href="./mas.html#mas"><span>¿Quieres saber más?</span></a></li>
+            </ul>
+        </nav>
         <div>
             <div class="footer-right">
                 <h3>Aviso legal</h3>
