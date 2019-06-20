@@ -6,24 +6,16 @@
 }
 
 /*HEADER*/
-header{
-    /* border: 1px solid rgb(250, 6, 6); */ 
+header{    
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    
-      /* margin-top: 25%; */
       height: 100vh; /* Colocar el nav */
 }
 
 h1{
     font-family: 'Delius Unicase', cursive;
-    /* border: 1px solid rgb(77, 13, 252); */
-    /* background-image: linear-gradient(
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)
-      ); https://themes.getbootstrap.com/preview/?theme_id=4231&show_new=*/
     width: 100%;
     height: 10vh;
       display: flex;
@@ -35,35 +27,24 @@ h1{
         rgba(255, 255, 255, 0.5),
         rgba(255, 255, 255, 0.5)
       );
-      /* Se podría hacer un transform y cuando esté acabando el vídeo que apareciera "El amazonas" */
-      /* También se podría hacer una página para cada apartado del nav, para que la página no sea muy larga. */
+      
 }
 
 .div-video { 
-    /* background-color: antiquewhite; */
     position: absolute;
     left: 0;
     right: 0;
-    /* top: 30; */
-    /* width: 100%; */
     height: 100vh; 
     z-index: -10;
     visibility: visible;
     margin: 0 auto;
-    display: flex;/* 
-    justify-content: center; */
+    display: flex;
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ); */
-    /* background: rgba(0,0,0,0.5); */
 }
 
 .video {
-    /* max-height: 100%; */
     height: 100%;
     margin: 0 auto;
     max-width: 100%;
@@ -97,7 +78,6 @@ h1{
     .menu ul li a{
     text-decoration: none;
     font-family: 'Delius', cursive;
-    /* color:rgb(146, 3, 3) */
     font-weight: bold;
     letter-spacing: 1.2px;
     color:limegreen;
@@ -107,24 +87,6 @@ h1{
         display: none;        
     }
 
-/* 
-#menu {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-
-.navigation{
-    margin-top: 21rem;
-} */
-
-nav{
-    /* border: 1px solid black; */
-    /* position: relative;
-    z-index: -10; */
-    /* margin-top: 51.2%; */
-    
-}
 
 /*ICONO DE SUBIDA*/
 
@@ -146,8 +108,7 @@ nav{
 }
 
 i:hover{
-    color: #2B8039;/* 
-    font-size: 300%;  */
+    color: #2B8039;
     transform-origin: center;
     transform: scale(1.5);    
 }
@@ -172,7 +133,6 @@ strong {
 /*Intro*/
 
  div{
-    /* min-height: 20vh; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -183,23 +143,16 @@ strong {
 
 
 div div{    
-    max-height: 20%;
+    /* max-height: 20%; */
     width: 30%;
-    /* border: 1px solid greenyellow;
-    background-color: bisque; */
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
 div>span{
-    margin: 5%;/* 
-    display: block;
-    text-align: center; */
-    /* border: 1px solid rgb(139, 19, 99); */
-    font-size: 400%;/* 
-    max-width: 400%;
-    min-width: 150% */
+    margin: 5%;
+    font-size: 400%;
     justify-content: center;
     color: #2B8039;
     display: flex;
@@ -207,11 +160,8 @@ div>span{
     align-items: center;
 }
 
-div span img {/* 
-    margin: 0%; */
-    max-width: 80%;/* 
-    align-items: center; */
-    /* border: 1px solid saddlebrown; */
+div span img {
+    max-width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -265,17 +215,9 @@ div.green {
 }
 
 .tabla-float{
-    /* display: block; */
     display: flex;
-    /* justify-content: flex-end; */
-    /* margin-left: 3%; */
     margin-top: 0; 
     margin-bottom:2%; 
-   /* width: 20%; *//* 
-   height: 20%;  */
-    
-    /* max-width: 40%; */
-    /* background-color: aqua; */
 }
 
 .tabla-float img.loc{
@@ -307,11 +249,6 @@ ul{
     list-style-type: none;
 }
 
-table tr th img {
-   /*  width: 234px;
-    height:440px; */
-}
-
 table caption{
     background-color: rgba(189, 247, 206, 0.747);
     color: #1b8f38;
@@ -330,9 +267,7 @@ div table::after {
 
 .img-rio {
     float: right;
-    margin: 3%;/* 
-    margin-top: 3%;
-    margin-bottom: 3%; */
+    margin: 3%;
 }
 
 .img {
@@ -354,36 +289,17 @@ div.green blockquote{
 }
 
 div.green h2 {
-    /* display: flex; */
     text-align: right;
-    margin/* -right */: 7%;
+    margin: 7%;
     margin-bottom: 2%;
     
 }
 
-/*CURIOSIDAD*/
-
-.imagenes-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  /*   background-color: bisque; */
-    flex-wrap:  nowrap;
-}
-
-.imagenes-flex img{
-    width: 33%;
-    /* max-width: 100%; */
-}
-
 /*VIAJES*/
 
-.flex {
-    border: 1px solid rgb(2, 158, 248);
-    /* display: inline-block; */
+.flex{
     display: flex;
     justify-content:space-between;
-    /* align-content: center; */
     flex-wrap: nowrap;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -418,28 +334,16 @@ blockquote q {
 .parrafo-claudia{
     
     font-size: 130%;
-    display: flex;/* 
-    justify-content: right;*/
+    display: flex;
     align-items: center; 
     align-content: flex-end;
-    width: 80%;/* 
-    margin-left: 10%; */
-    /* margin-right: 10%; */
+    width: 80%;
 }
 
 #viajes h3{
     margin-top: 2%;
     margin-bottom: 1%;
 }
-/* 
-.img-barco {
-    max-width: 80%;
-}
-
-.img-barco img{
-    max-width: 100%;
-    max-height: 100%;
-}    */
 
 /*MAS*/
 
@@ -550,12 +454,7 @@ footer {
     background-position: top;
     background-size: cover;
     background-position: top;
-    background-repeat: no-repeat;/* 
-    background-color: rgba(224, 238, 163, 0.226); */
-   /*  -moz-transform: rotate(-50deg);
-     -o-transform: rotate(-50deg);
-     -webkit-transform: rotate(-50deg);
-     transform: rotate(-50deg); */
+    background-repeat: no-repeat;
      margin: 0;
      font-family: 'Delius', cursive;
 }
@@ -642,13 +541,10 @@ address{
     /*HEADER*/
 
     header{
-            /* border: 1px solid rgb(250, 6, 6); */ 
             display: flex;
             justify-content: center;
             align-items: center;
             align-content: center;
-            
-            /* margin-top: 25%; */
             height: 55vh; /* Colocar el nav */
         }
 
@@ -679,10 +575,6 @@ address{
         margin-right: 5%;
         border: none;
         color: inherit;
-        
-}
-
-
     }
 
     .hamb-nav i{
@@ -808,21 +700,21 @@ address{
         background-position: top;
         background-size: cover;
         background-position: top;
-        background-repeat: no-repeat;/* 
-        background-color: rgba(224, 238, 163, 0.226); */
-       /*  -moz-transform: rotate(-50deg);
-         -o-transform: rotate(-50deg);
-         -webkit-transform: rotate(-50deg);
-         transform: rotate(-50deg); */
+        background-repeat: no-repeat;
          margin: 0;
          font-family: 'Delius', cursive;
     }
 
 }
 
-@media screen and (max-width:670px){ 
+@media screen and (max-width: 500px) {
 
-   
+    header {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width:670px){ 
 
     label {
         margin-left:2%;
@@ -860,32 +752,12 @@ address{
     }
 }
 
-@media screen and (max-width: 500px) {
-
-    header {
-        height: 40vh;
-    }
-}
-
-@media screen and (max-width:675px){ 
-
-    header{
-        height: 55vh; 
-    }
-}
 @media screen and (max-width:676px){ 
 
     header{
         height: 60vh; 
     }
 } 
-
-/* @media screen and (max-width: 640px) {
-
-    header {
-        height: 55vh;
-    }
-} */
 
 
 
