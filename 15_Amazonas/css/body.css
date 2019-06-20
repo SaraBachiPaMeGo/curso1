@@ -87,7 +87,6 @@ h1{
         display: none;        
     }
 
-
 /*ICONO DE SUBIDA*/
 
 .up{
@@ -295,7 +294,6 @@ div.green h2 {
     
 }
 
-
 /*VIAJES*/
 
 .flex{
@@ -320,8 +318,7 @@ div.green h2 {
 }
 .flex img {
     max-width: 80%;
-    filter: drop-shadow(5px 5px 10px #444);
-    
+    filter: drop-shadow(5px 5px 10px #444);    
 }
 
 blockquote q {
@@ -360,7 +357,6 @@ fieldset{
 
 label {
     margin-left:2%;
-
 }
 
 .input-name {
