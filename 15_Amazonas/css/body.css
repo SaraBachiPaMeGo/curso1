@@ -295,6 +295,7 @@ div.green h2 {
     
 }
 
+
 /*VIAJES*/
 
 .flex{
@@ -672,11 +673,6 @@ address{
     }
     
     /*MAS*/
-
-    label {
-        margin-left:2%;
-    
-    }
     
     .input-name {
         width: 50%;
@@ -752,12 +748,19 @@ address{
     }
 }
 
-@media screen and (max-width:676px){ 
+ @media screen and (min-width:676px){ 
 
     header{
         height: 60vh; 
     }
-} 
+}  
+
+@media screen and (min-width:1000px){ 
+
+    header{
+        height:100vh; 
+    }
+}  
 
 
 
