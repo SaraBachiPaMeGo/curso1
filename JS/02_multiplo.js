@@ -30,37 +30,15 @@ console.log(acumulador, contador)
  */
 
 function isMultiplo(m = 0, n = 0) {
+    if(isNaN(m)|| isNaN(n)){
+        throw new Error('Parámetros numéricos')        
+    }
     let r = true
-    if(n%m) { //  n%m != 0)
+    if(m%n) { //  n%m != 0)
         r = false
     }
     return r
  }
-
-// Espectativas
-console.log('isMultiplo(2,20) debe dar true')
-// Prueba
-console.log(isMultiplo(2,20))
-// Espectativas
-console.log('isMultiplo(2,21) debe dar false')
-// Prueba
-console.log(isMultiplo(2,21))
-// Espectativas
-console.log('isMultiplo(2,-20) debe dar true')
-// Prueba
-console.log(isMultiplo(2,-20))
-// Espectativas
-console.log('isMultiplo(2,-21) debe dar false')
-// Prueba
-console.log(isMultiplo(2,-21))
-// Espectativas
-console.log('isMultiplo(3,20) debe dar false')
-// Prueba
-console.log(isMultiplo(3,20))
-// Espectativas
-console.log('isMultiplo(3,21) debe dar true')
-// Prueba
-console.log(isMultiplo(3,21))
 
 
 /** function extraerMultiplos
@@ -70,9 +48,30 @@ console.log(isMultiplo(3,21))
  * @returns {array}
  */
 
-function extraerMultiplos(n, aDatos) {
+function extraerMultiplos(n=0, aDatos=[]) {
     let r = []
+    for (let i = 0; i < aDatos.length; i++) {
+        const element = aDatos[i];
+        if(isMultiplo(element,n)){
+           /* r[r.length]=item */ /* Primera casilla vacía, la rellenamos con Element ()l última  */
+           r.push(element) /* Añadimos un elemento al array como la parte de arriba */
+        }        
+    }
     return r
+}
+
+/**
+ * @description Muestra un Array con los múltiplos de n 
+ * @param {number} n 
+ * @param {Array} aDatos 
+ * @return {void}
+ */
+
+function mostrarMultiplos(n,aDatos){
+    console.clear();
+    console.log(`Los múltiplos de ${n}` )
+    console.log(`En el Array de ${aDatos} son:` )
+    console.log(extraerMultiplos(n,aDatos));
 }
 
 {
@@ -84,4 +83,14 @@ function extraerMultiplos(n, aDatos) {
     }
     n%3 == 0  
 */    
+}
+
+module.exports = {};
+module.exports.isMultiplo = isMultiplo
+module.exports.extraerMultiplos= extraerMultiplos
+module.exports.mostrarMultiplos= mostrarMultiplos
+
+{
+    let aDatos = [1,2,3,4,5,6,7,8,9]
+    mostrarMultiplos(2,aDatos);
 }

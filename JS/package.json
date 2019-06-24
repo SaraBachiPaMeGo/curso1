@@ -1,10 +1,10 @@
 {
   "name": "JS",
   "version": "1.0.0",
-  "description": "",
-  "main": "01_reinicio.js",
+  "description": "Ejercicios JavaScript 2º modulo",
+  "main": "App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "keywords": [],
   "author": "",
