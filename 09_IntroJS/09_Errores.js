@@ -1,8 +1,4 @@
 
-
-
-
-
 function codificaEdad(edad){ //Codificar la edad, para hacerlo en un código finito
     let i=3;
     if(!isNumber(edad)){
