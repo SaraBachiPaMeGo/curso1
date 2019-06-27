@@ -4,7 +4,7 @@ console.log('Hola mundo')
 
 /* vinculándolo a un html  */
 
-                              //DATOS
+               //DATOS
 
 //Tipos primitivos de JavaScript
 
@@ -66,6 +66,8 @@ a = [
 
 let precio =80.90;
 let producto ='Gafas';
+
+
 
 
 
