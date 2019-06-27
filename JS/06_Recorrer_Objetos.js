@@ -40,14 +40,10 @@ function objectToString(object={}) {
             
         }
     }
-    return `${cadena} `
-    
+    return `${cadena} `    
 }
 
-
-
 console.log(objectToString(p1))
-
 
 function objectToString(object={}) {
     let cadena=``
@@ -67,7 +63,6 @@ function objectToString(object={}) {
                 }
             }
     }
-    return `${cadena} `
-    
-}
+    return `${cadena} `    
+    }
 }
