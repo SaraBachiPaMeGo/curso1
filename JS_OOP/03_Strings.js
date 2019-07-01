@@ -63,5 +63,5 @@ console.log(numero.toString())/* Convierte el número a string */
 console.log(numero.toFixed(2)) /*Le dices los dígitos que quieres que salgan y redondea */
 console.log(numero.toPrecision(2)) /* No distingue entre enteros y decimales. Te saca justo los números que dice que salga. Por ejemplo (3) le doy 1000 y saca 100 */
 console.log(numero.toExponential())/* Notación científica */
-
+console.log(numero.toLocaleString())/*  */
 
