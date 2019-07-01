@@ -40,8 +40,28 @@ y= cadena.split(' ').join(' ') /* Da lo mismo */
 
 console.log(y)
 
+cadena.slice(inicio,final)
+cadena.substring(inicio,final)
+cadena.substr(inicio,desplazamiento)
 
+/* FUNCIONES DE BÚSQUEDA .Le pasamos dos expresiones regulares para buscar x */
+cadena.match()// recupera el resultado de hacer coincidir una cadena con una expresión regular .
+cadena.search() // ejecuta una búsqueda de una coincidencia entre una expresión regular y este Stringobjeto.
+cadena.replace() /* Busca las veces que aparezca x y lo sustituye por y */
 
+cadena.indexOf(clave) /* le pasas una expresión o cadena y te devuelve la posición en la que aparece tu clave */
+cadena.lastIndexOf(clave)/* Lo mismo pero empezando por atrás. Detecta la última vez que detecta la clave */
 
+cadena.charAt(posicion)/* Te devuelve un carácter. Le pasas una posición (numérico). Qué caracter hay en la posición x. */
+
+cadena.charCodeAt(posicion)/* Te devuleve el código del caracter */
+
+String.fromCharCod(num) /*Instanciada en la clase genérica . Le dices un número de códgio y te lo convierte a código. 65 a A mayúscula por ejemplo */
+
+let numero = 23.5974;
+console.log(numero.toString())/* Convierte el número a string */
+console.log(numero.toFixed(2)) /*Le dices los dígitos que quieres que salgan y redondea */
+console.log(numero.toPrecision(2)) /* No distingue entre enteros y decimales. Te saca justo los números que dice que salga. Por ejemplo (3) le doy 1000 y saca 100 */
+console.log(numero.toExponential())/* Notación científica */
 
 
