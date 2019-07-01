@@ -77,6 +77,7 @@ function mediaTotal1(...rest) { /* rest operator */
         }
         return s
     }
+
 }
 
 console.log(mediaTotal1(7, 1, 0, [2, 2, [8, 9]]))

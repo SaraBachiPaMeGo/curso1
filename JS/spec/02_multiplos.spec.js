@@ -41,7 +41,7 @@ describe('Pruebas de la función isMultiplo', () => {
 
 });
 
-describe('Función extraerMultiploss', () => {
+describe('Función extraerMultiplos', () => {
 
     it('should return an array', () => {
         expect(Array.isArray(f.extraerMultiplos())).toBeTruthy(); /* Comprobamos que es un array  */

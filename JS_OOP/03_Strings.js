@@ -25,8 +25,20 @@ for (let i = 0; i < cadena.length; i++) {
     console.log(element)
 } /* Te devuelve la frase en forma de array (de arriba a abajo) */
 
+let x= cadena.split() /* Si no le pasas nada a split, guarda la cadena entera dentro de un array */
 
+console.log(x)
+console.clear;
 
+let y= cadena.split(' ') /* Split crea un array, y por lo tanto te lo separa por comas */
+
+console.log(y)
+
+/* Lo contrario de split es join, convierte todos los elementos de un array en una cadena */
+
+y= cadena.split(' ').join(' ') /* Da lo mismo */
+
+console.log(y)
 
 
 
