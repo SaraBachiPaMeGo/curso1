@@ -1,4 +1,4 @@
-let {aMeses, aMesesRusos, aMesesIngles} = require('./02_data.js')
+let {aMeses, aMesesRusos, aMesesIngles} = require('./02_Data.js')
 
 function elegirArray(key) {
     let r

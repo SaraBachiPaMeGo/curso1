@@ -15,4 +15,4 @@ const aMesesIngles = [
 module.exports = {}
 module.exports.aMeses = aMeses
 module.exports.aMesesRusos = aMesesRusos
-module.exports.aMesesIngles = aMesesIngles
+module.exports.aMesesIngles = aMesesInglenus
