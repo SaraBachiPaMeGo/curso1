@@ -1,5 +1,8 @@
 `use strict`
 
+let intl = require('intl')
+require('intl/locale-data/jsonp/es.js')
+
 let cadena = "Esto no es buena práctica,comillas dobles" /* en html se usa comillas dobles, para diferenciar los string en javascript se ponen comillas simples */
 
 let cadena1 = 'Esto sí buena práctica, con comillas simples'
@@ -65,3 +68,4 @@ console.log(numero.toPrecision(2)) /* No distingue entre enteros y decimales. Te
 console.log(numero.toExponential())/* Notación científica */
 console.log(numero.toLocaleString())/*  */
 
+console.log(numero.toLocaleString('es',{style: 'currency', currency : 'EUR'}))
