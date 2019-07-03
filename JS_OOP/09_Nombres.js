@@ -23,24 +23,41 @@ console.log(usuarios)
 
 /* No pasa por Raquel porque es 1, 1 */
 
-function palindromo2(letra='', aNombres=[]) {
+function palindromo2(letra='', aNombres=[]) { /* Elimino el nombre que aparece con la x letra primera del item del array */
+    const r =aNombres.slice() /* Clono lo que recibo por parámetros */
     for (let i = 0; i <aNombres.length; i++) {
         const element = aNombres[i];
-        if (item[0].toLowerCase()=== letra.toLowerCase()) { 
+        if (element[0].toLowerCase()=== letra.toLowerCase()) { 
             aNombres.splice(i,1)
             i--
         }
     }
+    return r
 }
 
 let l ='r'
 palindromo2(l,usuarios)
 console.log(usuarios)
 
+/* PARÁMETROS */
 
+function algo(h) { /* h recibe el valor de z, 4 */
+    h =h*h
+}
 
+let z=4
+algo(z)
+console.log(algo(z))/* Te da undefined porque algo() no devuelve nada */
 
+/* Parámetros y referencias */
 
+function cuadrados(a) {
+    for (let i = 0; i < a.length; i++) {
+        a[i] = a[i]*a[i]
+    }
+    return a /* [1,25,4,36] */
+}
 
-
-
+let x =[1,5,2,6]
+cuadrados(x)
+console.log(x)

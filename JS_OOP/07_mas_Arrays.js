@@ -39,5 +39,32 @@ aNombres.slice(1,3)/*Debes pasarla las posisiones para que te saque el trozo de 
        /* - De forma mutable*/
 
 aNombres.splice(1,3) /* Coge un trozo del array , te devuelve el array con ese trozo pero al array del principio le quita verdaderamente ese trozo */
+    /* Con un 3er parámetro le decimos qué queremos meter en el array (sustituímos lo que hemos quitado) */
     
+aNombres.splice(1,3,'pedro','Paula') 
+console.log(aNombres)
+/* También podemos añadir elementos en una posición concreta */
+
+let aPaises = ['Francia', 'Italia','Hungria','Grecia']
+aPaises.splice(2,0,'ESPAÑA') /* Ponemos el 0 porque no queremos eliminar ningún elemento del array */
+console.log(aPaises)
 }
+
+/* CLONAR */
+
+/*let clon = aPaises.slice()  En el caso de que no le demos ningún valor si hace clon */
+
+/* Pilas y colas */
+console.log('............................................')
+aPaises = ['Francia', 'Italia','Hungria','Grecia']
+aPaises.push('Portugal','Alemania') /* Añade en la última posición */
+aPaises.pop()/* Quita el último elemento del array */
+console.log(aPaises)
+/*PILA  -> stack FILO (el primero en entrar es el último en salir) */
+
+/* COLAS -> heap FIFO (First in, First out)*/
+console.log('............................................')
+aPaises.unshift('Croacia') /* como push. Inserta un nuevo elemento pero al principio */
+console.log(aPaises)
+aPaises.shift('Croacia') /* Eleminas el primer elemento */
+console.log(aPaises)
