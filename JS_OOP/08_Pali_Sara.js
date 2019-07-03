@@ -5,7 +5,7 @@
  */
 
  function palindromo(frase='') {
-     frase2 = frase.split().reverse() /* Guarda la frase dentro de un array y hacemos que la frase comience al revés*/
+     frase2 = frase.split(' ').reverse() /* Guarda la frase dentro de un array y hacemos que la frase comience al revés*/
      
      if(frase== frase2) { /* Comparar la frase */
          return true;
@@ -30,3 +30,23 @@
 
 console.log(palindromo2('Alí tomó tila'))
 console.log(palindromo2('Ali tomo tila'))
+
+/* EJERCICIO RESUELTO */
+
+function isPali(cadena='') {
+    const cadenaSinEspacios = cadena.split(' ').join('').toLocaleLowerCase() /* Split: las palabras las guarda en un array guardándolas en posiciones, convierte una cadena en array, join las vuelve a unir sin espacios. tolowercase lo deja todo en minúscula para que no haya problema de mayus y minus */
+    const cadenaInversa = cadenaSinEspacios.split('').reverse().join('')/* split te vuelve a hacer un array para que puedas hacer reverse(), join las vuelve a juntar porque lo has pasado a array  */
+    if(cadenaSinEspacios === cadenaInversa){
+        return true;
+    }
+    return false;
+}
+
+/* !!OJO en los arrays no hay comas, para que se vean las posiciones se ponen comas pero sólo para que se vean */
+
+console.log('.........................')
+console.log(isPali('Ali tomo tila'))
+console.log(isPali('hola'))
+
+module.exports = {}
+module.exports.isPali = isPali
