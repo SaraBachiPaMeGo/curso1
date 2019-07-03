@@ -55,7 +55,7 @@ console.log(aPaises)
 /*let clon = aPaises.slice()  En el caso de que no le demos ningún valor si hace clon */
 
 /* Pilas y colas */
-console.log('............................................')
+console.log('............................................') 
 aPaises = ['Francia', 'Italia','Hungria','Grecia']
 aPaises.push('Portugal','Alemania') /* Añade en la última posición */
 aPaises.pop()/* Quita el último elemento del array */
