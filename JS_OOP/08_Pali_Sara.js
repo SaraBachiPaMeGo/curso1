@@ -35,6 +35,7 @@ console.log(palindromo2('Ali tomo tila'))
 
 function isPali(cadena='') {
     const cadenaSinEspacios = cadena.split(' ').join('').toLocaleLowerCase() /* Split: las palabras las guarda en un array guardándolas en posiciones, convierte una cadena en array, join las vuelve a unir sin espacios. tolowercase lo deja todo en minúscula para que no haya problema de mayus y minus */
+    /*const cadenaSinEspacios = cadena.replace(/\s/g,'').toLowerCase().split('') */
     const cadenaInversa = cadenaSinEspacios.split('').reverse().join('')/* split te vuelve a hacer un array para que puedas hacer reverse(), join las vuelve a juntar porque lo has pasado a array  */
     if(cadenaSinEspacios === cadenaInversa){
         return true;

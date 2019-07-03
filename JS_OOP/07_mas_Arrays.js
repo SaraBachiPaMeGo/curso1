@@ -30,4 +30,14 @@
     aDatos.slice(0) /* clona un array y le tienes que pasar desde dónde (). Podemos sacar cachitos del array (2,5) sacará las posiciones que está entre medias. FUNCIÓN INMUTABLE */
     aDatos.reverse()/* Ordena el array al revés, los ultimos son los primeros y los primeros son los últimos. FUNCIÓN MUTABLE */
    
+/* Métodos que permiten fraccionar Arrays :
+        - De forma inmutable*/
+
+let aNombres= ['Sara','Sergio','Yoli','Pepe','Sebas'];
+aNombres.slice(1,3)/*Debes pasarla las posisiones para que te saque el trozo de array que quieras. OJO: La última posición no te la da, te la la anterior a la última. Si no le das ninguna posición a slice, te dará un clon del array.*/
+
+       /* - De forma mutable*/
+
+aNombres.splice(1,3) /* Coge un trozo del array , te devuelve el array con ese trozo pero al array del principio le quita verdaderamente ese trozo */
+    
 }
