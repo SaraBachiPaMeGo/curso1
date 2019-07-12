@@ -1,6 +1,6 @@
 const f = require('../30_Factorial.js')
 
-describe('Factorial number', () => {
+describe('Is Number', () => {
     it('should be false...', () => {
         expect(f.isNumber('')).toBeFalsy() 
     });
@@ -16,9 +16,22 @@ describe('Factorial number', () => {
     it('should be false...', () => {
         expect(f.isNumber(Array.isArray)).toBeFalsy() 
     });
+    it('should be true...', () => {
+        expect(f.isNumber(3)).toBeTruthy() 
+    });
+    it('should be true...', () => {
+        expect(f.isNumber(-5)).toBeTruthy()  
+    });
+    it('should be true...', () => {
+        expect(f.isNumber(3.5)).toBeTruthy()  
+    });
 });
 
-
+describe('Factorial ', () => {
+    it('should be 120...', () => {
+        expect(f.factorial(5)).toEqual(120)
+    });
+});
 
 
 
