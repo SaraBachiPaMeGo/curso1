@@ -38,4 +38,11 @@ module.exports = class Factorial {
         } 
         return r   
     }
+
+    renderizar() {
+        let cadena = 
+`El factorial de ${this.n}
+es ${this.factorial.toLocaleString()}`
+        console.log(cadena)
+    }
 }
