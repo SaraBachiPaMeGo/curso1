@@ -8,11 +8,11 @@ function encriptación(frase) {
     let enigma
     for (let i = 0; i < frase/* .charCodeAt(i) */; i++) { /* Te devuelve un carácter. Le pasas una posición (numérico). Qué caracter hay en la posición x. */
         const element = element.charCodeAt(0)
-        element += enigma;
+        enigma+=element ;
         console.log(enigma)
         for (let o = 0; o < enigma/* .charAt(i+3) */; o++) { /* Te devuleve el código del caracter */
             const element = element.charAt(0 + 3);
-            element += enigma
+            enigma+=element ;
             console.log(enigma)
         }
     }
