@@ -54,3 +54,32 @@ console.log(encriptación2(frase))
 
 
  */
+
+class Enigma {
+    constructor(){
+        this.clave = 0 /* Los saltos que va a dar entre letra y letra. Si es A y la clave 3 será D */
+        this.frase = ''
+        this.criptoFrase = ''
+    }
+
+    encriptar(frase, clave){
+        this.frase =frase
+        this.clave = clave
+
+        this.criptoFrase=
+        
+        this.cadena.split('').map(letra => {
+            String.fromCharCode(letra.charCodeAt(0) +this.clave) /* Convertimos la letra a un código, sumamos la clave y volvemos a tener otra letra gracias a fromcharode */
+        }).join('') /* Nos da la frase */
+
+    }
+
+    desencriptar(frase, clave){
+        this.criptoFrase = frase
+        this.clave = clave
+        this.cadena = '......'
+
+
+    }
+}
+
