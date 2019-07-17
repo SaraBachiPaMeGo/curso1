@@ -18,17 +18,17 @@ export class App {
         /* Manejadores de eventos  */
 
         this.aBtn.forEach((btn) => {
-            btn.addEventListener('click', this.onBtnClick)
+            btn.addEventListener('click', this.onBtnClick.bind(this)) /* ponemos bind(this después de un método) para que a la hora de sacarnos el this no nos de problemas, y elemento que dispara el evento, el event target, por eso arriba hemos fijado el even.atget para fijar el this. Si el manejador empieza por this, el método acaba por bing(this) */
         });
 
-        this.apel.addEventListener('input', this.escribirContinuo)
+        this.apel.addEventListener('input', this.escribirContinuo.bind(this))
     }
 
     onBtnClick(event) {
         let mensaje = ''
         switch (event.target.id) {
             case 'btn-normal':
-                mensaje = `Hola ${user.value} desde una función`
+                mensaje = `Hola ${this.user.value} desde una función`
                 break;
 
             case 'btn-super':
