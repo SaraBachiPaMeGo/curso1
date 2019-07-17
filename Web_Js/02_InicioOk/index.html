@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">    
+    <script src="./js/app.js" type="module"></script> <!-- So ponemos esto al principio, no saldrán los eventos ni nada, porque está leyendo los botones que están abajo y todavía no están asignados. También se puede estructurar bien e lcódigo . HAY QUE AÑADIR TYPE MODULE PARA QUE EMPIECE LA CARGA DE MÓDULOS (Crear varios ficheros que se conectan entre sí a través de export e import)-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>Curso Páginas web JS</title>
+</head>
+
+<body>
+    <header>
+        <h1>JS en la web</h1>
+    </header>
+    <main class="content-wrapper">
+        <section>
+            <h2>Elementos de la web desde JavaScript</h2>
+            <p>Los más básicos son:</p>
+            <ul>
+                <li>Eventos</li>
+                <li>Dom (Document Object Model)</li>
+                <ul>
+                    <li>Botones</li>
+                    <li>Inputs</li>
+                </ul>
+            </ul>
+        </section>
+        <section>
+            <h2>Ejemplo:</h2>
+        </section>
+        <div class="container">
+            <div id="btn-normal">
+                <button>Haz click</button>
+            </div>
+            <div>
+                <button id="btn-super" class=" btn btn-super">No tocar</button>
+            </div>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div class="output">
+                <output id="out-saludo"></output> <!-- Responde a un value -->
+            </div>
+            </div>
+            <section>
+                <h2>Doble binding</h2>      
+                <div>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido">
+                </div> 
+                <div class="output">
+                    <output id="out-apel"></output>
+                </div>
+            </section>
+    </main>
+    <footer class="mainfooter">
+        <address>
+            Sara Bachiller Parra
+        </address>
+    </footer>
+    
+</body>
+
+</html>

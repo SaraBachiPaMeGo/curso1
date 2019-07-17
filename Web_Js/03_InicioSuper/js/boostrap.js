@@ -1,0 +1,3 @@
+import {app} from './app.js'
+
+document.addEventListener('DOMContentLoaded', app) /* Hace lo mismo, espera a que la página cargue todo el contenido. Las imágenes no estánrenderizadas al 100% pero los nodos ya están listos. En la segundo parámetro le diremos que haga todo. Por eso lo meteremos todo en una función. Es un patrón que se usa bastante para generar el código de las páginas web: haciendo uan función general */
