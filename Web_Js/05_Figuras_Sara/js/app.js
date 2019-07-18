@@ -4,7 +4,7 @@ console.log('Hola')
 export class App {
 
     constructor() {
-        this.aBtn = document.querySelector('.btn')
+        this.aBtn = document.querySelectorAll('.btn')
         /* this.out = document.querySelectorAll() */
 
         this.cuadrado = document.querySelector('#cuadrado')
@@ -35,47 +35,38 @@ export class App {
     onBtnClick(event) {
         switch (event.target.id) {
             case 'btn-cuadrado':
-                this.outCuadrado
+                this.cuadradoMethod() 
                 break;
             case 'btn-triangulo':
-                this.outTriangulo
+                this.triangulo() 
                 break;
             case 'btn-rectangulo':
-                this.outRectangulo 
+                this.rectangulo() 
                 break;
             case 'btn-circulo':
-                this.outCirculo
-                break;
-            default:
+                this.circulo() 
                 break;
         }
     }
 
-    cuadrado(lado) {
-        this.lado = lado
-
-        this.outCuadrado = this.lado * this.lado
+    cuadradoMethod() { 
+        this.outCuadrado.value = this.cuadrado.value * this.cuadrado.value
     }
 
-    triangulo(base, altura) {
-        this.baseTri = base
-        this.altTri = altura
+    triangulo() {
 
-        this.outTriangulo = this.baseTri * this.altTri
+        this.outTriangulo.value = this.baseTri.value * this.altTri.value
     }
 
-    rectangulo(lado, lado2) {
-        this.ladoCua = lado
-        this.lado2Cua = lado2
+    rectangulo() {
 
-        this.outRectangulo = this.ladoCua * this.lado2Cua
+        this.outRectangulo.value = this.ladoCua.value * this.lado2Cua.value
     }
 
-    circulo(radio) {
+    circulo() {
         const pi = Math.PI
-        this.rcirculo = radio
 
-        this.outCirculo = pi * this.rcirculo * this.rcirculo
+        this.outCirculo.value = (pi * this.rcirculo.value * this.rcirculo.value).toFixed(3)
     }
 }
 

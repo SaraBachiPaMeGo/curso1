@@ -31,14 +31,15 @@ h1 span{
 .content-wrapper {
     background-color: beige;
     margin-left: 2rem;
+    padding-bottom: 1rem;
 }
 
-.btn-super{
+/* .btn-super{
     background-color: rgb(0, 195, 255);
     color: blue;
     padding: 2rem 2.5rem;
     border:  2px solid blue;
-}
+} */
 
 .btn:hover {
     cursor: pointer;
@@ -61,6 +62,7 @@ h1 span{
     color: beige;
     text-align: center;
     padding: 1rem; /* Da "Aire" a la página */
+    margin-top: 50px;
 }
 
 .mainfooter aside{
@@ -88,8 +90,18 @@ h1 span{
     padding: 1rem 1rem; /* Da "Aire" a la página */
 }
 
-.output {
+output {
     background-color: bisque;
     color: blue;
-    padding: 1rem;
+    padding: 0.5rem;
+    padding-left: 5rem;
+    margin: 20px;
+}
+
+input{
+    margin-left: 20px;
+}
+
+label {
+    margin-left: 50px;
 }
