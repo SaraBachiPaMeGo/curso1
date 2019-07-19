@@ -1,0 +1,37 @@
+body{
+    margin: 1rem;
+    background-color: antiquewhite;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+    margin: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: beige;
+    color: rgba(231, 24, 162, 0.253);
+}
+
+button {
+    background-color: burlywood;
+    color: rgba(231, 24, 162, 0.808);
+}
+
+output {
+    margin-top: 50px;
+    background-color: bisque;
+    color: blue;
+    padding: 0.5rem;
+    padding-left: 5rem;
+    margin: 20px;
+}
+
+
+
+
+
+
+
+
