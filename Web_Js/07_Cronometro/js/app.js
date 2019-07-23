@@ -56,9 +56,9 @@ Diferencia entre setTimeOut y setInterval
         /* out.innerHTML = '' */
     }
 
-    setTimeout(() => {
+   /*  setTimeout(() => {
         location.assign(url)
-    }, 10000);
+    }, 10000); */
 }
 
 
