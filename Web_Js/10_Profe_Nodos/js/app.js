@@ -1,8 +1,8 @@
 export function app() {
-    console.log('Cargada app') 
+    console.log('Cargada app')
 
-    function pruebas () {
-            class Lista extends Array {}
+    function pruebas() {
+        class Lista extends Array { }
 
         let x = new Lista()
         console.dir(x)
@@ -18,7 +18,7 @@ export function app() {
         let item = nodo.children[1].children[0]
         let item2 = document.querySelector('#saludo')
 
-        console.dir()    
+        console.dir()
     }
 
     // Nodos
@@ -35,53 +35,53 @@ export function app() {
 
     function onClickEnlace(ev) {
         if (counter < 3) {
-            ev.target.parentElement.outerHTML="Ops!! "
-            console.log(++counter)         
+            ev.target.parentElement.outerHTML = "Ops!! "
+            console.log(++counter)
         } else {
-        /*  ev.target.parentElement
-            .parentElement.parentElement.outerHTML = 
-                    '<p>Opps!!. No existo</p>'    */
+            /*  ev.target.parentElement
+                .parentElement.parentElement.outerHTML = 
+                        '<p>Opps!!. No existo</p>'    */
             lista.outerHTML = '<p>Opps!!. No existo</p>'
         }
     }
- 
-{
-    document.getElementsByTagName('p')
-    document.querySelectorAll('p')
 
-    document.getElementsByName('user')
-    document.querySelectorAll('[name="user"]')
+    {
+        document.getElementsByTagName('p')
+        document.querySelectorAll('p')
 
-    document.getElementsByClassName('clase1')
-    document.querySelectorAll('.clase1')
+        document.getElementsByName('user')
+        document.querySelectorAll('[name="user"]')
 
-    document.getElementById('id1')
-    document.querySelector('#id1')
+        document.getElementsByClassName('clase1')
+        document.querySelectorAll('.clase1')
 
-    /* document.getElementsByTagNameNS */
-}
+        document.getElementById('id1')
+        document.querySelector('#id1')
 
-{
-    // Creacion de Nodos
-    let origen  = document.querySelector('.addNodos div')
-    console.dir(origen)
+        /* document.getElementsByTagNameNS */
+    }
 
-    origen.innerHTML = '<p>Creando desde JS</p>'
+    {
+        // Creacion de Nodos
+        let origen = document.querySelector('.addNodos div')
+        console.dir(origen)
 
-    let html = document.createElement('p')
-    let content = document.createTextNode('Creando un párrafo desde un nodo nuevo')
+        origen.innerHTML = '<p>Creando desde JS</p>'
 
-    html.appendChild(content)
-    origen.appendChild(html)
+        let html = document.createElement('p')
+        let content = document.createTextNode('Creando un párrafo desde un nodo nuevo')
 
-    let aside = document.createElement('aside')
-    aside.innerHTML = '<h2>Más info</h2>'
+        html.appendChild(content)
+        origen.appendChild(html)
 
-    aside.innerHTML += '<p>Aquí va la info</p>'
+        let aside = document.createElement('aside')
+        aside.innerHTML = '<h2>Más info</h2>'
 
-    // origen.innerHTML += aside ----> NO VA, innerHTML espera que le pases un string no un nodo. Cada vez que hacemos += renderizamos otra vez la página pero es para que no se pierda lo anterior. Tenemos que hacer appendChild para que no pase eso en vez de utilizar innerHTML 
+        aside.innerHTML += '<p>Aquí va la info</p>'
 
-    origen.appendChild(aside)
-}
+        // origen.innerHTML += aside ----> NO VA, innerHTML espera que le pases un string no un nodo. Cada vez que hacemos += renderizamos otra vez la página pero es para que no se pierda lo anterior. Tenemos que hacer appendChild para que no pase eso en vez de utilizar innerHTML 
+
+        origen.appendChild(aside)
+    }
 
 }
