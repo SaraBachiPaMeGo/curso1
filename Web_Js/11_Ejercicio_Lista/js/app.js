@@ -59,7 +59,7 @@ export function app() {
 
         aBtnBorrar.forEach(btn => btn.addEventListener('click', onBorrar))
         aBtnEditar.forEach(btn => btn.addEventListener('click', onEditar))
-        aTextos.forEach(txt => txt.addEventListener('blur', onChange))
+        aTextos.forEach(txt => txt.addEventListener('blur', onChange)) // ¿Qué es blur? Evento de perder el foco. Queremos saber si el usuario ha dado al botón de enter. En vez de un botón es un campo único. Change sirve para perder el foco de un objeto que sea un input auténtico (cuando tenemos un elemento html que tiene la propi value y cambia, quiere decir que hay un evento)
     }
 
     function onBorrar(ev) {
@@ -77,8 +77,8 @@ export function app() {
    }   
 
    function onEditar(ev) {
-    console.log(ev.target.dataset.id)
-    ev.target.previousElementSibling.contentEditable = true
+    console.log(ev.target.dataset.id) // .data sirve para invertarte propiedades para los lementos html. dataset los guarda todos los atributos de tipo data. En este caso el data id se guarda en dataset
+    ev.target.previousElementSibling.contentEditable = true // consigues el hermano anterior. Gracias a la relacion de cada nodo no necesitamos apuntar directamente a un nodo
     console.dir(ev.target.parentNode)
    }
 
