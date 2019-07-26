@@ -93,8 +93,9 @@ i{
     text-align: end;
     font-size:200%; 
     color: rgba(0, 0, 0, 0.644);
-    display: flex;
-    flex-direction: column;
+    display: inline
+    /* display: flex;
+    flex-direction: column; */
 }
 /* 
 a {

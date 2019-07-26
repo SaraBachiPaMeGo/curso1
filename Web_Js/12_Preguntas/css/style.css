@@ -7,8 +7,8 @@ body {
     display: none;
 }
 
-.ocultar {
-    display: none
+.oculto {
+    display: none;
 }
 
 header {
@@ -96,3 +96,26 @@ h1 span{
     padding: 1rem 1rem; /* Da "Aire" a la página */
 }
 
+i{
+    margin: 2%;
+    text-align: end;
+    font-size:150%; 
+    color: rgba(8, 123, 255, 0.541);
+    display: flex;
+    flex-direction: column;
+}
+
+.boton {
+    text-align: center;
+    width: 5rem;
+    height: 3rem;
+    background-color: blueviolet; 
+    color: antiquewhite;
+}
+
+.boton2 {
+    width: 5rem;
+    height: 3rem;
+    background-color: rgba(226, 43, 211, 0.397);
+    color: black;
+}
