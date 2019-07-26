@@ -4,24 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ejercicio 10</title>
+    <title>JS en la Web</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./favicon.ico">
+    <script src="./js/bootstrap.js" type="module"></script>
 </head>
 <body>
-    <h1>Ejercicio 10 </h1>
-    <section>
-        <p><strong>Aumentar una lista</strong></p>
-        <p>Crear una página con una lista y un botón o un enlace, de modo que cada vez que lo pulsa, el usuario pueda añadir un nuevo ítem a la lista.</p>
-        <p>Detalle: La acción de pincha sobre un enlace o botón corresponde al ya conocido evento onClick que ejecutará una función; junto con los demás 'Eventos' de JavaScript, se verán a continuación con profundidad</p>
-    </section>
-    <section>
-        <label for="item">Escriba un nuevo ítem</label>
-        <input type="text" name="item" id="item">
-        <button id="btn">Añadir a la lista</button>
-    </section>
-    <section>
-        <h2>Lista de ítems:</h2>
-        <output id="out"></output>
-    </section>
-    
+    <header>
+        <h1>JS en la Web</h1>
+    </header>
+    <main>
+        <section>
+            <h2 contenteditable>Lista de animales</h2>
+            <div>
+                <label for="in-new">Añade un animal</label>
+                <input type="text" name="in-new" id="in-new">
+            </div>
+            <div>
+                <h3>Lista de animales</h3>
+                <div id="out-lista"></div>
+            </div>
+            <dialog class="confirmacion">
+                <p>Seguro que deseas borrar el animalillo</p>
+                <button>SI</button> 
+                <button>NO</button>
+            </dialog>
+        </section>
+    </main>
+    <footer>
+        <address>
+            Alejandro Cerezo
+        </address>
+    </footer>
 </body>
 </html>
