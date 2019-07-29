@@ -27,6 +27,11 @@ body>header {
     right: 0;
 }
 
+.logo {
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+
 .active {
     background-color: rgba(115, 170, 241, 0.404);
     color: white;
@@ -46,21 +51,22 @@ nav ul {
 
 nav li {
     display: block;
-    margin: 1rem;
+    margin: 2rem;
     font-size: larger;
-    width: 5rem;
     text-align: center;
-    height: 3rem;
+    /* padding: 1rem; */
     
 }
 
-.top-sticky {
+.top {
     height: 20vh;
 }
 
 nav a {
     text-decoration: none;
     color: inherit;
+    /* padding: 0.4rem; */
+    padding: 1rem;
 }
 
 header h1 {
