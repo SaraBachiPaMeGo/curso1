@@ -19,7 +19,7 @@ export function app() {
     //                      IMAGENES                    //
 
     let aImagenes = ARBOLES.map(item=>{
-        const img = new img()
+        const img = new Image() // Función constructora de nodos del DOM pero de tipo image  ---> Es un híbrido entre JS y HTML
         img.alt = item.nombre
         img.src = './assets' + item.source
         return img
