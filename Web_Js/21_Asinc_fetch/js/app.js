@@ -15,37 +15,42 @@ export function app() {
     btnBuscar.addEventListener('click', onClickBuscar)
 
     //Funciones manejadoras de eventos
-    function onClickBorrar(ev) { /* Borramos sólo en la pantalla, no en el localStorage */
+    function onClickBorrar(ev) {
         inputId.value = ''
     }
 
-    function onClickBuscar(ev) {        
+    function onClickBuscar(ev) {
         let url = userURL + '/' + inputId.value
-
-        llamadaAjax('GET', url, leerDatos) /* OTRA FORMA DE HACERLO */
+        fetch(url)/* Devuelve una promesa (un objeto que tiene la capacidad de devolver valores pero en un futuro, pueden ser distintos según el transcurso del proceso). Se puede responder con tehn(cuando todo haya ido bien ) o catch (cuando no se cumple la promesa) */
+            .then(response => {
+                console.log(response) /*  response => response.json() */
+                if (response.status == 200) {
+                    return response.json()/* Blob es un fichero de imágenes. Primero te mandan los datos sin procesar (normalmente el json).Todos devuelven una promesa. Nos devuelve una promesa para poder hacer otro then y pasarles los datos.  */
+                }
+                throw (new Error(response.status)) /* Generamos un error porque la promesa no te da ningún error, ya que te responde. Ponemos el response.status dentro del new Error para ver el error que ha dado esa propiedad. De esta manera salta directamente al catch */
+            })
+            .then((data) => { /* fetch te devuelve un body (un chorro de datos que se tienen que procesar a apartir de un función y no sotros le tenemos que decir con qué función) */
+                outputNombre.innerHTML = data.username
+            }) /* También puedes poner directamente leerDatos() en vez de hacer una función anónima (metes todo el código de leerDatos) */
+            .catch((error) => {
+                outputNombre.innerHTML = 'Error de conexión ' + error
+            })
     }
 
-    function llamadaAjax(metodo, url, callback) {
+    //ES2017 
 
-        ajax.addEventListener('readystatechange', ()=>{callback(ajax)}) /* Quiero pasar parámetros a mi función manejadora callback. queremos tener acceso a http, de esta manera, se puede pasar parámetros  */
-        
-        ajax.open(metodo, url) /* Abre la conexión. Pide dos parámetros, 1º método(GET para conseguir la conexión ), 2º String al que te quieres conectar (a dónde te quieres conectar) */
-        ajax.send() /* Manda los datos. Ejecuta la petición */
-    }
-
-    //Función manejadora donde la llamada al evento está dentro 
-
-    function leerDatos(ajax) {
-        if (ajax.readyState == 4 && ajax.status == 200) { /* Verificamos que el proceso ha terminado con el readyState, y con el status vemos si ha ido bien (200) o mal (300 o x, depende de la causa del problema) */
-            let data = JSON.parse(ajax.responseText)  /* o ajax.responseText.username */
-            console.log(ajax.responseText) /* Datos que devuelve el servidor(api) */
-            outputNombre.innerHTML = data.username
-            /* Al parsear un JSON nos devuelve un objeto */
-                 /* username es la propiedad del objeto data, que a su vez son los datos que nos devuelve el servidor . TENEMOS QUE PARSEARLO DE JSON PORQUE LOS DATOS NOS VIENEN DADOS EN ESE FORMATO Y NO LO PODEMOS VER, NOS DARÍA UNDENIFED */
-            
-        }else if(ajax.readyState == 4){ // PONEMOS ESTO PARA QUE MIENTRAS ESTÁEN EL PROCESO NO SALTE 'no vale'
-            //outputNombre.innerHTML = 'no vale'
-             location.assign('./error.html')/*Te lleva a otra pág */
+    async function onClickBuscar2017(ev) {
+        let url = userURL + '/' + inputId.value
+        try {
+            let response = await fetch(url) /* Cuando se haga la promesa, lo que te devuelva lo guardas en response */
+            if (response.status == 200) {
+               let data = await response.json()
+                outputNombre.innerHTML = data.username
+            } else {
+                throw (new Error(response.status)) /* Generamos un error porque la promesa no te da ningún error, ya que te responde. Ponemos el response.status dentro del new Error para ver el error que ha dado esa propiedad. De esta manera salta directamente al catch */
+            }
+        } catch (error) {
+            outputNombre.innerHTML = 'Error de conexión ' + error
         }
     }
 }

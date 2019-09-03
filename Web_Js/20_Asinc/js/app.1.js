@@ -37,17 +37,15 @@ export function app() {
 
     //Función manejadora donde la llamada al evento está dentro 
 
-    function leerDatos(ajax) {
-        if (ajax.readyState == 4 && ajax.status == 200) { /* Verificamos que el proceso ha terminado con el readyState, y con el status vemos si ha ido bien (200) o mal (300 o x, depende de la causa del problema) */
-            let data = JSON.parse(ajax.responseText)  /* o ajax.responseText.username */
-            console.log(ajax.responseText) /* Datos que devuelve el servidor(api) */
-            outputNombre.innerHTML = data.username
-            /* Al parsear un JSON nos devuelve un objeto */
-                 /* username es la propiedad del objeto data, que a su vez son los datos que nos devuelve el servidor . TENEMOS QUE PARSEARLO DE JSON PORQUE LOS DATOS NOS VIENEN DADOS EN ESE FORMATO Y NO LO PODEMOS VER, NOS DARÍA UNDENIFED */
-            
-        }else{
-            outputNombre.innerHTML = 'no vale'
-              /* location.assign('./error.html')Te lleva a otra pág */
-        }
+    if (ajax.readyState == 4 && ajax.status == 200) { 
+        let data = JSON.parse(ajax.responseText)  /* o ajax.responseText.username */
+        console.log(ajax.responseText) /* Datos que devuelve el servidor(api) */
+        outputNombre.innerHTML = data.username
+        /* Al parsear un JSON nos devuelve un objeto */
+             /* username es la propiedad del objeto data, que a su vez son los datos que nos devuelve el servidor . TENEMOS QUE PARSEARLO DE JSON PORQUE LOS DATOS NOS VIENEN DADOS EN ESE FORMATO Y NO LO PODEMOS VER, NOS DARÍA UNDENIFED */
+        
+    }else if(ajax.readyState == 4){ // PONEMOS ESTO PARA QUE MIENTRAS ESTÁEN EL PROCESO NO SALTE 'no vale'
+        
+        // location.assign('./error.html')/*Te lleva a otra pág */
     }
 }
