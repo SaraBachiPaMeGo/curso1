@@ -19,9 +19,7 @@ export function app() {
         inputId.value = ''
     }
 
-    function onClickBuscar(ev) {
-
-        
+    function onClickBuscar(ev) {        
         let url = userURL + '/' + inputId.value
 
         llamadaAjax('GET', url, leerDatos) /* OTRA FORMA DE HACERLO */
@@ -45,9 +43,9 @@ export function app() {
             /* Al parsear un JSON nos devuelve un objeto */
                  /* username es la propiedad del objeto data, que a su vez son los datos que nos devuelve el servidor . TENEMOS QUE PARSEARLO DE JSON PORQUE LOS DATOS NOS VIENEN DADOS EN ESE FORMATO Y NO LO PODEMOS VER, NOS DARÍA UNDENIFED */
             
-        }else{
-            outputNombre.innerHTML = 'no vale'
-              /* location.assign('./error.html')Te lleva a otra pág */
+        }else if(ajax.readyState == 4){ // PONEMOS ESTO PARA QUE MIENTRAS ESTÁEN EL PROCESO NO SALTE 'no vale'
+            //outputNombre.innerHTML = 'no vale'
+             location.assign('./error.html')/*Te lleva a otra pág */
         }
     }
 }
