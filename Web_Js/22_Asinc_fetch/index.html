@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/css.css">
-    <script src="./js/boostrap.js" type="module"></script>
-    <title>Repaso después de vacas</title>
+    <title>Curso de JS</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="./js/bootstrap.js" type="module"></script>
 </head>
 <body>
     <header>
-        <h1>JS en la web</h1>
+        <h1>JS en la Web</h1>
     </header>
     <main>
-        <input id="input-id" type="text" name="input-id" placeholder="id" value=""> <!-- Recoge la información que el usuario da =>>> VALUE -->
+        <input type="text" name="in-clave" id="in-clave" 
+            placeholder="Clave de búsqueda" value=''>
         <button id="btn-buscar" type="button">Buscar</button>
-        <button id="btn-borrar" type="button">Borrar</button>
-        <p>Hola <output id="output-nombre"></output></p> <!-- Para sacar datos puedes poner cualquier etiqueta. La más neutra es 'span' -->
+        <div class="libros">
+            <ul id="ul-libros"></ul>
+            <p id="p-error"></p>
+        </div>
     </main>
     <footer>
-        <address>Sara Bachiller Parra</address>
-    </footer>
+        <address>
+            Alejandro Cerezo
+        </address>
+    </footer>   
 </body>
 </html>
