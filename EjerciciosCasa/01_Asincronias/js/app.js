@@ -39,6 +39,7 @@ export function app() {
                 aUsers = data /* Metemos todos los datos en el array genérico para objetener los datos */
                 getDatos() /* EN EL CASO DE QUE TENGAMOS TODO EN UNA FUNCIÓN, CÓMO HAGO PARA NO TENER QUE LLAMAR A OTRA FUNCIÓN? */
             })
+            /* RESPUESTA: En vez de llamar a una función, el código que consigue los datos lo  metemos en donde meteríamos la función */
             .catch(error => {
                 error = new Error() /* PASARLE COMO PARÁMETRO ERROR? EN 23\Usuarios CUANDO HACÍAMOS LA FUNCIÓN getDatos() NO LE PASÁBAMOS EN EL PARÁMETRO DATA O aUsers*/
                 errorData()
@@ -60,10 +61,17 @@ export function app() {
         let response = await fetch(url) /* Hay que importar await pero no se cómo */
         let data = await response.json()
         aUsers = data
+
+        /* aUsers = await response.json() Puedes quitarle el intermediario*/
+
         /* SI NO QUIERO PONER UN IF PARA EL STATUS COMO LE PONGO EL CATCH? TENGO QUE HACER UN TRY-CATCH OBLIGATORIAMENTE?
         EN EL CASO DEL FETCH LLAMÁBAMOS A UNA FUNCIÓN PARA QUE NOS RENDERIZARA LOS DATOS, PERO EN ESTE CASO? */
         /* En los apuntes en 'promesa' se supone que siempre se debe meter dentro de un try - catch */
         /* No ponemos delante la palabra reservada async? */
+
+        /*RESPUESTA: SI QUEREMOS GESTIONAR ERRORES, IMPRENCINDIBLE UTILIZAR EL TRY-CATCH. A la respuesta de renderizar los datos, como tengo una función tocha que está dentro el renderizar, deberia de llamar a esa función o mucho mejor, hacer otra que sólo se dedique a ello */
+        /* RESPUESTA: si quiero utilizar el await IMPRENCINDIBLE poner la palabra reservada async. De esta manera nos permitirá utilizar el await */
+        /* No tenemos que meter los datos en renderData() porque aUsers es genérico, en cambio el error no es global, por lo que se lo tenemos que pasar en parámetro */
     }
 
     function onClickBorrar() {
