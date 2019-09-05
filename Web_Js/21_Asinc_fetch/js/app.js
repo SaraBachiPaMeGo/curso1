@@ -31,6 +31,7 @@ export function app() {
             })
             .then((data) => { /* fetch te devuelve un body (un chorro de datos que se tienen que procesar a apartir de un función y no sotros le tenemos que decir con qué función) */
                 outputNombre.innerHTML = data.username
+                console.log(data)
             }) /* También puedes poner directamente leerDatos() en vez de hacer una función anónima (metes todo el código de leerDatos) */
             .catch((error) => {
                 outputNombre.innerHTML = 'Error de conexión ' + error

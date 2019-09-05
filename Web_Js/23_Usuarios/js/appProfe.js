@@ -43,12 +43,12 @@ export function app() {
         }
         console.log(oUser)
         let cabecera = new Headers({
-            'Content-Type':  'application/json'
+            'Content-Type':  'application/json' /* Especificamos el tipo de dato que mandamos nosotros (que va a estar en JSON), es el request no el response. Es un objeto estándar de JS y tenemos que ponerle comillas al nombre  */
         })
         fetch(USERS, {
-            method: 'POST',
+            method: 'POST', /* Debemos mandarle los datos (body) */
             headers: cabecera, 
-            body: JSON.stringify(oUser) })
+            body: JSON.stringify(oUser) }) /* Mis datos están en el objeto oUser y estoy recogiendo los datos que me está mandando el user. De esta manera parseamos los datos y los pasa a string */
         .then (response => response.json())
         .then (data => {
             if(data.id > 0) {
@@ -87,14 +87,37 @@ export function app() {
 
     function onDlgBorrar(ev) {
         if(ev.target.id == 'btn-borrar') {
-            // Borrar
+           
+            fetch(USERS+'/'+userActual.id,{method:'DELETE'}) /* Si response json, aunque sea un booleano será json.Nos mandará un objeto vacío  */
+            .then(response => response.json())
+            .then(() => getDatos()) /* Volvemos a hacer la petición para refrescar la página . data es un objeto vacío por lo que ponermos ()*/
         }
         dlgBorrar.close()
     }
 
     function onDlgEditar(ev) {
         if(ev.target.id == 'btn-update') {
-            // Actualizar
+            // Actualizar con put (volver a mandar todos los datos del registro. Los datos que no se modifican hay que volverlos a especificar, ej: nombre:jose y la edad la borra porque no se lo has especificado. Aquello que no modificas le tienes que decir que no quieres modificarlo) / patch() (sabe que si no me mandas un campo no es 0 sino que no lo quieres mmodificar)
+            /* Hay que hacer el put de un registro concreto */
+            
+            let oUser = { /* Guardamos en el objeto usuario los datos metidos en los input. Se actualiza con los datos dados en apntalla */
+                nombre: nodosEditar.nombre.value, /* Tenemos que coger los datos de los NUEVOS inputs */
+                edad: nodosEditar.userActual.edad
+        
+            }
+
+            let cabecera = new Headers({
+                'Content-Type':  'application/json' /* Especificamos el tipo de dato que mandamos nosotros (que va a estar en JSON), es el request no el response. Es un objeto estándar de JS y tenemos que ponerle comillas al nombre  */
+            })
+            fetch(USERS+'/'+userActual.id, {
+                method: 'PUT', /* Debemos mandarle los datos (body) */
+                headers: cabecera, 
+                body: JSON.stringify(oUser) }) /* Mis datos están en el objeto oUser y estoy recogiendo los datos que me está mandando el user. De esta manera parseamos los datos y los pasa a string */
+            .then (response => response.json())
+            .then(data => {
+                oUser=data
+                getDatos()
+            })
         }
         dlgEditar.close()
     }

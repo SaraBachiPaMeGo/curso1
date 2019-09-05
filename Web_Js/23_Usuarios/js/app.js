@@ -1,5 +1,6 @@
 
 import { url } from './api.js'
+import dialogPolyfill from '../node_modules/dialog-polyfill/index.js'; /* Nos hemos metido en caniuse y en resources- github y hemos seguido los pasos que establece */
 export function app() {
     console.log('Cargada app')
 
@@ -23,7 +24,9 @@ export function app() {
     /* AÑADIR LOS DIALOGS */
     let dlgBorrar = document.querySelector('#dlg-borrar')
     let dlgEditar = document.querySelector('#dlg-editar')
-
+    //polifill
+    dialogPolyfill.registerDialog(dlgEditar); /* Se utiliza para que en el edge no te salgan los dialog directamente */
+    dialogPolyfill.registerDialog(dlgBorrar);
 
     let aBtnEditar = []//Toman valor tras renderizar la tabla
     let aBtnDelete = []
@@ -89,9 +92,9 @@ export function app() {
     }
     function renderData() {
         let html = `<tr>
-        <td class="id">ID</td>
-        <td class="nombre">Nombre</td> 
-        <td class="edad">Edad</td>
+        <th class="id">ID</th>
+        <th class="nombre">Nombre</th> 
+        <th class="edad">Edad</th>
         </tr>`
 
         aUsers.forEach(item => html += `
@@ -120,7 +123,7 @@ export function app() {
         });
     }
 
-    function onClickEdit(ev) {
+    function onClickEdit(ev) { //OpenModal
         //ev.target.parentElement.dataset.id /* el data set es el OBJETO que tiene la propiedad id que le has puesto en el html*/
         let id
         if (ev.target.tagName == 'TD') { /* Hacemos esto para cuando le demos click no nos salga undefined (acuerdate que era por culpa del i que tiene un before). tagName --> el nombre de la etiqueta de HTML */
