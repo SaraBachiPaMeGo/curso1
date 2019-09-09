@@ -1,13 +1,13 @@
+  
 import { url } from './api.js'
-import { aName } from './api.js'
-import { resultado } from './api.js'
 
 export function app() {
     console.log('App Cargada')
-    let aName = [] /* CUANDO LA VARIABLE ESTÁ EN LA API ME DA UN ERROR PORQUE LA PONE COMO CONST */
-    let aPais = []
-    let newUrl = ''
-    let actualPais =''
+
+    let aName = []
+    let actualPais = {}
+    let newUrl = url + '/'
+    let nombrePais = ''
 
     //Nodos del DOM 
     let slcContinent = document.querySelector('#slc-continent')
@@ -19,86 +19,88 @@ export function app() {
         asia: document.querySelector('#asia'),
         america: document.querySelector('#america'),
         oceania: document.querySelector('#oceania'),
-    }
-    
+    }    
+
     //Asociación de eventos
     slcContinent.addEventListener('change', conection)
-    
+
     //Funciones manejadoras
 
     function conection(ev) { // Hacemos la conexión con la BD y obtenemos los datos
-        newUrl = url + '/' + ev.target.value /* Hacer una url que va a ser igual a la que tenemos más el value del option */
-        /* console.log(ev.target.value) */
+        console.log(ev.target.value)
+        newUrl =  newUrl+ ev.target.value /* Hacer una url que va a ser igual a la que tenemos más el value del option */
         fetch(newUrl)
             .then(response => response.json())
             .then(data => {
                 aName = data.map(nombre => {
-                    return {
-                        nombre: nombre.name
-                    }
+                    return { nombre: nombre.name }                    
                 })
                 renderDatos()
-               // console.log(aName) //Array de objetos 
+                
             })
     }
 
     function conection2(ev) { 
-        newUrl = '/' + ev.target.value 
-        console.log(ev.target.value) 
-        fetch(newUrl)
+        console.log(ev.target.value + 'ev.target connection2') //Sale europa
+        
+        let url = 'https://restcountries.eu/rest/v2/name/'+ ev.target.value + '?fullText=true'//Necesito el nombre del país
+        /* newUrl = ev.target.value  + 's=name;capital;flag;currencies;languages' */
+        
+        fetch(url)
             .then(response => response.json())
             .then(data => {
                 actualPais = data.map(info => {
-                    return {
-                        bandera: info.flag,
+                    return { 
                         capital: info.capital,
-                        idioma: info.languages[3].nativeName//new
-                    }
+                        flag: info.flag,
+                        languages: info.languages.map(idioma=>{
+                            return  idioma.name
+                        })                       
+                    }                    
                 })
-                renderDatos2()
-                console.log(actualPais) 
+                renderDatos2()                
             })
     }
 
-    function newNodos() {
+    function newNodo() {
         let slcCountry = document.querySelector('#slc-country') // innerHTML
         slcCountry.addEventListener('change', conection2)
     }
 
     //Otras funciones
 
-    function renderDatos(ev) { //Nos muestra los países
-
-        let html = `<select name="select2" id="slc-country">`
+    function renderDatos(ev) { //Nos muestra los países       
+        
+        let html = '<select name="select2" id="slc-country">'
 
         aName.forEach(pais => {
             html += `
-            <option value="lang" id="opt-pais">${pais.nombre}</option>
+            <option value="${pais.nombre}" id="opt-pais">${pais.nombre}</option>
             `
-            actualPais = pais.nombre
-            console.log(pais)/* ${ev.target.value}<option value="europa" id="opt-pais">${aName}</option> */
+            actualPais = pais
+            
         });
 
         newSlc.innerHTML = html
-        newNodos()
+        newNodo()
     }
 
-    function renderDatos2(ev) { //Nos muestra los países  
-        let html = ``
+    function renderDatos2(ev) { //Nos muestra los países       
+        
+        let html = ' <div>'
 
         actualPais.forEach(pais => {
             html += `
-            <div value="opt-pais" id="opt-pais">${pais.bandera}</div>
-            <div value="opt-pais" id="opt-pais">${pais.capital}</div>
-            <div value="opt-pais" id="opt-pais">${pais.bandera}</div>
+            <span>CAPITAL</span>  <p>${pais.capital}</p>
+            <span>BANDERA </span><p>${pais.flag}</p>
+            <img src="${pais.flag}" alt="Banderas de paises">
+            <span>IDIOMA </span> <p>${pais.languages}</p>
+            </div>
             `
-            resultado = pais
-            console.log(resultado)/* ${ev.target.value}<option value="europa" id="opt-pais">${aName}</option> */
         });
 
         newDiv.innerHTML = html
     }
-
 }
 
 
