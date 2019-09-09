@@ -12,11 +12,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Delius Unicase', cursive;
 }
 
 main {
     margin: 2rem;
     min-height: 60vh;
+    font-family: 'Delius', cursive;
 }
 
 select{
@@ -30,5 +32,44 @@ select{
 select:hover{
     background-color: rgba(0, 119, 255, 0.733);
     color: rgb(0, 1, 8);
+}
 
+.div1 {
+    margin: 2rem;
+}
+
+span {
+    padding: 1rem;
+}
+
+.span1 {
+    background-color: rgba(128, 128, 128, 0.336);
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.span2{
+    display: block;
+}
+
+select {
+    cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.849);
+    color: white;
+    margin: 0.5rem;
+}
+
+i{
+    font-size: 200%;
+    color: #2B8039;
+}
+
+img {
+    max-width: 50%;
+    max-height: 50%;
+    
+}
+
+.div-img{
+    margin: 2rem;
 }

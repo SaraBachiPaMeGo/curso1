@@ -1,4 +1,4 @@
-  
+
 import { url } from './api.js'
 
 export function app() {
@@ -19,7 +19,7 @@ export function app() {
         asia: document.querySelector('#asia'),
         america: document.querySelector('#america'),
         oceania: document.querySelector('#oceania'),
-    }    
+    }
 
     //Asociación de eventos
     slcContinent.addEventListener('change', conection)
@@ -28,37 +28,37 @@ export function app() {
 
     function conection(ev) { // Hacemos la conexión con la BD y obtenemos los datos
         console.log(ev.target.value)
-        newUrl =  newUrl+ ev.target.value /* Hacer una url que va a ser igual a la que tenemos más el value del option */
+        newUrl = newUrl + ev.target.value /* Hacer una url que va a ser igual a la que tenemos más el value del option */
         fetch(newUrl)
             .then(response => response.json())
             .then(data => {
                 aName = data.map(nombre => {
-                    return { nombre: nombre.name }                    
+                    return { nombre: nombre.name }
                 })
                 renderDatos()
-                
+
             })
     }
 
-    function conection2(ev) { 
+    function conection2(ev) {
         console.log(ev.target.value + 'ev.target connection2') //Sale europa
-        
-        let url = 'https://restcountries.eu/rest/v2/name/'+ ev.target.value + '?fullText=true'//Necesito el nombre del país
+
+        let url = 'https://restcountries.eu/rest/v2/name/' + ev.target.value + '?fullText=true'//Necesito el nombre del país
         /* newUrl = ev.target.value  + 's=name;capital;flag;currencies;languages' */
-        
+
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 actualPais = data.map(info => {
-                    return { 
+                    return {
                         capital: info.capital,
                         flag: info.flag,
-                        languages: info.languages.map(idioma=>{
-                            return  idioma.name
-                        })                       
-                    }                    
+                        languages: info.languages.map(idioma => {
+                            return idioma.name
+                        })
+                    }
                 })
-                renderDatos2()                
+                renderDatos2()
             })
     }
 
@@ -70,7 +70,7 @@ export function app() {
     //Otras funciones
 
     function renderDatos(ev) { //Nos muestra los países       
-        
+
         let html = '<select name="select2" id="slc-country">'
 
         aName.forEach(pais => {
@@ -78,7 +78,7 @@ export function app() {
             <option value="${pais.nombre}" id="opt-pais">${pais.nombre}</option>
             `
             actualPais = pais
-            
+
         });
 
         newSlc.innerHTML = html
@@ -86,19 +86,21 @@ export function app() {
     }
 
     function renderDatos2(ev) { //Nos muestra los países       
-        
+
         let html = ' <div>'
 
         actualPais.forEach(pais => {
             html += `
-            <span>CAPITAL</span>  <p>${pais.capital}</p>
-            <span>BANDERA </span><p>${pais.flag}</p>
+            <span>CAPITAL</span><i class="fas fa-map-marker-alt"></i> <span class="span1">${pais.capital}</span>            
+            <span>IDIOMA </span> <span class="span1">${pais.languages}</span>
+            <span>BANDERA </span>
+            <div class="div-img">
             <img src="${pais.flag}" alt="Banderas de paises">
-            <span>IDIOMA </span> <p>${pais.languages}</p>
+            </div>
             </div>
             `
         });
-
+        
         newDiv.innerHTML = html
     }
 }
