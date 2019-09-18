@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass scss/:css/"
+    "sass": "sass scss/:css/ --watch --no-source-map",
+    "pug": "pug -w -P -p -/pug/partials -O ./pug/options.json ./pug/templates -o ./",
+    "pug:sass": "parallelshell \"npm run pug\" \"npm run sass\""
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,11 @@
     "normalize.css": "^8.0.1",
     "popper": "^1.0.1",
     "popper.js": "^1.15.0",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "sass": "^1.22.12"
   },
   "devDependencies": {
-    "jasmine": "^3.4.0"
+    "jasmine": "^3.4.0",
+    "parallelshell": "^3.0.2"
   }
 }
