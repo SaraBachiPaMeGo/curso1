@@ -24,7 +24,8 @@
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "popper": "^1.0.1",
-    "popper.js": "^1.15.0"
+    "popper.js": "^1.15.0",
+    "pug": "^2.0.4"
   },
   "devDependencies": {
     "jasmine": "^3.4.0"
