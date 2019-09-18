@@ -3,7 +3,7 @@
 //- esto es un comentario solo para pug
     más comentario
 -const page = 1
--const titulo  = 'Hola Pug'
+-const titulo  = 'Hola Pug con Sass'
 -const charset = 'utf-8'
 -const empresa = 'Colegio <b>Tajamar</b>'
 -const aPaises = [{nombre: 'España', id: 'es', description: 'Bla bla bla'}, {nombre: 'Francia', id: 'fr', description: 'Ble ble ble'}, {nombre: 'Italia', id: 'it', description: 'Bli bli bli'}]
@@ -32,6 +32,7 @@ html(lang=language)
         meta(charset=charset)
         title #{titulo} 
         link(rel="stylesheet", href="./css/style.css")
+        script(src="./app/app.js", type="module")
     body
         // Comentario
         header#main-header.main-header

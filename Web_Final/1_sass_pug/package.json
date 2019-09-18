@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass scss/:css/ --watch --no-source-map",
-    "pug": "pug -w -P -p -/pug/partials -O ./pug/options.json ./pug/templates -o ./",
+    "sass": "sass sass/:dist/css/ --watch --no-source-map",
+    "pug": "pug -w -P -p ./pug/partials -O ./pug/options.json ./pug/templates -o ./dist ./",
     "pug:sass": "parallelshell \"npm run pug\" \"npm run sass\"",
-    "parallelshell":"parallelshell \"echo 1\""
+    "ugly": "uglifyjs app/app.js -o dist/app/app.js -c -m"
   },
   "keywords": [],
   "author": "Sara Bachiller Parra",
   "license": "ISC",
   "devDependencies": {
-    "parallelshell": "^3.0.2",
+    "parallelshell": "3.0.1",
     "pug": "^2.0.4",
-    "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.22.12"
+    "sass": "^1.22.12",
+    "uglify-js": "^3.6.0"
   }
 }
