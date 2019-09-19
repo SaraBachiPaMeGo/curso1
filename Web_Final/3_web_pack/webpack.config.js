@@ -1,4 +1,8 @@
 const path = require('path')
+const ExtractTextPlugins =require('extract-text-webpack-plugin')
+const ExtractSass = new ExtractTextPlugins({
+    FILENAME: 'STYLE.CSS'
+});
 
 module.exports = {
     entry: './src/js/boostrap.js',
@@ -24,9 +28,10 @@ module.exports = {
             {
                 test: '/\.scss$/',
                 loader: [
-                    
+
                 ]
             } // Regla de Sass
         ]
-    }
+    },
+    plugins: [ExtractSass]
 }
