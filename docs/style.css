@@ -7,7 +7,7 @@ header,footer {
     color: rgb(255, 238, 0);
     background-color: honeydew;
     padding: 2rem;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
