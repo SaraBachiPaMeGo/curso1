@@ -1,37 +1,40 @@
 const path = require('path')
-const ExtractTextPlugins =require('extract-text-webpack-plugin')
-const ExtractSass = new ExtractTextPlugins({
-    FILENAME: 'STYLE.CSS'
-});
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+const extractCss = new ExtractTextPlugin({
+    filename: 'style.css'
+})
 
 module.exports = {
-    entry: './src/js/boostrap.js',
+    entry: './src/js/bootstrap.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    mode: 'development',
+    mode: 'production',
     module: {
         rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    { loader: 'style-loader' },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true
-                        }
+            // regla de CSS
+            {test: /\.css$/, 
+            use: [
+                { loader: 'style-loader' },
+                // css-loader
+                {
+                loader: 'css-loader',
+                options: {
+                    modules: true
                     }
-                ]
-            },// fin de la regla de css
-            {
-                test: '/\.scss$/',
-                loader: [
-
-                ]
-            } // Regla de Sass
+                }
+            ]}, // fin de la regla de CSS
+            // regla de SaSS
+            {test: /\.scss$/,
+            use: extractCss.extract({
+                use: [ {loader:'css-loader'},
+                        {loader: 'sass-loader'}],
+                fallback:'style-loader'  
+            })  
+            }
         ]
     },
-    plugins: [ExtractSass]
+    plugins: [extractCss]
 }
