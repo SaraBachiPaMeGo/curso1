@@ -20,12 +20,16 @@
                 case 1:
                     inputMes = 13
                     inputAño = inputAño - 1
+                    mes = Math.trunc(((inputMes + 1) * 3) / 5);
                     var resul = (inputDia + (2 * inputMes) + inputAño + mes + año1 - año2 + año3 + 2)
-                    console.log("Resul "+resul)
-                    var resul2 = Math.trunc(resul / 7) 
-                    console.log("Resul2 "+resul2)
+
+                    console.log("Datos = ", "(" , inputDia, "+" , "(2*",inputMes ,")+",inputAño, "+",mes ,"+" , año1 ,"-" , año2 , "+" ,año3, "+ 2" )
+
+                    console.log("Resul " + resul)
+                    var resul2 = Math.trunc(resul / 7)
+                    console.log("Resul2 " + resul2)
                     var resul3 = resul - (resul2 * 7)
-                    console.log("Resul3 "+resul3)
+                    console.log("Resul3 " + resul3)
                     switch (resul3) {
                         case 0:
                             outdia.innerHTML = "Sábado";
@@ -54,12 +58,16 @@
                 case 2:
                     inputMes = 14
                     inputAño = inputAño - 1
+                    mes = Math.trunc(((inputMes + 1) * 3) / 5);
                     var resul = (inputDia + (2 * inputMes) + inputAño + mes + año1 - año2 + año3 + 2)
-                    console.log("Resul "+resul)
-                    var resul2 = Math.trunc(resul / 7) 
-                    console.log("Resul2 "+resul2)
+                    
+                    console.log("Datos = ", "(" , inputDia, "+" , "(2*",inputMes ,")+",inputAño, "+",mes ,"+" , año1 ,"-" , año2 , "+" ,año3, "+ 2" )
+
+                    console.log("Resul " + resul)
+                    var resul2 = Math.trunc(resul / 7)
+                    console.log("Resul2 " + resul2)
                     var resul3 = resul - (resul2 * 7)
-                    console.log("Resul3 "+resul3)
+                    console.log("Resul3 " + resul3)
                     switch (resul3) {
                         case 0:
                             outdia.innerHTML = "Sábado";
@@ -87,11 +95,12 @@
                     console.log(resul3)
                 default:
                     var resul = (inputDia + (2 * inputMes) + inputAño + mes + año1 - año2 + año3 + 2)
-                    console.log("Resul "+resul)
-                    var resul2 = Math.trunc(resul / 7) 
-                    console.log("Resul2 "+resul2)
+                    console.log("Datos = ", "(" , inputDia, "+" , "(2*",inputMes ,")+",inputAño, "+",mes ,"+" , año1 ,"-" , año2 , "+" ,año3, "+ 2" )
+                    console.log("Resul " + resul)
+                    var resul2 = Math.trunc(resul / 7)
+                    console.log("Resul2 " + resul2)
                     var resul3 = resul - (resul2 * 7)
-                    console.log("Resul3 "+resul3)
+                    console.log("Resul3 " + resul3)
                     switch (resul3) {
                         case 0:
                             outdia.innerHTML = "Sábado";
@@ -115,9 +124,8 @@
                             outdia.innerHTML = "Viernes";
                             break;
                     }
-                console.log(resul3)
+                    console.log(resul3)
             }
-
         }
     </script>
 </head>
