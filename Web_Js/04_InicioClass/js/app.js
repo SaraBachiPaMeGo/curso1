@@ -44,6 +44,6 @@ export class App {
         this.apel1.value = `${this.apel.value}`
     }
 
-}70
+}
 
 
